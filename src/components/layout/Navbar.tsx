@@ -49,11 +49,11 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
           isScrolled
             ? "bg-crema/95 backdrop-blur-md shadow-sm py-3"
-            : "bg-transparent py-5"
+            : "bg-transparent py-4"
         }`}
       >
         <div className="container">
@@ -61,19 +61,27 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
             {/* Logo */}
             <Link
               href={`/${locale}`}
-              className="font-serif text-xl md:text-2xl text-ferro tracking-wide hover:text-verde-bosco transition-colors"
+              className={`font-serif text-xl md:text-2xl tracking-wide transition-colors ${
+                isScrolled || !pathname.includes("suite/")
+                  ? "text-ferro hover:text-verde-bosco"
+                  : "text-bianco-latte hover:text-crema"
+              }`}
             >
               [Nome Casolare]
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-6">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-sm font-medium tracking-wide transition-colors hover:text-verde-bosco ${
-                    pathname === item.href ? "text-verde-bosco" : "text-ferro"
+                  className={`text-sm font-sans transition-colors ${
+                    pathname === item.href
+                      ? "text-verde-bosco font-medium"
+                      : isScrolled
+                      ? "text-ferro/80 hover:text-verde-bosco"
+                      : "text-ferro/80 hover:text-verde-bosco"
                   }`}
                 >
                   {item.label}
@@ -82,32 +90,32 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
             </div>
 
             {/* Right side: Language + CTA + Mobile Menu */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               {/* Language Switcher */}
               <div className="relative">
                 <button
                   onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                  className="flex items-center gap-1 text-sm text-ferro hover:text-verde-bosco transition-colors"
+                  className="flex items-center gap-1 text-sm text-ferro/70 hover:text-verde-bosco transition-colors px-2 py-1"
                   aria-label="Change language"
                 >
-                  <Globe size={18} />
-                  <span className="uppercase">{locale}</span>
+                  <Globe size={16} />
+                  <span className="uppercase text-xs font-sans">{locale}</span>
                 </button>
 
                 <AnimatePresence>
                   {isLangMenuOpen && (
                     <motion.div
-                      initial={{ opacity: 0, y: -10 }}
+                      initial={{ opacity: 0, y: -5 }}
                       animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      className="absolute top-full right-0 mt-2 bg-bianco-latte rounded shadow-lg py-2 min-w-[120px]"
+                      exit={{ opacity: 0, y: -5 }}
+                      className="absolute top-full right-0 mt-2 bg-bianco-latte rounded-lg shadow-lg py-1 min-w-[100px] border border-pietra/30"
                     >
                       {locales.map((l) => (
                         <Link
                           key={l}
                           href={getLocalizedPath(l)}
                           onClick={() => setIsLangMenuOpen(false)}
-                          className={`block px-4 py-2 text-sm hover:bg-crema transition-colors ${
+                          className={`block px-4 py-2 text-sm font-sans hover:bg-crema transition-colors ${
                             l === locale
                               ? "text-verde-bosco font-medium"
                               : "text-ferro"
@@ -120,6 +128,8 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
                   )}
                 </AnimatePresence>
               </div>
+
+              {/* CTA Desktop */}
 
               {/* Mobile Menu Button */}
               <button
@@ -144,33 +154,35 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
             className="fixed inset-0 z-40 lg:hidden"
           >
             <div
-              className="absolute inset-0 bg-ferro/30 backdrop-blur-sm"
+              className="absolute inset-0 bg-ferro/20 backdrop-blur-sm"
               onClick={() => setIsMobileMenuOpen(false)}
             />
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ type: "tween", duration: 0.3 }}
-              className="absolute right-0 top-0 bottom-0 w-80 max-w-full bg-crema shadow-xl"
+              transition={{ type: "tween", duration: 0.25 }}
+              className="absolute right-0 top-0 bottom-0 w-72 max-w-full bg-crema shadow-xl"
             >
               <div className="p-6 pt-20">
-                <nav className="flex flex-col gap-4">
+                <nav className="flex flex-col gap-2">
                   {navItems.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className={`text-lg font-serif py-2 border-b border-pietra/30 transition-colors hover:text-verde-bosco ${
+                      className={`text-lg font-serif py-3 border-b border-pietra/20 transition-colors ${
                         pathname === item.href
                           ? "text-verde-bosco"
-                          : "text-ferro"
+                          : "text-ferro hover:text-verde-bosco"
                       }`}
                     >
                       {item.label}
                     </Link>
                   ))}
                 </nav>
+
+                {/* CTA Mobile */}
               </div>
             </motion.div>
           </motion.div>

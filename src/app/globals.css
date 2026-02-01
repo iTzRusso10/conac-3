@@ -1,36 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;1,6..12,400&display=swap');
 
 @import "tailwindcss";
 
 /* ===== THEME CONFIGURATION ===== */
 @theme inline {
-  /* Colors - La Dolce Vita Palette */
-  --color-verde-bosco: #4A5D4C;
-  --color-verde-bosco-light: #5A6D5C;
-  --color-verde-bosco-dark: #3A4D3C;
+  /* Colors - Palette Rustica Italiana */
+  --color-verde-bosco: #5A6B4A;
+  --color-verde-bosco-light: #6A7B5A;
+  --color-verde-bosco-dark: #4A5B3A;
   
-  --color-crema: #F5F0E8;
-  --color-crema-light: #FFFEF9;
-  --color-crema-dark: #E8E4DC;
+  --color-crema: #FAF6F0;
+  --color-crema-light: #FFFDF8;
+  --color-crema-dark: #EDE8E0;
   
-  --color-pietra: #D4C8B8;
-  --color-pietra-light: #E4D8C8;
-  --color-pietra-dark: #C4B8A8;
+  --color-pietra: #D8CFC2;
+  --color-pietra-light: #E8DFD2;
+  --color-pietra-dark: #C8BFB2;
   
-  --color-terracotta: #C4A77D;
-  --color-terracotta-light: #D4B78D;
-  --color-terracotta-dark: #B4976D;
+  --color-terracotta: #C17F59;
+  --color-terracotta-light: #D19069;
+  --color-terracotta-dark: #A66F49;
   
-  --color-ferro: #2C2C2C;
-  --color-ferro-light: #4C4C4C;
-  --color-ferro-dark: #1C1C1C;
+  --color-ferro: #3D3D3D;
+  --color-ferro-light: #5D5D5D;
+  --color-ferro-dark: #2D2D2D;
   
-  --color-oro: #B8976A;
-  --color-oro-light: #C8A77A;
-  --color-oro-dark: #A8875A;
+  --color-oro: #C9A962;
+  --color-oro-light: #D9B972;
+  --color-oro-dark: #B99952;
   
   --color-nebbia: #E8E4DC;
-  --color-bianco-latte: #FFFEF9;
+  --color-bianco-latte: #FFFDF8;
   
   /* Semantic Colors */
   --color-background: var(--color-crema);
@@ -40,18 +40,18 @@
   --color-accent: var(--color-oro);
   --color-muted: var(--color-pietra);
   
-  /* Typography - Più classico */
+  /* Typography - Mix classico e leggibile */
   --font-serif: 'Playfair Display', Georgia, serif;
-  --font-body: 'Lora', Georgia, serif;
-  --font-accent: 'Crimson Pro', Georgia, serif;
+  --font-body: 'Source Serif 4', Georgia, serif;
+  --font-sans: 'Nunito Sans', -apple-system, sans-serif;
   
   /* Spacing */
-  --section-padding-y: 7rem;
+  --section-padding-y: 5rem;
   --section-padding-x: 1.5rem;
   
   /* Transitions */
-  --transition-smooth: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-fast: 0.25s ease-out;
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.2s ease-out;
 }
 
 /* ===== BASE STYLES ===== */
@@ -64,54 +64,51 @@ body {
   color: var(--color-ferro);
   font-family: var(--font-body);
   font-size: 17px;
-  line-height: 1.8;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===== TYPOGRAPHY - Più Classico ===== */
+/* ===== TYPOGRAPHY - Stile Italiano Autentico ===== */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
   font-weight: 500;
-  line-height: 1.15;
+  line-height: 1.2;
   color: var(--color-ferro);
 }
 
 h1 {
-  font-size: clamp(2.75rem, 7vw, 4.5rem);
-  letter-spacing: -0.02em;
-  font-weight: 600;
-}
-
-h2 {
-  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   letter-spacing: -0.01em;
 }
 
+h2 {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+}
+
 h3 {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-size: clamp(1.4rem, 3vw, 2rem);
 }
 
 p {
-  max-width: 60ch;
+  max-width: 62ch;
   font-family: var(--font-body);
 }
 
 /* Parole chiave in grassetto */
 strong, b {
   font-weight: 600;
-  color: var(--color-ferro);
+  color: var(--color-ferro-dark);
 }
 
 /* Testo elegante per citazioni */
 .elegant-text {
-  font-family: var(--font-accent);
+  font-family: var(--font-body);
   font-style: italic;
-  font-size: 1.15em;
-  line-height: 1.9;
+  font-size: 1.1em;
+  line-height: 1.8;
 }
 
-/* Serif per titoli display */
 .font-serif {
   font-family: var(--font-serif);
 }
@@ -120,339 +117,93 @@ strong, b {
   font-family: var(--font-body);
 }
 
-/* ===== VINTAGE DECORATIVE ELEMENTS ===== */
-
-/* Ornamento floreale SVG */
-.ornament {
-  display: block;
-  width: 120px;
-  height: 30px;
-  margin: 0 auto;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 30'%3E%3Cpath d='M60 15 Q50 5, 40 15 Q30 25, 20 15 Q10 5, 5 15 M60 15 Q70 5, 80 15 Q90 25, 100 15 Q110 5, 115 15' stroke='%23C4A77D' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='60' cy='15' r='3' fill='%23C4A77D'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center;
+.font-sans {
+  font-family: var(--font-sans);
 }
 
-.ornament-small {
-  width: 80px;
-  height: 20px;
-}
+/* ===== RUSTIC DECORATIVE ELEMENTS ===== */
 
-.ornament-large {
-  width: 180px;
-  height: 40px;
-}
-
-/* Linee decorative vintage con curve */
-.decorative-line {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 2rem 0;
-}
-
-.decorative-line::before,
-.decorative-line::after {
-  content: '';
-  width: 80px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-terracotta), transparent);
-}
-
-/* Diamante decorativo */
-.decorative-diamond {
-  width: 10px;
-  height: 10px;
-  background: var(--color-terracotta);
-  transform: rotate(45deg);
-  position: relative;
-}
-
-.decorative-diamond::before {
-  content: '';
-  position: absolute;
-  inset: 2px;
-  border: 1px solid var(--color-crema);
-}
-
-/* ===== VINTAGE FRAMES - Cornici Eleganti ===== */
-
-/* Cornice italiana classica con angoli arrotondati */
-.italian-frame {
-  position: relative;
-  border: 2px solid var(--color-pietra);
+/* Bordo semplice terracotta */
+.border-rustic {
+  border: 1px solid var(--color-pietra);
   border-radius: 8px;
-  background: var(--color-bianco-latte);
-  box-shadow: 
-    0 4px 20px rgba(0,0,0,0.06),
-    inset 0 0 0 6px var(--color-bianco-latte),
-    inset 0 0 0 7px var(--color-pietra-light);
 }
 
-.italian-frame::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
-  border: 1px solid var(--color-pietra-light);
+/* Card con ombra morbida */
+.card-rustic {
+  background: var(--color-bianco-latte);
   border-radius: 12px;
-  pointer-events: none;
-}
-
-/* Cornice vintage con ornamenti agli angoli */
-.vintage-frame {
-  position: relative;
-  border: 1px solid var(--color-terracotta);
-  border-radius: 4px;
-  padding: 2rem;
-  background: linear-gradient(135deg, var(--color-bianco-latte) 0%, var(--color-crema) 100%);
-}
-
-.vintage-frame::before,
-.vintage-frame::after {
-  content: '❧';
-  position: absolute;
-  font-size: 1.5rem;
-  color: var(--color-terracotta);
-  line-height: 1;
-}
-
-.vintage-frame::before {
-  top: -0.75rem;
-  left: 1.5rem;
-  background: var(--color-crema);
-  padding: 0 0.5rem;
-}
-
-.vintage-frame::after {
-  bottom: -0.75rem;
-  right: 1.5rem;
-  background: var(--color-crema);
-  padding: 0 0.5rem;
-  transform: rotate(180deg);
-}
-
-/* Card con bordo elegante */
-.elegant-card {
-  position: relative;
-  background: var(--color-bianco-latte);
-  border-radius: 16px;
-  padding: 2.5rem;
   box-shadow: 
-    0 10px 40px rgba(0,0,0,0.08),
-    0 2px 10px rgba(0,0,0,0.04);
+    0 4px 20px rgba(0,0,0,0.05),
+    0 1px 4px rgba(0,0,0,0.03);
   border: 1px solid var(--color-pietra-light);
-  overflow: hidden;
 }
 
-.elegant-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color-terracotta), var(--color-oro), var(--color-terracotta));
+/* Effetto texture carta */
+.texture-paper {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
 }
 
-/* Quote box elegante */
-.quote-box {
-  position: relative;
-  padding: 2.5rem 3rem;
-  background: var(--color-bianco-latte);
-  border-left: 4px solid var(--color-terracotta);
-  border-radius: 0 12px 12px 0;
-  font-family: var(--font-accent);
-  font-style: italic;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-}
-
-.quote-box::before {
-  content: '"';
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  font-size: 4rem;
-  font-family: var(--font-serif);
-  color: var(--color-terracotta);
-  opacity: 0.3;
-  line-height: 1;
-}
-
-/* ===== SECTION DIVIDERS - Separatori Vintage ===== */
-
-.section-divider {
-  position: relative;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.section-divider::before {
-  content: '';
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-pietra), var(--color-pietra), transparent);
-}
-
-.section-divider::after {
-  content: '✦';
-  position: relative;
-  z-index: 1;
-  background: var(--color-crema);
-  padding: 0 1.5rem;
-  color: var(--color-terracotta);
-  font-size: 1rem;
-}
-
-/* Divider con foglia */
-.section-divider-leaf::after {
-  content: '❦';
-  font-size: 1.5rem;
-}
-
-/* ===== TEXT IN CORNICE ===== */
-
-.text-framed {
-  position: relative;
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  border: 1px solid var(--color-terracotta);
-  border-radius: 4px;
-}
-
-.text-framed::before,
-.text-framed::after {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border: 1px solid var(--color-terracotta);
-}
-
-.text-framed::before {
-  top: -4px;
-  left: -4px;
-  border-right: none;
-  border-bottom: none;
-}
-
-.text-framed::after {
-  bottom: -4px;
-  right: -4px;
-  border-left: none;
-  border-top: none;
-}
-
-/* ===== VINTAGE BACKGROUND PATTERNS ===== */
-
-.bg-pattern-dots {
-  background-image: radial-gradient(var(--color-pietra) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-.bg-pattern-lines {
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    var(--color-pietra-light) 10px,
-    var(--color-pietra-light) 11px
-  );
-}
-
-/* Texture carta antica */
-.bg-paper {
-  background-color: var(--color-bianco-latte);
-  background-image: 
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  background-blend-mode: soft-light;
-}
-
-/* ===== BUTTONS - Stile Vintage ===== */
+/* ===== BUTTONS - Stile Casolare ===== */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  padding: 1rem 2.25rem;
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-radius: 6px;
+  letter-spacing: 0.03em;
+  border-radius: 8px;
   cursor: pointer;
   transition: all var(--transition-smooth);
   text-decoration: none;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn::before {
-  content: '';
-  position: absolute;
-  inset: 3px;
-  border: 1px solid currentColor;
-  border-radius: 4px;
-  opacity: 0.3;
-  transition: opacity var(--transition-fast);
-}
-
-.btn:hover::before {
-  opacity: 0.5;
 }
 
 .btn-primary {
   background: var(--color-verde-bosco);
   color: var(--color-crema-light);
   border: 2px solid var(--color-verde-bosco);
-  box-shadow: 0 4px 15px rgba(74, 93, 76, 0.25);
+  box-shadow: 0 2px 8px rgba(90, 107, 74, 0.25);
 }
 
 .btn-primary:hover {
   background: var(--color-verde-bosco-dark);
   border-color: var(--color-verde-bosco-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(74, 93, 76, 0.35);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(90, 107, 74, 0.35);
 }
 
 .btn-secondary {
   background: transparent;
   color: var(--color-ferro);
-  border: 2px solid var(--color-ferro);
+  border: 2px solid var(--color-pietra-dark);
 }
 
 .btn-secondary:hover {
   background: var(--color-ferro);
   color: var(--color-crema-light);
-  transform: translateY(-2px);
+  border-color: var(--color-ferro);
 }
 
-.btn-elegant {
-  background: linear-gradient(135deg, var(--color-terracotta) 0%, var(--color-oro) 100%);
+.btn-terracotta {
+  background: var(--color-terracotta);
   color: var(--color-bianco-latte);
-  border: none;
-  box-shadow: 0 4px 20px rgba(196, 167, 125, 0.4);
+  border: 2px solid var(--color-terracotta);
+  box-shadow: 0 2px 8px rgba(193, 127, 89, 0.3);
 }
 
-.btn-elegant:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(196, 167, 125, 0.5);
+.btn-terracotta:hover {
+  background: var(--color-terracotta-dark);
+  border-color: var(--color-terracotta-dark);
+  transform: translateY(-1px);
 }
 
-/* ===== FORM ELEMENTS - Stile Vintage ===== */
+/* ===== FORM ELEMENTS ===== */
 .form-input {
   width: 100%;
-  padding: 1rem 1.25rem;
+  padding: 0.875rem 1rem;
   font-family: var(--font-body);
   font-size: 1rem;
   background: var(--color-bianco-latte);
@@ -463,21 +214,19 @@ strong, b {
 
 .form-input:focus {
   outline: none;
-  border-color: var(--color-terracotta);
-  box-shadow: 0 0 0 4px rgba(196, 167, 125, 0.15);
+  border-color: var(--color-verde-bosco);
+  box-shadow: 0 0 0 3px rgba(90, 107, 74, 0.1);
 }
 
 .form-input::placeholder {
   color: var(--color-pietra-dark);
-  font-style: italic;
 }
 
 .form-label {
   display: block;
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
   font-weight: 500;
-  letter-spacing: 0.03em;
   margin-bottom: 0.5rem;
   color: var(--color-ferro);
 }
@@ -486,7 +235,7 @@ strong, b {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -499,26 +248,12 @@ strong, b {
   to { opacity: 1; }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
 .animate-fade-in-up {
-  animation: fadeInUp 0.9s ease-out forwards;
+  animation: fadeInUp 0.7s ease-out forwards;
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.7s ease-out forwards;
-}
-
-.animate-float {
-  animation: float 4s ease-in-out infinite;
+  animation: fadeIn 0.5s ease-out forwards;
 }
 
 /* Staggered animation delays */
@@ -531,7 +266,7 @@ strong, b {
 /* ===== LAYOUT UTILITIES ===== */
 .container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
   padding-left: var(--section-padding-x);
   padding-right: var(--section-padding-x);
@@ -543,45 +278,27 @@ strong, b {
   position: relative;
 }
 
-/* Sezione con bordi curvi */
-.section-curved {
-  position: relative;
-}
-
-.section-curved::before {
-  content: '';
-  position: absolute;
-  top: -40px;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: inherit;
-  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-}
-
-/* ===== SCROLLBAR Elegante ===== */
+/* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
   background: var(--color-crema);
-  border-left: 1px solid var(--color-pietra-light);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--color-pietra), var(--color-pietra-dark));
-  border-radius: 5px;
-  border: 2px solid var(--color-crema);
+  background: var(--color-pietra);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(var(--color-terracotta), var(--color-terracotta-dark));
+  background: var(--color-pietra-dark);
 }
 
 /* ===== SELECTION ===== */
 ::selection {
-  background: var(--color-terracotta);
+  background: var(--color-verde-bosco);
   color: var(--color-bianco-latte);
 }
 
@@ -592,62 +309,36 @@ strong, b {
   height: 100%;
 }
 
-/* Immagine con cornice vintage */
-.img-vintage {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 
-    0 10px 40px rgba(0,0,0,0.15),
-    0 4px 12px rgba(0,0,0,0.1);
-}
-
-.img-vintage::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border: 8px solid var(--color-bianco-latte);
-  border-radius: 8px;
-  box-shadow: inset 0 0 0 1px var(--color-pietra);
-  pointer-events: none;
+/* Immagine con bordo morbido */
+.img-rustic {
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
 }
 
 /* ===== SPECIAL TEXT EFFECTS ===== */
 
-/* Prima lettera grande (drop cap) */
+/* Prima lettera grande */
 .drop-cap::first-letter {
   font-family: var(--font-serif);
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  font-weight: 600;
   float: left;
-  line-height: 0.8;
-  margin-right: 0.75rem;
-  margin-top: 0.1rem;
-  color: var(--color-terracotta);
+  line-height: 0.85;
+  margin-right: 0.5rem;
+  margin-top: 0.15rem;
+  color: var(--color-verde-bosco);
 }
 
-/* Highlight per parole chiave */
-.highlight {
-  background: linear-gradient(transparent 60%, rgba(196, 167, 125, 0.3) 60%);
-  padding: 0 0.25rem;
+/* Highlight naturale */
+.highlight-natural {
+  background: linear-gradient(transparent 55%, rgba(201, 169, 98, 0.25) 55%);
+  padding: 0 0.15rem;
 }
 
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   :root {
-    --section-padding-y: 4rem;
+    --section-padding-y: 3.5rem;
     --section-padding-x: 1.25rem;
-  }
-  
-  .vintage-frame {
-    padding: 1.5rem;
-  }
-  
-  .elegant-card {
-    padding: 1.5rem;
-  }
-  
-  .quote-box {
-    padding: 1.5rem 2rem;
   }
 }

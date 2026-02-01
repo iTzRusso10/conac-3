@@ -18,10 +18,10 @@ const icons = {
 };
 
 const colors = {
-  truffle: { bg: 'bg-terracotta/10', text: 'text-terracotta', border: 'border-terracotta' },
-  wine: { bg: 'bg-verde-bosco/10', text: 'text-verde-bosco', border: 'border-verde-bosco' },
-  nature: { bg: 'bg-verde-bosco/10', text: 'text-verde-bosco', border: 'border-verde-bosco' },
-  relax: { bg: 'bg-pietra/30', text: 'text-ferro', border: 'border-pietra-dark' },
+  truffle: { bg: 'bg-terracotta/15', icon: 'text-terracotta' },
+  wine: { bg: 'bg-verde-bosco/15', icon: 'text-verde-bosco' },
+  nature: { bg: 'bg-verde-bosco/15', icon: 'text-verde-bosco' },
+  relax: { bg: 'bg-oro/15', icon: 'text-oro-dark' },
 };
 
 export default function ExperienceCard({
@@ -35,39 +35,28 @@ export default function ExperienceCard({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-30px' }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group text-center"
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: index * 0.08 }}
+      className="flex gap-4 items-start"
     >
-      {/* Icon con cornice circolare vintage */}
-      <div className="relative inline-block mb-6">
-        {/* Cerchio esterno decorativo */}
-        <div className={`absolute -inset-2 rounded-full border ${colorSet.border} opacity-30 group-hover:opacity-60 transition-opacity`} />
-        
-        {/* Cerchio principale */}
-        <div
-          className={`w-20 h-20 rounded-full ${colorSet.bg} ${colorSet.text} flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg`}
-        >
-          <Icon size={32} strokeWidth={1.5} />
-        </div>
-
-        {/* Ornamento */}
-        <div className={`absolute -bottom-1 left-1/2 -translate-x-1/2 text-sm ${colorSet.text}`}>
-          ✦
-        </div>
+      {/* Icon - stile semplice rustico */}
+      <div
+        className={`flex-shrink-0 w-12 h-12 rounded-xl ${colorSet.bg} ${colorSet.icon} flex items-center justify-center`}
+      >
+        <Icon size={24} strokeWidth={1.5} />
       </div>
 
-      {/* Title */}
-      <h3 className="font-serif text-xl md:text-2xl text-ferro mb-4 group-hover:text-verde-bosco transition-colors">
-        {title}
-      </h3>
-
-      {/* Description */}
-      <p className="font-body text-ferro/70 leading-relaxed italic">
-        {description}
-      </p>
+      {/* Content */}
+      <div className="flex-1">
+        <h3 className="font-serif text-lg text-ferro mb-1">
+          {title}
+        </h3>
+        <p className="font-body text-ferro/65 text-sm leading-relaxed">
+          {description}
+        </p>
+      </div>
     </motion.div>
   );
 }

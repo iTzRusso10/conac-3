@@ -16,26 +16,13 @@ export default function SectionTitle({
   decorated = false,
 }: SectionTitleProps) {
   return (
-    <div className={`mb-12 md:mb-16 ${centered ? 'text-center' : ''}`}>
-      {/* Ornamento superiore */}
-      {decorated && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className={`mb-4 text-terracotta text-2xl ${centered ? '' : ''}`}
-        >
-          ❦
-        </motion.div>
-      )}
-
+    <div className={`mb-10 ${centered ? 'text-center' : ''}`}>
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="font-serif text-3xl md:text-4xl lg:text-5xl text-ferro"
+        className="font-serif text-3xl md:text-4xl text-ferro"
       >
         {title}
       </motion.h2>
@@ -45,45 +32,24 @@ export default function SectionTitle({
           initial={{ opacity: 0, scaleX: 0 }}
           whileInView={{ opacity: 1, scaleX: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className={`mt-6 flex items-center gap-4 ${centered ? 'justify-center' : ''}`}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className={`mt-4 flex items-center gap-3 ${centered ? 'justify-center' : ''}`}
         >
-          {/* Linea sinistra con curva */}
-          <svg width="80" height="12" viewBox="0 0 80 12" className="text-pietra">
-            <path 
-              d="M0 6 Q20 2, 40 6 Q60 10, 80 6" 
-              stroke="currentColor" 
-              strokeWidth="1" 
-              fill="none"
-            />
-          </svg>
-          
-          {/* Diamante centrale */}
-          <div className="relative">
-            <div className="w-3 h-3 bg-terracotta rotate-45" />
-            <div className="absolute inset-0 w-3 h-3 border border-terracotta rotate-45 scale-150 opacity-50" />
-          </div>
-          
-          {/* Linea destra con curva */}
-          <svg width="80" height="12" viewBox="0 0 80 12" className="text-pietra">
-            <path 
-              d="M0 6 Q20 10, 40 6 Q60 2, 80 6" 
-              stroke="currentColor" 
-              strokeWidth="1" 
-              fill="none"
-            />
-          </svg>
+          {/* Linea con punto centrale - stile rustico semplice */}
+          <div className="h-px w-12 bg-pietra" />
+          <div className="w-2 h-2 rounded-full bg-terracotta/70" />
+          <div className="h-px w-12 bg-pietra" />
         </motion.div>
       )}
 
       {subtitle && (
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className={`mt-6 text-lg md:text-xl text-ferro/70 leading-relaxed font-body italic ${
-            centered ? 'max-w-2xl mx-auto' : 'max-w-xl'
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className={`mt-5 text-lg text-ferro/70 leading-relaxed font-body ${
+            centered ? 'max-w-xl mx-auto' : 'max-w-lg'
           }`}
         >
           {subtitle}
