@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getDictionary } from '@/i18n/getDictionary';
-import type { Locale } from '@/i18n/config';
+import { locales, type Locale } from '@/i18n/config';
 import Hero from '@/components/ui/Hero';
 import SectionTitle from '@/components/ui/SectionTitle';
 import SuiteCard from '@/components/ui/SuiteCard';
@@ -11,9 +11,10 @@ import { galleryImages } from '@/data/gallery';
 export default async function HomePage({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
+  const { locale: localeParam } = await params;
+  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
   const dictionary = await getDictionary(locale);
 
   const experienceTypes = ['truffle', 'wine', 'nature', 'relax'] as const;

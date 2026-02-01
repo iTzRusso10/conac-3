@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getDictionary } from '@/i18n/getDictionary';
-import type { Locale } from '@/i18n/config';
+import { locales, type Locale } from '@/i18n/config';
 import Hero from '@/components/ui/Hero';
 import EventForm from '@/components/ui/EventForm';
 import { Heart, Users, Sunset, Utensils, Check } from 'lucide-react';
@@ -8,9 +8,10 @@ import { Heart, Users, Sunset, Utensils, Check } from 'lucide-react';
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const { locale } = await params;
+  const { locale: localeParam } = await params;
+  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
 
   return {
     title: locale === 'it' ? 'Ricevimenti & Eventi' : 'Events & Celebrations',
@@ -24,9 +25,10 @@ export async function generateMetadata({
 export default async function EventsPage({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
+  const { locale: localeParam } = await params;
+  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
   const dictionary = await getDictionary(locale);
 
   const weddingHighlights = Object.values(dictionary.events.wedding.highlights);

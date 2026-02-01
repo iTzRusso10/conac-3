@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getDictionary } from '@/i18n/getDictionary';
-import type { Locale } from '@/i18n/config';
+import { locales, type Locale } from '@/i18n/config';
 import { suites, getSuiteById } from '@/data/suites';
 import {
   Mountain,
@@ -29,9 +29,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: Locale; slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { locale, slug } = await params;
+  const { locale: localeParam, slug } = await params;
+  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
   const dictionary = await getDictionary(locale);
   const suite = getSuiteById(slug);
 
@@ -48,9 +49,10 @@ export async function generateMetadata({
 export default async function SuiteDetailPage({
   params,
 }: {
-  params: Promise<{ locale: Locale; slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { locale, slug } = await params;
+  const { locale: localeParam, slug } = await params;
+  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
   const dictionary = await getDictionary(locale);
   const suite = getSuiteById(slug);
 
