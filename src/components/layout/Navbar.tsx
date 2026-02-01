@@ -8,6 +8,7 @@ import { Menu, X, Globe } from "lucide-react";
 import type { Dictionary } from "@/i18n/getDictionary";
 import type { Locale } from "@/i18n/config";
 import { locales, localeNames } from "@/i18n/config";
+import Image from "next/image";
 
 interface NavbarProps {
   dictionary: Dictionary;
@@ -67,8 +68,13 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
                   : "text-bianco-latte hover:text-crema"
               }`}
             >
-              <span className="font-medium">Relais Conac</span>
-              <span className="text-sm ml-1 opacity-70">1888</span>
+              <Image
+                src="/images/structure_only.png"
+                alt="Relais Conac"
+                width={120}
+                height={50}
+                className="w-28 h-[60px]"
+              />
             </Link>
 
             {/* Desktop Navigation */}

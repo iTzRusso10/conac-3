@@ -14,6 +14,7 @@ interface HeroProps {
   overlay?: boolean;
   height?: 'full' | 'large' | 'medium';
   align?: 'center' | 'left';
+  showBrandName?: boolean;
 }
 
 export default function Hero({
@@ -24,6 +25,7 @@ export default function Hero({
   overlay = true,
   height = 'large',
   align = 'center',
+  showBrandName = false,
 }: HeroProps) {
   const heightClasses = {
     full: 'min-h-screen',
@@ -62,36 +64,82 @@ export default function Hero({
             align === 'center' ? 'mx-auto' : ''
           }`}
         >
-          <motion.h1
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className={`font-serif text-4xl md:text-5xl lg:text-6xl leading-tight ${
-              image ? 'text-bianco-latte' : 'text-ferro'
-            }`}
-          >
-            {headline}
-          </motion.h1>
+          {showBrandName ? (
+            <>
+              {/* Brand Name con font script */}
+              <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                className="text-center"
+              >
+                <h1 className="font-script text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-bianco-latte leading-none">
+                  Relais Conac
+                </h1>
+                <div className="mt-2 md:mt-4">
+                  <span className="text-oro text-2xl md:text-3xl lg:text-4xl tracking-[0.3em] font-serif">
+                    — 1888 —
+                  </span>
+                </div>
+              </motion.div>
 
-          {subhead && (
-            <motion.p
-              initial={{ opacity: 0, y: 25 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              className={`mt-5 text-lg md:text-xl font-body leading-relaxed max-w-xl ${
-                image ? 'text-crema/90' : 'text-ferro/75'
-              }`}
-            >
-              {subhead}
-            </motion.p>
+              {/* Tagline come sottotitolo */}
+              {headline && (
+                <motion.p
+                  initial={{ opacity: 0, y: 25 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.4 }}
+                  className="mt-8 text-lg md:text-xl lg:text-2xl font-body italic text-crema/90 max-w-xl text-center"
+                >
+                  {headline}
+                </motion.p>
+              )}
+
+              {subhead && (
+                <motion.p
+                  initial={{ opacity: 0, y: 25 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.5 }}
+                  className="mt-4 text-base md:text-lg font-body text-crema/75 max-w-lg text-center"
+                >
+                  {subhead}
+                </motion.p>
+              )}
+            </>
+          ) : (
+            <>
+              <motion.h1
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className={`font-serif text-4xl md:text-5xl lg:text-6xl leading-tight ${
+                  image ? 'text-bianco-latte' : 'text-ferro'
+                }`}
+              >
+                {headline}
+              </motion.h1>
+
+              {subhead && (
+                <motion.p
+                  initial={{ opacity: 0, y: 25 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.3 }}
+                  className={`mt-5 text-lg md:text-xl font-body leading-relaxed max-w-xl ${
+                    image ? 'text-crema/90' : 'text-ferro/75'
+                  }`}
+                >
+                  {subhead}
+                </motion.p>
+              )}
+            </>
           )}
 
           {cta && (
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.5 }}
-              className="mt-8"
+              transition={{ duration: 0.7, delay: showBrandName ? 0.7 : 0.5 }}
+              className="mt-10"
             >
               <Link
                 href={cta.href}

@@ -47,6 +47,7 @@ export default async function HomePage({
         }}
         image="/images/hero-home.jpg"
         height="full"
+        showBrandName={true}
       />
 
       {/* Intro - La Dolce Vita */}
