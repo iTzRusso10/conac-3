@@ -1,0 +1,391 @@
+{
+  "metadata": {
+    "siteName": "[Nome Casolare]",
+    "tagline": "Dove il tempo ha il sapore del vino"
+  },
+  "nav": {
+    "home": "Home",
+    "story": "La Nostra Storia",
+    "dolcevita": "La Dolce Vita",
+    "suites": "Le Suite",
+    "gallery": "Galleria",
+    "events": "Ricevimenti",
+    "experiences": "Esperienze",
+    "contact": "Contatti",
+    "book": "Prenota"
+  },
+  "cta": {
+    "checkAvailability": "Verifica disponibilità",
+    "discoverSuites": "Scopri le suite",
+    "readManifesto": "Il nostro manifesto",
+    "exploreGallery": "Esplora la galleria",
+    "discoverExperiences": "Scopri le esperienze",
+    "requestQuote": "Richiedi preventivo",
+    "getInTouch": "Scrivici",
+    "bookExperience": "Prenota un'esperienza",
+    "sendRequest": "Invia richiesta",
+    "exploreSuite": "Scopri questa suite",
+    "otherSuites": "Scopri le altre suite"
+  },
+  "home": {
+    "hero": {
+      "headline": "Dove il tempo ha il sapore del vino",
+      "subhead": "Un casolare storico nelle colline del Piemonte. Sei suite con anima, una piscina che guarda la valle, e il silenzio del bosco come benvenuto."
+    },
+    "intro": {
+      "title": "La Dolce Vita",
+      "p1": "Non è un tema, è un modo di vivere.",
+      "p2": "È la pietra calda sotto i piedi al mattino. Il profumo del bosco che entra dalla finestra. Un calice di Barolo mentre il sole scende dietro le colline.",
+      "p3": "A [Nome Casolare] coltiviamo l'arte della lentezza. Ogni dettaglio — dalle lanterne in ferro battuto ai fiori raccolti nel prato — racconta una cura artigianale che si è persa altrove.",
+      "p4": "Qui non si \"soggiorna\". Si vive, per qualche giorno, come si dovrebbe vivere sempre."
+    },
+    "suites": {
+      "title": "Le nostre suite",
+      "intro": "Sei stanze, sei anime. Ogni suite porta il nome di un elemento del paesaggio piemontese e ne custodisce lo spirito."
+    },
+    "experiences": {
+      "title": "Esperienze",
+      "intro": "Il Piemonte non si visita. Si vive con tutti i sensi.",
+      "truffle": {
+        "title": "Caccia al tartufo",
+        "desc": "All'alba, con il tartufaio e il suo cane, nei boschi dove crescono tesori nascosti."
+      },
+      "wine": {
+        "title": "Degustazioni private",
+        "desc": "Barolo, Barbaresco, Nebbiolo. In cantina o a bordo piscina, con chi il vino lo crea."
+      },
+      "nature": {
+        "title": "Passeggiate e silenzio",
+        "desc": "Sentieri tra vigne e noccioleti. Nebbie mattutine. Il suono dei propri passi."
+      },
+      "relax": {
+        "title": "Piscina & quiete",
+        "desc": "Bordi in pietra, acqua che riflette il cielo, un libro, nient'altro."
+      }
+    },
+    "gallery": {
+      "title": "Scorci",
+      "intro": "Lanterne al crepuscolo. Pietra scaldata dal sole. Calici che aspettano. Ogni angolo racconta."
+    },
+    "final": {
+      "title": "Pronto a rallentare?",
+      "text": "Verifica la disponibilità per le date del tuo soggiorno."
+    }
+  },
+  "story": {
+    "hero": {
+      "headline": "Una storia che profuma di legna e di vino",
+      "subhead": "Mura che hanno visto generazioni. Mani che le hanno riportate alla vita."
+    },
+    "roots": {
+      "title": "Le radici",
+      "p1": "[Nome Casolare] affonda le sue pietre nella storia contadina del Piemonte. Costruito nel XIX secolo, ha ospitato famiglie che lavoravano la terra, curavano i vigneti, raccoglievano nocciole e tartufi.",
+      "p2": "Per decenni, queste mura hanno custodito il ritmo lento delle stagioni: vendemmie, inverni al camino, primavere tra i fiori del prato.",
+      "p3": "Poi, come accade a molte case di campagna, il silenzio. L'abbandono."
+    },
+    "rebirth": {
+      "title": "Riportarlo alla luce",
+      "p1": "Nel 2018, [Nome famiglia] ha scoperto questo casolare nascosto tra i boschi. Era un rudere. Era perfetto.",
+      "p2": "Iniziò un restauro che è durato quattro anni: pietra per pietra, trave per trave, rispettando ogni crepa e ogni imperfezione. Artigiani locali hanno forgiato le lanterne. Falegnami hanno recuperato i legni originali. Nulla è stato fabbricato in serie.",
+      "p3": "L'obiettivo non era creare un hotel. Era riportare alla vita un luogo, e condividerlo."
+    },
+    "today": {
+      "title": "Quello che siamo",
+      "p1": "Oggi [Nome Casolare] è un rifugio per chi cerca l'autentico.",
+      "p2": "Sei suite, ognuna con un'anima diversa. Una piscina con bordi in pietra che guarda la valle. Una cantina dove il Barolo riposa. Un bosco dove passeggiare, raccogliere tartufi, perdersi.",
+      "p3": "Non siamo un resort. Non siamo un agriturismo qualsiasi. Siamo un progetto di vita che vogliamo condividere con chi sa apprezzare le cose fatte bene, fatte lentamente, fatte con amore."
+    }
+  },
+  "dolcevita": {
+    "hero": {
+      "headline": "La Dolce Vita",
+      "subhead": "Non è nostalgia di un tempo passato. È la scelta di vivere il presente con più cura."
+    },
+    "manifesto": {
+      "title": "Il nostro manifesto",
+      "intro": "La Dolce Vita non è un film. Non è un poster vintage. Non è un cliché da cartolina.",
+      "intro2": "È il modo in cui scegliamo di fare le cose qui.",
+      "time": {
+        "title": "È il tempo che dedichiamo.",
+        "text": "Al caffè del mattino, bevuto guardando la nebbia che sale dalla valle. Alla cena preparata con ingredienti raccolti oggi. Alla conversazione che si allunga oltre il dessert."
+      },
+      "details": {
+        "title": "È l'attenzione ai dettagli.",
+        "text": "Alle lanterne accese ogni sera all'imbrunire. Ai fiori freschi in ogni stanza. Alla bottiglia di vino locale che vi aspetta in camera."
+      },
+      "pleasure": {
+        "title": "È il piacere che non richiede giustificazioni.",
+        "text": "Un pomeriggio in piscina senza programmi. Una passeggiata nel bosco senza destinazione. Un secondo calice di Barolo perché sì."
+      },
+      "authenticity": {
+        "title": "È l'autenticità che non si esibisce.",
+        "text": "Pietre vere, non ricostruite. Mobili trovati nei mercati, non cataloghi. Storie locali, non marketing."
+      },
+      "conclusion": "A [Nome Casolare], La Dolce Vita non è uno slogan. È quello che vedrete, sentirete, assaggerete ogni giorno."
+    },
+    "senses": {
+      "title": "I cinque sensi del casolare",
+      "sight": {
+        "name": "Vista",
+        "text": "La linea morbida delle colline. La luce dorata del tramonto sulle pietre. Le lanterne che si accendono una a una."
+      },
+      "sound": {
+        "name": "Udito",
+        "text": "Il silenzio, interrotto solo dagli uccelli. Il crepitio del fuoco. I passi sulla ghiaia del vialetto."
+      },
+      "smell": {
+        "name": "Olfatto",
+        "text": "Il bosco dopo la pioggia. Il profumo del tartufo appena trovato. La legna che brucia nel camino."
+      },
+      "taste": {
+        "name": "Gusto",
+        "text": "Un Barolo che racconta la sua vigna. Il miele del vicino. Il pane caldo della mattina."
+      },
+      "touch": {
+        "name": "Tatto",
+        "text": "La pietra tiepida al sole. I lini freschi del letto. L'acqua della piscina sulla pelle."
+      }
+    }
+  },
+  "suites": {
+    "hero": {
+      "headline": "Sei stanze, sei anime",
+      "subhead": "Ogni suite porta il nome di un elemento del paesaggio piemontese. Ognuna ha una storia da raccontare."
+    },
+    "intro": "Scegliete la vostra. O lasciatevi consigliare: vi guideremo verso l'anima che fa per voi.",
+    "details": {
+      "size": "Superficie",
+      "guests": "Ospiti",
+      "bed": "Letto",
+      "features": "Caratteristiche",
+      "highlight": "Highlight speciale"
+    },
+    "amenities": {
+      "view": "Vista panoramica sulla valle",
+      "bathroom": "Bagno privato con doccia a pioggia",
+      "products": "Prodotti da bagno artigianali locali",
+      "heating": "Riscaldamento autonomo",
+      "wifi": "Wi-Fi",
+      "kettle": "Bollitore con selezione tè e caffè",
+      "robes": "Accappatoi e pantofole",
+      "minibar": "Minibar con prodotti locali"
+    },
+    "list": {
+      "bruma": {
+        "name": "Bruma",
+        "tagline": "La nebbia che accarezza le colline all'alba",
+        "soul": "Intimità, silenzio, contemplazione",
+        "description": "Bruma è il nome che diamo alla nebbia leggera che, nelle mattine d'autunno, avvolge la valle come un velo di seta. Questa suite ne cattura l'essenza. Tonalità di grigio perla si fondono con il crema caldo dei tessuti naturali. La luce entra morbida, filtrata dalle tende di lino. Dal letto, la vista si apre sulla valle — spesso velata, appunto, dalla bruma mattutina. È la suite per chi cerca intimità e contemplazione. Per chi ama i risvegli lenti, il caffè a letto, il silenzio.",
+        "highlight": "Finestra panoramica con seduta per contemplare l'alba"
+      },
+      "vendemmia": {
+        "name": "Vendemmia",
+        "tagline": "Il profumo dell'uva matura e il calore della terra",
+        "soul": "Passione, tradizione, calore",
+        "description": "Vendemmia racconta la stagione più attesa nelle Langhe: quando le vigne si tingono d'oro e rosso, e l'aria si riempie del profumo dell'uva matura. In questa suite, legni caldi e rossi profondi evocano la cantina, la tradizione, il lavoro paziente dei vignaioli. È la suite per chi cerca calore e carattere.",
+        "highlight": "Dettagli in legno antico recuperato e toni bordeaux"
+      },
+      "lanterna": {
+        "name": "Lanterna",
+        "tagline": "La luce dorata che guida verso casa",
+        "soul": "Accoglienza, romanticismo, sera",
+        "description": "Ogni sera, all'imbrunire, accendiamo le lanterne lungo il vialetto. Lanterna cattura quella luce dorata, quel momento sospeso tra giorno e notte. È la suite più luminosa, con tocchi di ferro battuto e riflessi ambrati. Per chi cerca romanticismo e quel senso di tornare a casa.",
+        "highlight": "Lanterne originali in ferro battuto e balcone privato"
+      },
+      "tartufo": {
+        "name": "Tartufo",
+        "tagline": "Il tesoro nascosto del sottobosco",
+        "soul": "Mistero, autenticità, scoperta",
+        "description": "Il tartufo non si coltiva, si cerca. Nasce nell'ombra del bosco, sotto terra, prezioso proprio perché raro. Questa suite evoca quel mistero: tonalità terrose, texture naturali, un'atmosfera raccolta e autentica. Per chi ama le cose rare e le scoperte inaspettate.",
+        "highlight": "Materiali naturali e connessione diretta con il giardino"
+      },
+      "vigna": {
+        "name": "Vigna",
+        "tagline": "Filari ordinati sotto il sole",
+        "soul": "Serenità, ordine, natura coltivata",
+        "description": "I filari della vigna sono un paesaggio dell'anima: ordine nella natura, pazienza che diventa bellezza. Verde, crema e tocchi dorati creano una suite ariosa e serena, che guarda direttamente sui vigneti. Per chi cerca pace e respiro.",
+        "highlight": "Vista diretta sui vigneti e spazi particolarmente luminosi"
+      },
+      "camino": {
+        "name": "Camino",
+        "tagline": "Il crepitio della legna, il calore che avvolge",
+        "soul": "Calore, rifugio, inverno",
+        "description": "Nelle sere d'inverno, non c'è nulla come il fuoco. Camino è la suite più intima: pietra a vista, luce calda, un vero camino funzionante. È il rifugio perfetto quando fuori fa freddo e dentro si sta bene. Per chi cerca il calore più autentico.",
+        "highlight": "Camino funzionante e pareti in pietra originale"
+      }
+    }
+  },
+  "gallery": {
+    "hero": {
+      "headline": "Scorci",
+      "subhead": "Ogni angolo racconta. Ogni luce ha il suo momento. Queste sono le nostre immagini — ma la vera magia è da vivere."
+    },
+    "filters": {
+      "all": "Tutto",
+      "exteriors": "Esterni",
+      "interiors": "Interni",
+      "suites": "Suite",
+      "pool": "Piscina",
+      "experiences": "Esperienze",
+      "details": "Dettagli"
+    },
+    "cta": {
+      "title": "Le immagini sono solo l'inizio"
+    }
+  },
+  "events": {
+    "hero": {
+      "headline": "Momenti che restano",
+      "subhead": "Matrimoni intimi. Cene sotto le stelle. Aperitivi a bordo piscina. Il vostro evento, nella cornice che merita."
+    },
+    "wedding": {
+      "title": "Matrimoni intimi",
+      "p1": "Non un matrimonio qualsiasi. Il vostro matrimonio.",
+      "p2": "[Nome Casolare] ospita cerimonie e ricevimenti per piccoli numeri — fino a 50 invitati — in un'atmosfera che non troverete altrove.",
+      "p3": "La cerimonia nel prato con vista sulle colline. L'aperitivo a bordo piscina mentre il sole scende. La cena nella corte interna, tra lanterne e candele. La festa che continua al camino.",
+      "p4": "Ogni dettaglio è curato con voi: dal menu alle composizioni floreali, dalla musica all'illuminazione.",
+      "highlights": {
+        "exclusive": "Uso esclusivo della proprietà",
+        "ceremony": "Cerimonia all'aperto o nella corte",
+        "menu": "Menu personalizzato con prodotti locali",
+        "stay": "Pernottamento per gli sposi e gli ospiti",
+        "vendors": "Coordinamento con fornitori selezionati"
+      }
+    },
+    "party": {
+      "title": "Feste private",
+      "p1": "Compleanni speciali. Anniversari. Reunion familiari. Ogni occasione diventa memorabile quando il luogo è quello giusto.",
+      "p2": "Affittate l'intero casolare per un weekend con amici o famiglia. Organizziamo cene a tema, degustazioni, esperienze personalizzate."
+    },
+    "aperitivo": {
+      "title": "Aperitivo al tramonto",
+      "p1": "Il sole che scende dietro le colline. Calici di Langhe DOC. Stuzzichini preparati con ingredienti del territorio. Musica soft, lanterne che si accendono.",
+      "p2": "L'aperitivo perfetto esiste. È qui."
+    },
+    "dinner": {
+      "title": "Cene romantiche",
+      "p1": "Un tavolo per due nel posto più bello della proprietà — che sia la terrazza con vista, il bordo piscina, o accanto al camino d'inverno.",
+      "p2": "Menu degustazione con vini abbinati. Nessun altro ospite. Solo voi."
+    },
+    "form": {
+      "title": "Raccontateci il vostro evento",
+      "eventType": "Tipo di evento",
+      "eventTypes": {
+        "wedding": "Matrimonio",
+        "party": "Festa privata",
+        "dinner": "Cena romantica",
+        "aperitivo": "Aperitivo",
+        "other": "Altro"
+      },
+      "date": "Data preferita",
+      "guests": "Numero indicativo ospiti",
+      "name": "Nome e cognome",
+      "email": "Email",
+      "phone": "Telefono",
+      "message": "Raccontateci di più",
+      "note": "Vi risponderemo entro 48 ore con una proposta personalizzata."
+    }
+  },
+  "contact": {
+    "hero": {
+      "headline": "Parliamoci",
+      "subhead": "Per informazioni, disponibilità o semplicemente per saperne di più — siamo qui."
+    },
+    "form": {
+      "title": "Verifica disponibilità",
+      "arrivalDate": "Data arrivo",
+      "departureDate": "Data partenza",
+      "adults": "Numero adulti",
+      "children": "Numero bambini (0-12 anni)",
+      "suite": "Suite preferita",
+      "noPreference": "Nessuna preferenza",
+      "name": "Nome e cognome",
+      "email": "Email",
+      "phone": "Telefono",
+      "notes": "Note o richieste particolari",
+      "note": "Vi confermeremo disponibilità e tariffe entro 24 ore."
+    },
+    "info": {
+      "title": "Informazioni",
+      "address": "Indirizzo",
+      "phone": "Telefono",
+      "email": "Email",
+      "howToReach": "Come arrivare",
+      "fromTurin": "Da Torino",
+      "fromMilan": "Da Milano",
+      "airport": "Aeroporto più vicino",
+      "train": "Stazione ferroviaria",
+      "parking": "Parcheggio",
+      "parkingNote": "Gratuito all'interno della proprietà"
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "q1": "Qual è l'orario di check-in e check-out?",
+      "a1": "Check-in dalle 15:00, check-out entro le 11:00. Orari flessibili su richiesta.",
+      "q2": "Accettate animali?",
+      "a2": "Sì, su richiesta e per alcune suite. Contattateci per dettagli.",
+      "q3": "La piscina è accessibile tutto l'anno?",
+      "a3": "La piscina è aperta da maggio a settembre. Riscaldata da giugno ad agosto.",
+      "q4": "È possibile organizzare eventi privati?",
+      "a4": "Sì, ospitiamo matrimoni intimi, feste private e cene esclusive. Visitate la pagina Ricevimenti.",
+      "q5": "C'è un soggiorno minimo?",
+      "a5": "Nei weekend e in alta stagione richiediamo un minimo di 2 notti."
+    }
+  },
+  "experiences": {
+    "hero": {
+      "headline": "Vivere il Piemonte",
+      "subhead": "Il territorio non si visita. Si annusa, si assaggia, si cammina. Queste sono le esperienze che vi aspettano."
+    },
+    "truffle": {
+      "title": "Caccia al tartufo",
+      "p1": "All'alba, quando il bosco è ancora umido di rugiada, partiamo con il nostro tartufaio e il suo cane.",
+      "p2": "Camminiamo tra querce e noccioli, in silenzio, aspettando il momento in cui il cane si ferma e inizia a scavare. E poi, eccolo: il tartufo bianco o nero, tesoro nascosto della terra piemontese.",
+      "p3": "Al ritorno, una degustazione con uova al tegamino e tajarin al tartufo.",
+      "duration": "Durata: circa 3 ore",
+      "includes": "Incluso: passeggiata, degustazione, calice di vino",
+      "season": "Periodo: ottobre-gennaio (tartufo bianco), tutto l'anno (tartufo nero)"
+    },
+    "wine": {
+      "title": "Degustazioni private",
+      "p1": "Barolo, Barbaresco, Nebbiolo, Arneis. I vini di queste colline raccontano la terra da cui nascono.",
+      "p2": "Organizziamo degustazioni nella nostra cantina o a bordo piscina al tramonto, guidate da produttori locali che vi sveleranno i segreti delle loro vigne.",
+      "p3": "Non una lezione, ma una conversazione. Non un assaggio, ma un viaggio.",
+      "wines": "4-6 vini selezionati",
+      "pairing": "Abbinamento con formaggi e salumi locali",
+      "visits": "Possibilità di visita alle cantine vicine"
+    },
+    "nature": {
+      "title": "Passeggiate nella natura",
+      "p1": "I sentieri partono direttamente dal casolare.",
+      "p2": "Potete camminare per ore tra vigne, noccioleti e boschi, incontrando solo silenzio e qualche capriolo. Nebbie mattutine, tramonti dorati, il profumo della terra dopo la pioggia.",
+      "p3": "Su richiesta, organizziamo escursioni guidate con esperti del territorio.",
+      "trail1": "Anello del bosco: 1 ora, facile",
+      "trail2": "Sentiero delle vigne: 2 ore, medio",
+      "trail3": "Trekking panoramico: mezza giornata"
+    },
+    "pool": {
+      "title": "Piscina & quiete",
+      "p1": "I bordi sono in pietra locale. L'acqua riflette il cielo delle Langhe. Intorno, solo verde e silenzio.",
+      "p2": "La piscina del casolare non è un'attrazione. È un luogo dove non fare nulla, nel senso più pieno e prezioso del termine.",
+      "p3": "Lettini, asciugamani, una caraffa di acqua aromatizzata. Il resto lo porta il tempo che avete deciso di prendervi."
+    }
+  },
+  "footer": {
+    "tagline": "Dove il tempo ha il sapore del vino",
+    "rights": "Tutti i diritti riservati",
+    "vat": "P.IVA",
+    "privacy": "Privacy Policy",
+    "newsletter": {
+      "title": "Storie dal casolare",
+      "desc": "Iscriviti per ricevere aggiornamenti e racconti dalle Langhe.",
+      "placeholder": "La tua email",
+      "button": "Iscriviti"
+    }
+  },
+  "form": {
+    "success": "Grazie. Vi risponderemo entro 24 ore.",
+    "error": "Si è verificato un errore. Riprova o contattaci direttamente.",
+    "required": "Questo campo è obbligatorio"
+  }
+}
