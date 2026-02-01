@@ -170,13 +170,13 @@ export default async function HomePage({
           </Link>
         </div>
       </SectionWithLogo>
+      <LogoDivider />
 
       {/* Separatore con logo */}
-      <LogoDivider />
 
       {/* Experiences */}
       <SectionWithLogo
-        className="bg-crema"
+        className="bg-crema !pt-0"
         logoPosition="center"
         logoOpacity={0.05}
         logoSize="lg"
