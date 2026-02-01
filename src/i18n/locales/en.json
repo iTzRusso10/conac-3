@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "siteName": "[Nome Casolare]",
+    "siteName": "Relais Conac",
     "tagline": "Where time tastes like wine"
   },
   "nav": {
@@ -36,7 +36,7 @@
       "title": "La Dolce Vita",
       "p1": "It's not a theme. It's a way of living.",
       "p2": "It's the warm stone beneath your feet in the morning. The scent of the forest drifting through an open window. A glass of Barolo as the sun sinks behind the hills.",
-      "p3": "At [Nome Casolare], we cultivate the art of slowness. Every detail — from the wrought-iron lanterns to the wildflowers gathered from the meadow — tells a story of artisan care that has been lost elsewhere.",
+      "p3": "At Relais Conac, we cultivate the art of slowness. Every detail — from the wrought-iron lanterns to the wildflowers gathered from the meadow — tells a story of artisan care that has been lost elsewhere.",
       "p4": "Here, you don't just \"stay.\" You live, for a few days, as one always should."
     },
     "suites": {
@@ -79,7 +79,7 @@
     },
     "roots": {
       "title": "The roots",
-      "p1": "[Nome Casolare] sinks its stones into Piedmont's farming history. Built in the 19th century, it housed families who worked the land, tended vineyards, gathered hazelnuts and truffles.",
+      "p1": "Relais Conac sinks its stones into Piedmont's farming history. Built in the 19th century, it housed families who worked the land, tended vineyards, gathered hazelnuts and truffles.",
       "p2": "For decades, these walls kept the slow rhythm of the seasons: harvests, winters by the fireplace, springs among meadow flowers.",
       "p3": "Then, as happens to many country houses, silence. Abandonment."
     },
@@ -91,7 +91,7 @@
     },
     "today": {
       "title": "What we are",
-      "p1": "Today, [Nome Casolare] is a refuge for those seeking the authentic.",
+      "p1": "Today, Relais Conac is a refuge for those seeking the authentic.",
       "p2": "Six suites, each with a different soul. A pool with stone edges overlooking the valley. A cellar where Barolo rests. A forest for walking, truffle hunting, getting lost.",
       "p3": "We are not a resort. We are not just another agriturismo. We are a life project we want to share with those who appreciate things done well, done slowly, done with love."
     }
@@ -121,7 +121,7 @@
         "title": "It's authenticity that doesn't perform.",
         "text": "Real stones, not reconstructed. Furniture found in markets, not catalogs. Local stories, not marketing."
       },
-      "conclusion": "At [Nome Casolare], La Dolce Vita is not a slogan. It's what you'll see, feel, and taste every day."
+      "conclusion": "At Relais Conac, La Dolce Vita is not a slogan. It's what you'll see, feel, and taste every day."
     },
     "senses": {
       "title": "The five senses of the farmhouse",
@@ -241,7 +241,7 @@
     "wedding": {
       "title": "Intimate weddings",
       "p1": "Not just any wedding. Your wedding.",
-      "p2": "[Nome Casolare] hosts ceremonies and receptions for small numbers — up to 50 guests — in an atmosphere you won't find elsewhere.",
+      "p2": "Relais Conac hosts ceremonies and receptions for small numbers — up to 50 guests — in an atmosphere you won't find elsewhere.",
       "p3": "The ceremony in the meadow overlooking the hills. Aperitivo by the pool as the sun sets. Dinner in the inner courtyard, among lanterns and candles. The celebration continuing by the fireplace.",
       "p4": "Every detail is crafted with you: from the menu to floral arrangements, from music to lighting.",
       "highlights": {

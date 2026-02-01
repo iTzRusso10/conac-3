@@ -67,7 +67,8 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
                   : "text-bianco-latte hover:text-crema"
               }`}
             >
-              [Nome Casolare]
+              <span className="font-medium">Relais Conac</span>
+              <span className="text-sm ml-1 opacity-70">1888</span>
             </Link>
 
             {/* Desktop Navigation */}

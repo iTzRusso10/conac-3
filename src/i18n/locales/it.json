@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "siteName": "[Nome Casolare]",
+    "siteName": "Relais Conac",
     "tagline": "Dove il tempo ha il sapore del vino"
   },
   "nav": {
@@ -36,7 +36,7 @@
       "title": "La Dolce Vita",
       "p1": "Non è un tema, è un modo di vivere.",
       "p2": "È la pietra calda sotto i piedi al mattino. Il profumo del bosco che entra dalla finestra. Un calice di Barolo mentre il sole scende dietro le colline.",
-      "p3": "A [Nome Casolare] coltiviamo l'arte della lentezza. Ogni dettaglio — dalle lanterne in ferro battuto ai fiori raccolti nel prato — racconta una cura artigianale che si è persa altrove.",
+      "p3": "A Relais Conac coltiviamo l'arte della lentezza. Ogni dettaglio — dalle lanterne in ferro battuto ai fiori raccolti nel prato — racconta una cura artigianale che si è persa altrove.",
       "p4": "Qui non si \"soggiorna\". Si vive, per qualche giorno, come si dovrebbe vivere sempre."
     },
     "suites": {
@@ -79,7 +79,7 @@
     },
     "roots": {
       "title": "Le radici",
-      "p1": "[Nome Casolare] affonda le sue pietre nella storia contadina del Piemonte. Costruito nel XIX secolo, ha ospitato famiglie che lavoravano la terra, curavano i vigneti, raccoglievano nocciole e tartufi.",
+      "p1": "Relais Conac affonda le sue pietre nella storia contadina del Piemonte. Costruito nel XIX secolo, ha ospitato famiglie che lavoravano la terra, curavano i vigneti, raccoglievano nocciole e tartufi.",
       "p2": "Per decenni, queste mura hanno custodito il ritmo lento delle stagioni: vendemmie, inverni al camino, primavere tra i fiori del prato.",
       "p3": "Poi, come accade a molte case di campagna, il silenzio. L'abbandono."
     },
@@ -91,7 +91,7 @@
     },
     "today": {
       "title": "Quello che siamo",
-      "p1": "Oggi [Nome Casolare] è un rifugio per chi cerca l'autentico.",
+      "p1": "Oggi Relais Conac è un rifugio per chi cerca l'autentico.",
       "p2": "Sei suite, ognuna con un'anima diversa. Una piscina con bordi in pietra che guarda la valle. Una cantina dove il Barolo riposa. Un bosco dove passeggiare, raccogliere tartufi, perdersi.",
       "p3": "Non siamo un resort. Non siamo un agriturismo qualsiasi. Siamo un progetto di vita che vogliamo condividere con chi sa apprezzare le cose fatte bene, fatte lentamente, fatte con amore."
     }
@@ -121,7 +121,7 @@
         "title": "È l'autenticità che non si esibisce.",
         "text": "Pietre vere, non ricostruite. Mobili trovati nei mercati, non cataloghi. Storie locali, non marketing."
       },
-      "conclusion": "A [Nome Casolare], La Dolce Vita non è uno slogan. È quello che vedrete, sentirete, assaggerete ogni giorno."
+      "conclusion": "A Relais Conac, La Dolce Vita non è uno slogan. È quello che vedrete, sentirete, assaggerete ogni giorno."
     },
     "senses": {
       "title": "I cinque sensi del casolare",
@@ -241,7 +241,7 @@
     "wedding": {
       "title": "Matrimoni intimi",
       "p1": "Non un matrimonio qualsiasi. Il vostro matrimonio.",
-      "p2": "[Nome Casolare] ospita cerimonie e ricevimenti per piccoli numeri — fino a 50 invitati — in un'atmosfera che non troverete altrove.",
+      "p2": "Relais Conac ospita cerimonie e ricevimenti per piccoli numeri — fino a 50 invitati — in un'atmosfera che non troverete altrove.",
       "p3": "La cerimonia nel prato con vista sulle colline. L'aperitivo a bordo piscina mentre il sole scende. La cena nella corte interna, tra lanterne e candele. La festa che continua al camino.",
       "p4": "Ogni dettaglio è curato con voi: dal menu alle composizioni floreali, dalla musica all'illuminazione.",
       "highlights": {

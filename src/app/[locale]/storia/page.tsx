@@ -1,8 +1,9 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getDictionary } from '@/i18n/getDictionary';
-import { locales, type Locale } from '@/i18n/config';
-import Hero from '@/components/ui/Hero';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { getDictionary } from "@/i18n/getDictionary";
+import { locales, type Locale } from "@/i18n/config";
+import Hero from "@/components/ui/Hero";
+import { SectionWithLogo } from "@/components/ui/LogoDecorations";
 
 export async function generateMetadata({
   params,
@@ -10,14 +11,16 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: localeParam } = await params;
-  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
+  const locale = (
+    locales.includes(localeParam as Locale) ? localeParam : "it"
+  ) as Locale;
 
   return {
-    title: locale === 'it' ? 'La Nostra Storia' : 'Our Story',
+    title: locale === "it" ? "La Nostra Storia" : "Our Story",
     description:
-      locale === 'it'
-        ? 'Scopri la storia del nostro casolare: dalle origini contadine alla rinascita come B&B di charme nelle Langhe piemontesi.'
-        : 'Discover our farmhouse story: from rural origins to rebirth as a boutique B&B in Piedmont Langhe.',
+      locale === "it"
+        ? "Scopri la storia del nostro casolare: dalle origini contadine alla rinascita come B&B di charme nelle Langhe piemontesi."
+        : "Discover our farmhouse story: from rural origins to rebirth as a boutique B&B in Piedmont Langhe.",
   };
 }
 
@@ -27,7 +30,9 @@ export default async function StoryPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: localeParam } = await params;
-  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
+  const locale = (
+    locales.includes(localeParam as Locale) ? localeParam : "it"
+  ) as Locale;
   const dictionary = await getDictionary(locale);
 
   return (
@@ -41,7 +46,12 @@ export default async function StoryPage({
       />
 
       {/* Le Radici */}
-      <section className="section bg-crema">
+      <SectionWithLogo
+        className="bg-crema"
+        logoPosition="center"
+        logoOpacity={0.05}
+        logoSize="xl"
+      >
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Image placeholder */}
@@ -59,15 +69,22 @@ export default async function StoryPage({
               <div className="space-y-4 text-ferro/80 leading-relaxed">
                 <p>{dictionary.story.roots.p1}</p>
                 <p>{dictionary.story.roots.p2}</p>
-                <p className="font-serif italic text-lg">{dictionary.story.roots.p3}</p>
+                <p className="font-serif italic text-lg">
+                  {dictionary.story.roots.p3}
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </SectionWithLogo>
 
       {/* Riportarlo alla luce */}
-      <section className="section bg-bianco-latte">
+      <SectionWithLogo
+        className="bg-bianco-latte"
+        logoPosition="center"
+        logoOpacity={0.05}
+        logoSize="xl"
+      >
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Text */}
@@ -90,10 +107,15 @@ export default async function StoryPage({
             </div>
           </div>
         </div>
-      </section>
+      </SectionWithLogo>
 
       {/* Quello che siamo */}
-      <section className="section bg-crema">
+      <SectionWithLogo
+        className="bg-crema"
+        logoPosition="center"
+        logoOpacity={0.05}
+        logoSize="xl"
+      >
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-ferro mb-8">
@@ -114,7 +136,7 @@ export default async function StoryPage({
             </div>
           </div>
         </div>
-      </section>
+      </SectionWithLogo>
     </>
   );
 }

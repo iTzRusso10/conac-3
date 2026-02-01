@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 import type { Dictionary } from '@/i18n/getDictionary';
 import type { Locale } from '@/i18n/config';
@@ -29,12 +30,19 @@ export default function Footer({ dictionary, locale }: FooterProps) {
       {/* Main Footer */}
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
+          {/* Brand con logo */}
           <div className="lg:col-span-1">
-            <Link href={`/${locale}`} className="font-serif text-2xl text-bianco-latte block mb-4">
-              [Nome Casolare]
+            <Link href={`/${locale}`} className="inline-block mb-4">
+              <div className="relative w-28 h-28 opacity-90">
+                <Image
+                  src="/images/logo-conac.png"
+                  alt="Relais Conac 1888"
+                  fill
+                  className="object-contain brightness-0 invert"
+                />
+              </div>
             </Link>
-            <p className="text-crema/70 font-serif italic text-lg mb-6">
+            <p className="text-crema/70 font-body italic text-base mb-6">
               {dictionary.footer.tagline}
             </p>
             <div className="flex gap-4">
@@ -67,7 +75,7 @@ export default function Footer({ dictionary, locale }: FooterProps) {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-crema/70 hover:text-terracotta transition-colors"
+                  className="text-crema/70 hover:text-terracotta transition-colors font-body text-sm"
                 >
                   {link.label}
                 </Link>
@@ -82,7 +90,7 @@ export default function Footer({ dictionary, locale }: FooterProps) {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-crema/70 hover:text-terracotta transition-colors"
+                  className="text-crema/70 hover:text-terracotta transition-colors font-body text-sm"
                 >
                   {link.label}
                 </Link>
@@ -95,28 +103,28 @@ export default function Footer({ dictionary, locale }: FooterProps) {
             <h4 className="font-serif text-lg text-bianco-latte mb-4">
               {dictionary.contact.info.title}
             </h4>
-            <div className="flex flex-col gap-3 text-crema/70">
+            <div className="flex flex-col gap-3 text-crema/70 font-body text-sm">
               <div className="flex items-start gap-3">
-                <MapPin size={18} className="mt-1 flex-shrink-0" />
+                <MapPin size={16} className="mt-1 flex-shrink-0" />
                 <span>
-                  [Via/Strada], [Numero]<br />
-                  [CAP] [Comune], Piemonte<br />
+                  Strada Provinciale, 12<br />
+                  12050 Monforte d'Alba, Piemonte<br />
                   Italia
                 </span>
               </div>
               <a
-                href="tel:+390000000000"
+                href="tel:+390173789000"
                 className="flex items-center gap-3 hover:text-terracotta transition-colors"
               >
-                <Phone size={18} />
-                <span>+39 000 000 0000</span>
+                <Phone size={16} />
+                <span>+39 0173 789 000</span>
               </a>
               <a
-                href="mailto:info@nomecasolare.it"
+                href="mailto:info@relaisconac.it"
                 className="flex items-center gap-3 hover:text-terracotta transition-colors"
               >
-                <Mail size={18} />
-                <span>info@nomecasolare.it</span>
+                <Mail size={16} />
+                <span>info@relaisconac.it</span>
               </a>
             </div>
           </div>
@@ -126,12 +134,12 @@ export default function Footer({ dictionary, locale }: FooterProps) {
       {/* Bottom Bar */}
       <div className="border-t border-crema/10">
         <div className="container py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-crema/50">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-crema/50 font-sans">
             <p>
-              © {currentYear} [Nome Casolare]. {dictionary.footer.rights}.
+              © {currentYear} Relais Conac 1888. {dictionary.footer.rights}.
             </p>
             <div className="flex items-center gap-6">
-              <span>{dictionary.footer.vat} [00000000000]</span>
+              <span>{dictionary.footer.vat} 01234567890</span>
               <Link
                 href={`/${locale}/privacy`}
                 className="hover:text-crema transition-colors"
