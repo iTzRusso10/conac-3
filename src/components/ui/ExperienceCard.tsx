@@ -18,10 +18,10 @@ const icons = {
 };
 
 const colors = {
-  truffle: 'bg-terracotta/10 text-terracotta',
-  wine: 'bg-verde-bosco/10 text-verde-bosco',
-  nature: 'bg-verde-bosco/10 text-verde-bosco',
-  relax: 'bg-pietra/30 text-ferro',
+  truffle: { bg: 'bg-terracotta/10', text: 'text-terracotta', border: 'border-terracotta' },
+  wine: { bg: 'bg-verde-bosco/10', text: 'text-verde-bosco', border: 'border-verde-bosco' },
+  nature: { bg: 'bg-verde-bosco/10', text: 'text-verde-bosco', border: 'border-verde-bosco' },
+  relax: { bg: 'bg-pietra/30', text: 'text-ferro', border: 'border-pietra-dark' },
 };
 
 export default function ExperienceCard({
@@ -31,6 +31,7 @@ export default function ExperienceCard({
   index = 0,
 }: ExperienceCardProps) {
   const Icon = icons[type];
+  const colorSet = colors[type];
 
   return (
     <motion.div
@@ -38,22 +39,35 @@ export default function ExperienceCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-30px' }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group p-6 bg-bianco-latte rounded-sm border border-pietra/30 hover:border-verde-bosco/30 transition-all duration-500 hover:shadow-lg"
+      className="group text-center"
     >
-      {/* Icon */}
-      <div
-        className={`w-14 h-14 rounded-full ${colors[type]} flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110`}
-      >
-        <Icon size={24} />
+      {/* Icon con cornice circolare vintage */}
+      <div className="relative inline-block mb-6">
+        {/* Cerchio esterno decorativo */}
+        <div className={`absolute -inset-2 rounded-full border ${colorSet.border} opacity-30 group-hover:opacity-60 transition-opacity`} />
+        
+        {/* Cerchio principale */}
+        <div
+          className={`w-20 h-20 rounded-full ${colorSet.bg} ${colorSet.text} flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg`}
+        >
+          <Icon size={32} strokeWidth={1.5} />
+        </div>
+
+        {/* Ornamento */}
+        <div className={`absolute -bottom-1 left-1/2 -translate-x-1/2 text-sm ${colorSet.text}`}>
+          ✦
+        </div>
       </div>
 
       {/* Title */}
-      <h3 className="font-serif text-xl text-ferro mb-3 group-hover:text-verde-bosco transition-colors">
+      <h3 className="font-serif text-xl md:text-2xl text-ferro mb-4 group-hover:text-verde-bosco transition-colors">
         {title}
       </h3>
 
       {/* Description */}
-      <p className="text-ferro/70 leading-relaxed">{description}</p>
+      <p className="font-body text-ferro/70 leading-relaxed italic">
+        {description}
+      </p>
     </motion.div>
   );
 }

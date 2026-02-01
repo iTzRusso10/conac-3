@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import type { Suite } from '@/data/suites';
 import type { Locale } from '@/i18n/config';
@@ -28,55 +27,71 @@ export default function SuiteCard({
 }: SuiteCardProps) {
   return (
     <motion.article
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      transition={{ duration: 0.7, delay: index * 0.15 }}
       className="group"
     >
       <Link href={`/${locale}/suite/${suite.slug}`} className="block">
-        {/* Image Container */}
-        <div className="relative aspect-[4/3] overflow-hidden italian-frame">
-          {/* Placeholder for image */}
-          <div
-            className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
-            style={{ backgroundColor: suite.color }}
-          >
-            {/* When you have images, replace with: */}
-            {/* <Image
-              src={suite.image}
-              alt={translations.name}
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-            /> */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-bianco-latte/80 font-serif text-2xl italic">
-                {translations.name}
+        {/* Image Container con cornice vintage */}
+        <div className="relative">
+          {/* Cornice esterna decorativa */}
+          <div className="absolute -inset-3 border border-pietra/40 rounded-2xl transition-all duration-500 group-hover:border-terracotta/60" />
+          
+          {/* Angoli decorativi */}
+          <div className="absolute -top-1 -left-1 w-6 h-6 border-l-2 border-t-2 border-terracotta rounded-tl-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute -top-1 -right-1 w-6 h-6 border-r-2 border-t-2 border-terracotta rounded-tr-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute -bottom-1 -left-1 w-6 h-6 border-l-2 border-b-2 border-terracotta rounded-bl-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute -bottom-1 -right-1 w-6 h-6 border-r-2 border-b-2 border-terracotta rounded-br-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+          <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg border-4 border-bianco-latte">
+            {/* Placeholder per immagine */}
+            <div
+              className="absolute inset-0 transition-transform duration-700 group-hover:scale-110"
+              style={{ backgroundColor: suite.color }}
+            >
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-bianco-latte/60 font-serif text-3xl italic">
+                  {translations.name}
+                </span>
+              </div>
+            </div>
+            
+            {/* Overlay gradiente */}
+            <div className="absolute inset-0 bg-gradient-to-t from-ferro/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            
+            {/* Badge anima */}
+            <div className="absolute top-4 left-4 px-3 py-1.5 bg-bianco-latte/90 backdrop-blur-sm rounded-full border border-pietra-light opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span className="text-xs font-serif text-terracotta tracking-wide">
+                ✦ {translations.soul.split(',')[0]}
               </span>
             </div>
           </div>
-          
-          {/* Overlay on hover */}
-          <div className="absolute inset-0 bg-ferro/0 group-hover:bg-ferro/20 transition-colors duration-500" />
         </div>
 
         {/* Content */}
-        <div className="mt-5">
-          <h3 className="font-serif text-2xl text-ferro group-hover:text-verde-bosco transition-colors">
+        <div className="mt-6 px-1">
+          {/* Nome suite */}
+          <h3 className="font-serif text-2xl md:text-3xl text-ferro group-hover:text-verde-bosco transition-colors duration-300">
             {translations.name}
           </h3>
           
-          <p className="mt-2 text-ferro/70 font-serif italic">
-            {translations.tagline}
-          </p>
+          {/* Linea decorativa */}
+          <div className="my-3 flex items-center gap-2">
+            <div className="h-px flex-1 bg-gradient-to-r from-terracotta/60 to-transparent" />
+            <div className="w-1.5 h-1.5 bg-terracotta rotate-45" />
+          </div>
           
-          <p className="mt-3 text-sm text-pietra-dark uppercase tracking-wider">
-            {translations.soul}
+          {/* Tagline */}
+          <p className="font-body italic text-ferro/70 leading-relaxed">
+            "{translations.tagline}"
           </p>
 
           {/* CTA */}
-          <div className="mt-4 flex items-center gap-2 text-verde-bosco">
-            <span className="text-sm font-medium">{ctaLabel}</span>
+          <div className="mt-5 flex items-center gap-3 text-verde-bosco font-serif">
+            <span className="text-sm tracking-wide">{ctaLabel}</span>
+            <div className="w-8 h-px bg-verde-bosco transition-all duration-300 group-hover:w-12" />
             <ArrowRight
               size={16}
               className="transition-transform duration-300 group-hover:translate-x-1"
