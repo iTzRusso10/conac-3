@@ -69,7 +69,7 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
               }`}
             >
               <Image
-                src="/images/structure_only.png"
+                src="/images/pia.png"
                 alt="Relais Conac"
                 width={120}
                 height={50}

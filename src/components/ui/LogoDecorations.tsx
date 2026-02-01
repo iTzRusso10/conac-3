@@ -19,7 +19,7 @@ export function LogoDivider({ className = "" }: { className?: string }) {
 
         {/* Logo */}
         <Image
-          src="/images/structure_only.png"
+          src="/images/pia.png"
           alt="Relais Conac 1888"
           width={80}
           height={50}
