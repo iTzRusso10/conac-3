@@ -121,14 +121,6 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
                 </AnimatePresence>
               </div>
 
-              {/* Desktop CTA */}
-              <Link
-                href={`/${locale}/contatti`}
-                className="hidden md:inline-flex btn btn-primary"
-              >
-                {dictionary.cta.checkAvailability}
-              </Link>
-
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -179,16 +171,6 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
                     </Link>
                   ))}
                 </nav>
-
-                <div className="mt-8">
-                  <Link
-                    href={`/${locale}/contatti`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="btn btn-primary w-full justify-center"
-                  >
-                    {dictionary.cta.checkAvailability}
-                  </Link>
-                </div>
               </div>
             </motion.div>
           </motion.div>
