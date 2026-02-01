@@ -53,8 +53,8 @@ export default async function HomePage({
       <SectionWithLogo
         className="bg-crema"
         logoPosition="center"
-        logoOpacity={0.04}
-        logoSize="xl"
+        logoOpacity={0.1}
+        logoSize="lg"
       >
         {/* Titolo sezione con stile rustico */}
         <div className="text-center mb-12">
