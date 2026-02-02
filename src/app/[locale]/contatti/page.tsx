@@ -64,28 +64,6 @@ export default async function ContactPage({
       <section className="section bg-crema">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Form */}
-            <div>
-              <h2 className="font-serif text-3xl text-ferro mb-8">
-                {dictionary.contact.form.title}
-              </h2>
-              <BookingForm dictionary={dictionary} />
-
-              {/* Booking Engine Placeholder */}
-              <div className="mt-8 p-6 bg-pietra/20 border-2 border-dashed border-pietra rounded-sm">
-                <p className="text-sm text-ferro/60 text-center">
-                  {locale === "it"
-                    ? "[ Placeholder per integrazione Booking Engine / Channel Manager ]"
-                    : "[ Placeholder for Booking Engine / Channel Manager integration ]"}
-                </p>
-                <p className="text-xs text-ferro/40 text-center mt-2">
-                  {locale === "it"
-                    ? "Es: Cloudbeds, Little Hotelier, Lodgify widget"
-                    : "E.g.: Cloudbeds, Little Hotelier, Lodgify widget"}
-                </p>
-              </div>
-            </div>
-
             {/* Info */}
             <div>
               <h2 className="font-serif text-3xl text-ferro mb-8">

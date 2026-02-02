@@ -4,6 +4,7 @@ import { locales, type Locale } from "@/i18n/config";
 import PageHero from "@/components/ui/PageHero";
 import EventForm from "@/components/ui/EventForm";
 import { Heart, Users, Sunset, Utensils, Check } from "lucide-react";
+import Image from "next/image";
 
 export async function generateMetadata({
   params,
@@ -138,6 +139,13 @@ export default async function EventsPage({
                   {dictionary.events.aperitivo.p2}
                 </p>
               </div>
+              <Image
+                src="/images/pia.png"
+                width={400}
+                height={300}
+                alt="Pia"
+                className="mt-4 mx-auto"
+              />
             </div>
 
             {/* Cena */}
@@ -150,8 +158,17 @@ export default async function EventsPage({
               </div>
               <div className="space-y-3 text-ferro/80">
                 <p>{dictionary.events.dinner.p1}</p>
-                <p>{dictionary.events.dinner.p2}</p>
+                <p className="font-serif italic text-lg text-ferro">
+                  {dictionary.events.dinner.p2}
+                </p>
               </div>
+              <Image
+                src="/images/pia.png"
+                width={400}
+                height={300}
+                alt="Pia"
+                className="mt-4 mx-auto"
+              />
             </div>
           </div>
         </div>
