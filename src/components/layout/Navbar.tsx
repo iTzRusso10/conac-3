@@ -86,7 +86,7 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
               href={`/${locale}`}
               className="justify-self-center flex flex-col items-center mt-1"
             >
-              <span className="font-script font-bold text-[16px] md:text-xl text-ferro leading-tight">
+              <span className="font-script font-bold text-[17px] md:text-xl text-ferro leading-tight">
                 Relais Conac
               </span>
               <span className="text-[9px] mt-[-3px] md:text-[10px] text-terracotta tracking-[0.15em] font-sans leading-tight">
@@ -141,9 +141,8 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
               transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
               className="fixed top-0 right-0 left-0 md:left-auto md:w-96 z-50 bg-crema shadow-2xl flex flex-col pt-16 md:pt-20"
               style={{
-                height: "100vh",
-                // Safari fix
-                minHeight: "-webkit-fill-available",
+                height: "100lvh", // iOS: include anche l’area sotto le barre
+                minHeight: "100vh", // fallback
               }}
             >
               {/* Navigation */}
