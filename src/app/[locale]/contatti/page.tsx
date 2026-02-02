@@ -54,29 +54,25 @@ export default async function ContactPage({
 
   return (
     <>
-      {/* Page Hero */}
       <PageHero
         title={dictionary.contact.hero.headline}
         subtitle={dictionary.contact.hero.subhead}
       />
 
-      {/* Form & Info */}
+      {/* FORM + INFO */}
       <section className="section bg-crema">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Info */}
-            <div>
-              <h2 className="font-serif text-3xl text-ferro mb-8">
+        <div className="container max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            {/* LEFT COLUMN */}
+            <div className="lg:col-span-7 space-y-10">
+              <h2 className="font-serif text-3xl text-ferro">
                 {dictionary.contact.info.title}
               </h2>
 
-              {/* Contact Details */}
-              <div className="space-y-6 mb-10">
+              {/* CONTACT DETAILS */}
+              <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <MapPin
-                    className="text-verde-bosco mt-1 flex-shrink-0"
-                    size={20}
-                  />
+                  <MapPin className="text-verde-bosco mt-1" size={20} />
                   <div>
                     <h4 className="font-medium text-ferro mb-1">
                       {dictionary.contact.info.address}
@@ -94,10 +90,7 @@ export default async function ContactPage({
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Phone
-                    className="text-verde-bosco mt-1 flex-shrink-0"
-                    size={20}
-                  />
+                  <Phone className="text-verde-bosco mt-1" size={20} />
                   <div>
                     <h4 className="font-medium text-ferro mb-1">
                       {dictionary.contact.info.phone}
@@ -112,10 +105,7 @@ export default async function ContactPage({
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Mail
-                    className="text-verde-bosco mt-1 flex-shrink-0"
-                    size={20}
-                  />
+                  <Mail className="text-verde-bosco mt-1" size={20} />
                   <div>
                     <h4 className="font-medium text-ferro mb-1">
                       {dictionary.contact.info.email}
@@ -130,54 +120,67 @@ export default async function ContactPage({
                 </div>
               </div>
 
-              {/* How to Reach */}
-              <div className="bg-bianco-latte p-6 italian-frame mb-10">
-                <h3 className="font-serif text-xl text-ferro mb-4">
-                  {dictionary.contact.info.howToReach}
-                </h3>
-                <div className="space-y-3 text-sm text-ferro/70">
-                  <div className="flex items-center gap-3">
-                    <Car size={16} className="text-verde-bosco" />
-                    <span>
-                      <strong>{dictionary.contact.info.fromTurin}:</strong> 80
-                      km, ~1 ora
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Car size={16} className="text-verde-bosco" />
-                    <span>
-                      <strong>{dictionary.contact.info.fromMilan}:</strong> 160
-                      km, ~2 ore
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Plane size={16} className="text-verde-bosco" />
-                    <span>
-                      <strong>{dictionary.contact.info.airport}:</strong> Torino
-                      Caselle (90 km)
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Train size={16} className="text-verde-bosco" />
-                    <span>
-                      <strong>{dictionary.contact.info.train}:</strong> Alba (15
-                      km)
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <ParkingCircle size={16} className="text-verde-bosco" />
-                    <span>
-                      <strong>{dictionary.contact.info.parking}:</strong>{" "}
-                      {dictionary.contact.info.parkingNote}
-                    </span>
-                  </div>
-                </div>
-              </div>
+              {/* HOW TO REACH */}
 
-              {/* Map Placeholder */}
-              <div className="aspect-video bg-pietra italian-frame">
-                <div className="w-full h-full flex items-center justify-center text-ferro/40">
-                  [Mappa Google Maps]
+              {/* MAP */}
+              <div className="aspect-video italian-frame overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2823.8!2d7.9607638!3d45.0408778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4787dd9aa9908199%3A0x14c6389a842db8db!2sRelais%20Conac%201888!5e0!3m2!1sit!2sit!4v1706000000000!5m2!1sit!2sit"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Location"
+                />
+              </div>
+            </div>
+
+            {/* RIGHT COLUMN */}
+            <div className="lg:col-span-5">
+              <div className="lg:top-28">
+                <div className="bg-bianco-latte p-6 italian-frame">
+                  <h3 className="font-serif text-xl text-ferro mb-4">
+                    {dictionary.contact.info.howToReach}
+                  </h3>
+                  <div className="space-y-3 text-sm text-ferro/70">
+                    <div className="flex items-center gap-3">
+                      <Car size={16} className="text-verde-bosco" />
+                      <span>
+                        <strong>{dictionary.contact.info.fromTurin}:</strong> 80
+                        km, ~1 ora
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Car size={16} className="text-verde-bosco" />
+                      <span>
+                        <strong>{dictionary.contact.info.fromMilan}:</strong>{" "}
+                        160 km, ~2 ore
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Plane size={16} className="text-verde-bosco" />
+                      <span>
+                        <strong>{dictionary.contact.info.airport}:</strong>{" "}
+                        Torino Caselle (90 km)
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Train size={16} className="text-verde-bosco" />
+                      <span>
+                        <strong>{dictionary.contact.info.train}:</strong> Alba
+                        (15 km)
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <ParkingCircle size={16} className="text-verde-bosco" />
+                      <span>
+                        <strong>{dictionary.contact.info.parking}:</strong>{" "}
+                        {dictionary.contact.info.parkingNote}
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -187,12 +190,12 @@ export default async function ContactPage({
 
       {/* FAQ */}
       <section className="section bg-bianco-latte">
-        <div className="container">
+        <div className="container max-w-6xl">
           <h2 className="font-serif text-3xl text-ferro text-center mb-12">
             {dictionary.contact.faq.title}
           </h2>
 
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {faqItems.map((item, index) => (
               <details
                 key={index}
@@ -202,7 +205,7 @@ export default async function ContactPage({
                   <span className="font-medium text-ferro pr-4">{item.q}</span>
                   <ChevronDown
                     size={20}
-                    className="text-ferro/50 transition-transform group-open:rotate-180 flex-shrink-0"
+                    className="text-ferro/50 transition-transform group-open:rotate-180"
                   />
                 </summary>
                 <div className="px-5 pb-5 text-ferro/70">

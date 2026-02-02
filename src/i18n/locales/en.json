@@ -268,20 +268,6 @@
       "headline": "Let's talk",
       "subhead": "For information, availability, or simply to learn more — we're here."
     },
-    "form": {
-      "title": "Check availability",
-      "arrivalDate": "Arrival date",
-      "departureDate": "Departure date",
-      "adults": "Number of adults",
-      "children": "Number of children (0-12 years)",
-      "suite": "Preferred suite",
-      "noPreference": "No preference",
-      "name": "Full name",
-      "email": "Email",
-      "phone": "Phone",
-      "notes": "Notes or special requests",
-      "note": "We'll confirm availability and rates within 24 hours."
-    },
     "info": {
       "title": "Information",
       "address": "Address",

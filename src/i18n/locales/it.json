@@ -267,20 +267,6 @@
       "headline": "Parliamoci",
       "subhead": "Per informazioni, disponibilità o semplicemente per saperne di più — siamo qui."
     },
-    "form": {
-      "title": "Verifica disponibilità",
-      "arrivalDate": "Data arrivo",
-      "departureDate": "Data partenza",
-      "adults": "Numero adulti",
-      "children": "Numero bambini (0-12 anni)",
-      "suite": "Suite preferita",
-      "noPreference": "Nessuna preferenza",
-      "name": "Nome e cognome",
-      "email": "Email",
-      "phone": "Telefono",
-      "notes": "Note o richieste particolari",
-      "note": "Vi confermeremo disponibilità e tariffe entro 24 ore."
-    },
     "info": {
       "title": "Informazioni",
       "address": "Indirizzo",
