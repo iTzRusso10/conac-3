@@ -84,12 +84,12 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
             {/* Brand Name - Centro */}
             <Link
               href={`/${locale}`}
-              className="justify-self-center flex flex-col items-center"
+              className="justify-self-center flex flex-col items-center mt-1"
             >
               <span className="font-script font-bold text-lg md:text-xl text-ferro leading-tight">
                 Relais Conac
               </span>
-              <span className="text-[9px] mt-[-3px] md:text-[10px] text-terracotta tracking-[0.15em] font-sans leading-tight">
+              <span className="text-[9px] mt-[-5px] md:text-[10px] text-terracotta tracking-[0.15em] font-sans leading-tight">
                 1888
               </span>
             </Link>
