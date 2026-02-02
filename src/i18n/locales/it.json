@@ -76,20 +76,30 @@
   },
   "story": {
     "hero": {
-      "headline": "Una storia che profuma di legna e di vino",
+      "headline": "La storia di una casa piemontese",
       "subhead": "Mura che hanno visto generazioni. Mani che le hanno riportate alla vita."
     },
     "roots": {
       "title": "Le radici",
-      "p1": "Relais Conac affonda le sue pietre nella storia contadina del Piemonte. Costruito nel XIX secolo, ha ospitato famiglie che lavoravano la terra, curavano i vigneti, raccoglievano nocciole e tartufi.",
-      "p2": "Per decenni, queste mura hanno custodito il ritmo lento delle stagioni: vendemmie, inverni al camino, primavere tra i fiori del prato.",
-      "p3": "Poi, come accade a molte case di campagna, il silenzio. L'abbandono."
+      "p1": "Relais Conac 1888 nasce da una storia autentica e personale, profondamente legata all’amore per l’Italia e per la sua dolce vita. Tutto ha inizio quando una giovane coppia di origini balcaniche, innamorata dello stile di vita italiano e del paesaggio piemontese, era alla ricerca di una casa che rispecchiasse il proprio gusto.",
+      "p2": "È così che hanno incontrato quello che allora era un casolare abbandonato immerso nelle colline del Monferrato, in Piemonte. Fin dal primo momento, quella casa ha raccontato una storia fatta di tempo, silenzio e potenziale.",
+      "p3": " Non era solo un edificio da recuperare, ma un luogo da comprendere, rispettare e riportare in vita."
     },
     "rebirth": {
-      "title": "Riportarlo alla luce",
-      "p1": "Nel 2018, [Nome famiglia] ha scoperto questo casolare nascosto tra i boschi. Era un rudere. Era perfetto.",
-      "p2": "Iniziò un restauro che è durato quattro anni: pietra per pietra, trave per trave, rispettando ogni crepa e ogni imperfezione. Artigiani locali hanno forgiato le lanterne. Falegnami hanno recuperato i legni originali. Nulla è stato fabbricato in serie.",
-      "p3": "L'obiettivo non era creare un hotel. Era riportare alla vita un luogo, e condividerlo."
+      "title": "Il recupero di una bellezza senza tempo",
+      "p1": "Il recupero di Relais Conac 1888 è stato un percorso lungo e profondamente personale. I proprietari hanno scelto di occuparsi direttamente della ristrutturazione, lavorando con le proprie mani nel tempo libero, dedicando energia, attenzione e passione a ogni dettaglio.",
+      "p2": "L’antico casolare piemontese, un tempo residenza nobile, è stato restaurato mantenendo proporzioni, materiali e legame con il territorio. Il risultato è un equilibrio armonioso tra tradizione e comfort contemporaneo, tra semplicità rurale ed eleganza discreta.",
+      "p3": ""
+    },
+    "dreams": {
+      "title": "Oltre le mura: un sogno da condividere",
+      "p1": "Dopo il recupero dell'edificio, i proprietari hanno compreso che Relais Conac 1888 non poteva restare un luogo privato. Inizialmente pensato come spazio di incontro per famiglia e amici, il relais si è trasformato in qualcosa di più: un progetto di ospitalità capace di dare nuova vita a una dimora storica e di condividerne la bellezza.",
+      "p2": "Come raccontano i proprietari: “Relais Conac 1888 è troppo speciale per rimanere nascosto, è un luogo che merita di essere condiviso. Da questa convinzione nasce l’idea di aprire le porte come Luxury B&B – Adults Only, mantenendo una gestione familiare, attenta e autentica."
+    },
+    "luxuryb&b": {
+      "title": "Luxury B&B Adults Only nel cuore del Piemonte",
+      "p1": "Relais Conac 1888 è oggi un luxury B&B Adults Only in Piemonte, pensato per chi cerca relax, privacy e un’esperienza intima immersa nella natura del Monferrato. La scelta di accogliere solo ospiti adulti nasce dalla volontà di offrire silenzio, lentezza e qualità del tempo.",
+      "p2": "l numero limitato di suite consente un’accoglienza personalizzata e discreta, in linea con un’idea di lusso percepibile nei dettagli, nei materiali, nell’atmosfera e nel rapporto con il paesaggio."
     },
     "today": {
       "title": "Quello che siamo",

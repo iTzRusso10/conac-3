@@ -107,8 +107,7 @@ export default async function StoryPage({
           </div>
         </div>
       </SectionWithLogo>
-
-      {/* Quello che siamo */}
+      {/* Sogno */}
       <SectionWithLogo
         className="bg-crema"
         logoPosition="center"
@@ -116,22 +115,53 @@ export default async function StoryPage({
         logoSize="xl"
       >
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-ferro mb-8">
-              {dictionary.story.today.title}
-            </h2>
-            <div className="space-y-6 text-lg text-ferro/80 leading-relaxed">
-              <p>{dictionary.story.today.p1}</p>
-              <p>{dictionary.story.today.p2}</p>
-              <p className="font-serif italic text-xl text-ferro">
-                {dictionary.story.today.p3}
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Image placeholder */}
+            <div className="aspect-[4/3] bg-pietra italian-frame order-2 lg:order-1">
+              <div className="w-full h-full flex items-center justify-center text-ferro/40">
+                [Foto storica / dettaglio pietra antica]
+              </div>
             </div>
 
-            <div className="mt-12">
-              <Link href={`/${locale}/suite`} className="btn btn-primary">
-                {dictionary.cta.discoverSuites}
-              </Link>
+            {/* Text */}
+            <div className="order-1 lg:order-2">
+              <h2 className="font-serif text-3xl md:text-4xl text-ferro mb-6">
+                {dictionary.story.dreams.title}
+              </h2>
+              <div className="space-y-4 text-ferro/80 leading-relaxed">
+                <p>{dictionary.story.dreams.p1}</p>
+                <p>{dictionary.story.dreams.p2}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </SectionWithLogo>
+
+      {/* Luxury B&B */}
+      <SectionWithLogo
+        className="bg-bianco-latte"
+        logoPosition="center"
+        logoOpacity={0.05}
+        logoSize="xl"
+      >
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Text */}
+            <div>
+              <h2 className="font-serif text-3xl md:text-4xl text-ferro mb-6">
+                {dictionary.story["luxuryb&b"].title}
+              </h2>
+              <div className="space-y-4 text-ferro/80 leading-relaxed">
+                <p>{dictionary.story["luxuryb&b"].p1}</p>
+                <p>{dictionary.story["luxuryb&b"].p2}</p>
+              </div>
+            </div>
+
+            {/* Image placeholder */}
+            <div className="aspect-[4/3] bg-pietra italian-frame">
+              <div className="w-full h-full flex items-center justify-center text-ferro/40">
+                [Foto restauro / artigiano al lavoro]
+              </div>
             </div>
           </div>
         </div>
