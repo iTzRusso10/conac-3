@@ -110,61 +110,46 @@
   },
   "dolcevita": {
     "hero": {
-      "headline": "La Dolce Vita",
-      "subhead": "Non è nostalgia di un tempo passato. È la scelta di vivere il presente con più cura."
+      "headline": "Il Nostro Manifesto - La Dolce Vita",
+      "subhead": "La Dolce Vita al Relais Conac 1888 è il piacere di rallentare, assaporare ogni attimo e ritrovare il contatto con ciò che conta davvero."
     },
     "manifesto": {
       "title": "Il nostro manifesto",
-      "intro": "La Dolce Vita non è un film. Non è un poster vintage. Non è un cliché da cartolina.",
-      "intro2": "È il modo in cui scegliamo di fare le cose qui.",
-      "time": {
-        "title": "È il tempo che dedichiamo.",
-        "text": "Al caffè del mattino, bevuto guardando la nebbia che sale dalla valle. Alla cena preparata con ingredienti raccolti oggi. Alla conversazione che si allunga oltre il dessert."
-      },
-      "details": {
-        "title": "È l'attenzione ai dettagli.",
-        "text": "Alle lanterne accese ogni sera all'imbrunire. Ai fiori freschi in ogni stanza. Alla bottiglia di vino locale che vi aspetta in camera."
-      },
-      "pleasure": {
-        "title": "È il piacere che non richiede giustificazioni.",
-        "text": "Un pomeriggio in piscina senza programmi. Una passeggiata nel bosco senza destinazione. Un secondo calice di Barolo perché sì."
-      },
-      "authenticity": {
-        "title": "È l'autenticità che non si esibisce.",
-        "text": "Pietre vere, non ricostruite. Mobili trovati nei mercati, non cataloghi. Storie locali, non marketing."
-      },
+      "intro": "Tra le colline piemontesi, ogni dettaglio racconta un ritmo lento e autentico.",
+      "intro2": "...racconta un ritmo lento e autentico...",
+      "intro3": "Qui il lusso si misura nella qualità del tempo e nella possibilità di vivere ogni esperienza con tutti i sensi.",
       "conclusion": "A Relais Conac, La Dolce Vita non è uno slogan. È quello che vedrete, sentirete, assaggerete ogni giorno."
     },
     "senses": {
-      "title": "I cinque sensi del casolare",
+      "title": "I cinque sensi del Relais",
       "sight": {
         "name": "Vista",
-        "text": "La linea morbida delle colline. La luce dorata del tramonto sulle pietre. Le lanterne che si accendono una a una."
+        "text": "Colline dorate, tramonti infuocati e dettagli eleganti che catturano lo sguardo."
       },
       "sound": {
         "name": "Udito",
-        "text": "Il silenzio, interrotto solo dagli uccelli. Il crepitio del fuoco. I passi sulla ghiaia del vialetto."
+        "text": "Il silenzio della natura interrotto solo dal canto degli uccelli e dal fruscio delle foglie."
       },
       "smell": {
         "name": "Olfatto",
-        "text": "Il bosco dopo la pioggia. Il profumo del tartufo appena trovato. La legna che brucia nel camino."
+        "text": "Profumi di legno, fiori e ingredienti freschi che raccontano il Piemonte autentico."
       },
       "taste": {
         "name": "Gusto",
-        "text": "Un Barolo che racconta la sua vigna. Il miele del vicino. Il pane caldo della mattina."
+        "text": "Sapori genuini e stagionali che trasformano ogni pasto in un rito sensoriale."
       },
       "touch": {
         "name": "Tatto",
-        "text": "La pietra tiepida al sole. I lini freschi del letto. L'acqua della piscina sulla pelle."
+        "text": "Materassi soffici, legno caldo e pietra naturale: ogni superficie invita al contatto."
       }
     }
   },
   "suites": {
     "hero": {
-      "headline": "Sei stanze, sei anime",
-      "subhead": "Ogni suite porta il nome di un elemento del paesaggio piemontese. Ognuna ha una storia da raccontare."
+      "headline": "Le Nostre Suite",
+      "subhead": ""
     },
-    "intro": "Scegliete la vostra. O lasciatevi consigliare: vi guideremo verso l'anima che fa per voi.",
+    "intro": "Tutte le camere sono progettate per garantire comfort, privacy e una vista mozzafiato sulla piscina e sul giardino.",
     "details": {
       "size": "Superficie",
       "guests": "Ospiti",
@@ -183,47 +168,26 @@
       "minibar": "Minibar con prodotti locali"
     },
     "list": {
-      "bruma": {
-        "name": "Bruma",
-        "tagline": "La nebbia che accarezza le colline all'alba",
+      "incanto": {
+        "name": "Incanto",
+        "tagline": "Rifugio esclusivo con piscina privata e ingresso indipendente, soggiorno separato, camera matrimoniale king-size, bagno con vasca e doccia. Balcone e terrazza con vista sul giardino, piscina e cortile interno",
         "soul": "Intimità, silenzio, contemplazione",
-        "description": "Bruma è il nome che diamo alla nebbia leggera che, nelle mattine d'autunno, avvolge la valle come un velo di seta. Questa suite ne cattura l'essenza. Tonalità di grigio perla si fondono con il crema caldo dei tessuti naturali. La luce entra morbida, filtrata dalle tende di lino. Dal letto, la vista si apre sulla valle — spesso velata, appunto, dalla bruma mattutina. È la suite per chi cerca intimità e contemplazione. Per chi ama i risvegli lenti, il caffè a letto, il silenzio.",
+        "description": "Incanto è il nome che diamo alla nebbia leggera che, nelle mattine d'autunno, avvolge la valle come un velo di seta. Questa suite ne cattura l'essenza. Tonalità di grigio perla si fondono con il crema caldo dei tessuti naturali. La luce entra morbida, filtrata dalle tende di lino. Dal letto, la vista si apre sulla valle — spesso velata, appunto, dalla bruma mattutina. È la suite per chi cerca intimità e contemplazione. Per chi ama i risvegli lenti, il caffè a letto, il silenzio.",
         "highlight": "Finestra panoramica con seduta per contemplare l'alba"
       },
-      "vendemmia": {
-        "name": "Vendemmia",
-        "tagline": "Il profumo dell'uva matura e il calore della terra",
+      "anima": {
+        "name": "Anima",
+        "tagline": "50 m² di lusso discreto, piscina privata a uso esclusivo, camera matrimoniale king-size e soggiorno separato. Bagno con vasca e doccia, terrazza con vista sui filari e sul cortile interno.",
         "soul": "Passione, tradizione, calore",
         "description": "Vendemmia racconta la stagione più attesa nelle Langhe: quando le vigne si tingono d'oro e rosso, e l'aria si riempie del profumo dell'uva matura. In questa suite, legni caldi e rossi profondi evocano la cantina, la tradizione, il lavoro paziente dei vignaioli. È la suite per chi cerca calore e carattere.",
         "highlight": "Dettagli in legno antico recuperato e toni bordeaux"
       },
-      "lanterna": {
-        "name": "Lanterna",
-        "tagline": "La luce dorata che guida verso casa",
+      "fiordaliso": {
+        "name": "Fiordaliso",
+        "tagline": "Junior suite di 50 m², ingresso indipendente, piscina privata, camera matrimoniale king-size, soggiorno con divano letto e bagno con vasca e doccia. Balcone e terrazza con vista piscina e giardino.",
         "soul": "Accoglienza, romanticismo, sera",
         "description": "Ogni sera, all'imbrunire, accendiamo le lanterne lungo il vialetto. Lanterna cattura quella luce dorata, quel momento sospeso tra giorno e notte. È la suite più luminosa, con tocchi di ferro battuto e riflessi ambrati. Per chi cerca romanticismo e quel senso di tornare a casa.",
         "highlight": "Lanterne originali in ferro battuto e balcone privato"
-      },
-      "tartufo": {
-        "name": "Tartufo",
-        "tagline": "Il tesoro nascosto del sottobosco",
-        "soul": "Mistero, autenticità, scoperta",
-        "description": "Il tartufo non si coltiva, si cerca. Nasce nell'ombra del bosco, sotto terra, prezioso proprio perché raro. Questa suite evoca quel mistero: tonalità terrose, texture naturali, un'atmosfera raccolta e autentica. Per chi ama le cose rare e le scoperte inaspettate.",
-        "highlight": "Materiali naturali e connessione diretta con il giardino"
-      },
-      "vigna": {
-        "name": "Vigna",
-        "tagline": "Filari ordinati sotto il sole",
-        "soul": "Serenità, ordine, natura coltivata",
-        "description": "I filari della vigna sono un paesaggio dell'anima: ordine nella natura, pazienza che diventa bellezza. Verde, crema e tocchi dorati creano una suite ariosa e serena, che guarda direttamente sui vigneti. Per chi cerca pace e respiro.",
-        "highlight": "Vista diretta sui vigneti e spazi particolarmente luminosi"
-      },
-      "camino": {
-        "name": "Camino",
-        "tagline": "Il crepitio della legna, il calore che avvolge",
-        "soul": "Calore, rifugio, inverno",
-        "description": "Nelle sere d'inverno, non c'è nulla come il fuoco. Camino è la suite più intima: pietra a vista, luce calda, un vero camino funzionante. È il rifugio perfetto quando fuori fa freddo e dentro si sta bene. Per chi cerca il calore più autentico.",
-        "highlight": "Camino funzionante e pareti in pietra originale"
       }
     }
   },

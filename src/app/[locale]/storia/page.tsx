@@ -166,6 +166,25 @@ export default async function StoryPage({
           </div>
         </div>
       </SectionWithLogo>
+
+      <SectionWithLogo
+        logoPosition="center"
+        logoOpacity={0.2}
+        logoSize="xl"
+        className="section bg-verde-bosco text-bianco-latte"
+      >
+        <div className="container text-center">
+          <h2 className="font-serif text-3xl md:text-4xl mb-6">
+            {locale === "it" ? "Vivi La Dolce Vita" : "Live La Dolce Vita"}
+          </h2>
+          <Link
+            href={`/${locale}/esperienze`}
+            className="btn bg-bianco-latte text-ferro hover:bg-crema"
+          >
+            {dictionary.cta.discoverExperiences}
+          </Link>
+        </div>
+      </SectionWithLogo>
     </>
   );
 }

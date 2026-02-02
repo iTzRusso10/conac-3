@@ -63,44 +63,11 @@ export default async function DolceVitaPage({
 
             <div className="space-y-8 text-lg text-ferro/80 leading-relaxed">
               <p>{dictionary.dolcevita.manifesto.intro}</p>
-              <p className="font-medium text-ferro">
+              <p className="font-medium text-ferro italic">
                 {dictionary.dolcevita.manifesto.intro2}
               </p>
-
-              {/* Time */}
-              <div className="border-l-2 border-terracotta pl-6 py-2">
-                <h3 className="font-serif text-xl text-ferro mb-2">
-                  {dictionary.dolcevita.manifesto.time.title}
-                </h3>
-                <p>{dictionary.dolcevita.manifesto.time.text}</p>
-              </div>
-
-              {/* Details */}
-              <div className="border-l-2 border-terracotta pl-6 py-2">
-                <h3 className="font-serif text-xl text-ferro mb-2">
-                  {dictionary.dolcevita.manifesto.details.title}
-                </h3>
-                <p>{dictionary.dolcevita.manifesto.details.text}</p>
-              </div>
-
-              {/* Pleasure */}
-              <div className="border-l-2 border-terracotta pl-6 py-2">
-                <h3 className="font-serif text-xl text-ferro mb-2">
-                  {dictionary.dolcevita.manifesto.pleasure.title}
-                </h3>
-                <p>{dictionary.dolcevita.manifesto.pleasure.text}</p>
-              </div>
-
-              {/* Authenticity */}
-              <div className="border-l-2 border-terracotta pl-6 py-2">
-                <h3 className="font-serif text-xl text-ferro mb-2">
-                  {dictionary.dolcevita.manifesto.authenticity.title}
-                </h3>
-                <p>{dictionary.dolcevita.manifesto.authenticity.text}</p>
-              </div>
-
-              <p className="font-serif italic text-xl text-center text-ferro pt-6">
-                {dictionary.dolcevita.manifesto.conclusion}
+              <p className="font-medium text-ferro">
+                {dictionary.dolcevita.manifesto.intro3}
               </p>
             </div>
           </div>
@@ -138,7 +105,7 @@ export default async function DolceVitaPage({
       {/* CTA */}
       <SectionWithLogo
         logoPosition="center"
-        logoOpacity={0.1}
+        logoOpacity={0.2}
         logoSize="xl"
         className="section bg-verde-bosco text-bianco-latte"
       >

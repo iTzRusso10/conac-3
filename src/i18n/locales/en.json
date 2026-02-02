@@ -118,22 +118,7 @@
       "title": "Our manifesto",
       "intro": "La Dolce Vita is not a film. Not a vintage poster. Not a postcard cliché.",
       "intro2": "It's the way we choose to do things here.",
-      "time": {
-        "title": "It's the time we dedicate.",
-        "text": "To morning coffee, sipped while watching the mist rise from the valley. To dinner prepared with ingredients gathered today. To conversation that stretches beyond dessert."
-      },
-      "details": {
-        "title": "It's the attention to details.",
-        "text": "To the lanterns lit every evening at dusk. To fresh flowers in every room. To the bottle of local wine waiting in your room."
-      },
-      "pleasure": {
-        "title": "It's pleasure that needs no justification.",
-        "text": "An afternoon by the pool with no agenda. A walk through the woods with no destination. A second glass of Barolo, just because."
-      },
-      "authenticity": {
-        "title": "It's authenticity that doesn't perform.",
-        "text": "Real stones, not reconstructed. Furniture found in markets, not catalogs. Local stories, not marketing."
-      },
+      "intro3": "Add english text here...",
       "conclusion": "At Relais Conac, La Dolce Vita is not a slogan. It's what you'll see, feel, and taste every day."
     },
     "senses": {
@@ -204,27 +189,6 @@
         "soul": "Welcome, romance, evening",
         "description": "Every evening, at dusk, we light the lanterns along the pathway. Lanterna captures that golden light, that suspended moment between day and night. It's the brightest suite, with wrought-iron touches and amber reflections. For those seeking romance and that sense of coming home.",
         "highlight": "Original wrought-iron lanterns and private balcony"
-      },
-      "tartufo": {
-        "name": "Tartufo",
-        "tagline": "The hidden treasure of the forest floor",
-        "soul": "Mystery, authenticity, discovery",
-        "description": "Truffle is not cultivated, it is searched for. Born in the shade of the forest, underground, precious precisely because it's rare. This suite evokes that mystery: earthy tones, natural textures, a gathered and authentic atmosphere. For those who love rare things and unexpected discoveries.",
-        "highlight": "Natural materials and direct connection to the garden"
-      },
-      "vigna": {
-        "name": "Vigna",
-        "tagline": "Ordered rows under the sun",
-        "soul": "Serenity, order, cultivated nature",
-        "description": "The vineyard rows are a landscape of the soul: order within nature, patience becoming beauty. Green, cream, and golden touches create an airy and serene suite that looks directly onto the vineyards. For those seeking peace and breath.",
-        "highlight": "Direct vineyard view and particularly luminous spaces"
-      },
-      "camino": {
-        "name": "Camino",
-        "tagline": "The crackle of firewood, the warmth that embraces",
-        "soul": "Warmth, refuge, winter",
-        "description": "On winter evenings, there's nothing like fire. Camino is the most intimate suite: exposed stone, warm light, a real working fireplace. It's the perfect refuge when it's cold outside and comfortable inside. For those seeking the most authentic warmth.",
-        "highlight": "Working fireplace and original stone walls"
       }
     }
   },
