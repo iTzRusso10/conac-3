@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getDictionary } from "@/i18n/getDictionary";
 import { locales, type Locale } from "@/i18n/config";
-import Hero from "@/components/ui/Hero";
 import { SectionWithLogo } from "@/components/ui/LogoDecorations";
+import Hero from "@/components/ui/Hero";
 
 export async function generateMetadata({
   params,
@@ -42,7 +42,6 @@ export default async function StoryPage({
         headline={dictionary.story.hero.headline}
         subhead={dictionary.story.hero.subhead}
         image="/images/hero-story.jpg"
-        height="medium"
       />
 
       {/* Le Radici */}
