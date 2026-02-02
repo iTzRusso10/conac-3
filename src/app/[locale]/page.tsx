@@ -46,7 +46,6 @@ export default async function HomePage({
           href: `/${locale}/suite`,
         }}
         video="/images/hero/hero-videos.mp4"
-        height="full"
         showBrandName={true}
       />
 

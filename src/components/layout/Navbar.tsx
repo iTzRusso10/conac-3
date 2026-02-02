@@ -17,7 +17,20 @@ interface NavbarProps {
 
 export default function Navbar({ dictionary, locale }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  // Determina se siamo sulla home page (dove c'è il video fullscreen)
+  const isHomePage = pathname === `/${locale}` || pathname === `/${locale}/`;
+
+  // Scroll detection per navbar trasparente/solida
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Blocca scroll quando menu è aperto
   useEffect(() => {
@@ -45,15 +58,21 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
 
   const otherLocale = locale === "it" ? "en" : "it";
 
+  // Su desktop + home page + non scrollato = navbar trasparente con testo bianco
+  // Altrimenti = navbar bianca con testo scuro
+  const isTransparent = isHomePage && !isScrolled && !isMenuOpen;
+
   return (
     <>
-      {/* HEADER - sempre bianco */}
+      {/* HEADER - z-index alto per stare sopra tutto */}
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-60 bg-crema ${
-          isMenuOpen ? "" : "shadow-sm"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isTransparent
+            ? "bg-crema shadow-sm md:bg-transparent md:shadow-none"
+            : "bg-crema shadow-sm"
         }`}
       >
         <div className="container">
@@ -65,7 +84,9 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
                 alt="Relais Conac"
                 width={80}
                 height={44}
-                className="h-9 w-auto md:h-11"
+                className={`h-9 w-auto md:h-11 transition-all duration-300 ${
+                  isTransparent ? "md:brightness-0 md:invert" : ""
+                }`}
               />
             </Link>
 
@@ -74,10 +95,22 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
               href={`/${locale}`}
               className="justify-self-center flex flex-col items-center mt-1"
             >
-              <span className="font-script font-bold text-[17px] md:text-xl text-ferro leading-tight">
+              <span
+                className={`font-script font-bold text-[17px] md:text-xl leading-tight transition-colors duration-300 ${
+                  isTransparent
+                    ? "text-ferro md:text-white md:drop-shadow-lg"
+                    : "text-ferro"
+                }`}
+              >
                 Relais Conac
               </span>
-              <span className="text-[9px] mt-[-3px] md:text-[10px] text-terracotta tracking-[0.15em] font-sans leading-tight">
+              <span
+                className={`text-[9px] mt-[-3px] md:text-[10px] tracking-[0.15em] font-sans leading-tight transition-colors duration-300 ${
+                  isTransparent
+                    ? "text-terracotta md:text-oro md:drop-shadow-md"
+                    : "text-terracotta"
+                }`}
+              >
                 1888
               </span>
             </Link>
@@ -86,7 +119,11 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
             <div className="justify-self-end flex items-center gap-1">
               <Link
                 href={getLocalizedPath(otherLocale)}
-                className="flex items-center gap-1 px-2 py-1.5 text-ferro hover:text-verde-bosco transition-colors"
+                className={`flex items-center gap-1 px-2 py-1.5 transition-colors duration-300 ${
+                  isTransparent
+                    ? "text-ferro md:text-white hover:text-verde-bosco md:hover:text-white/80"
+                    : "text-ferro hover:text-verde-bosco"
+                }`}
                 title={localeNames[otherLocale]}
               >
                 <Globe size={16} />
@@ -97,7 +134,11 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
 
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 text-ferro hover:text-verde-bosco transition-colors"
+                className={`p-2 transition-colors duration-300 ${
+                  isTransparent
+                    ? "text-ferro md:text-white hover:text-verde-bosco md:hover:text-white/80"
+                    : "text-ferro hover:text-verde-bosco"
+                }`}
                 aria-label={isMenuOpen ? "Chiudi menu" : "Apri menu"}
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -121,16 +162,16 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
               onClick={() => setIsMenuOpen(false)}
             />
 
-            {/* Menu */}
+            {/* Menu - inizia subito sotto l'header */}
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
-              className="fixed w-full top-0 right-0 bottom-0 md:left-auto md:w-96 z-50 bg-crema shadow-2xl flex flex-col pt-16 md:pt-20"
+              className="fixed w-full top-16 md:top-20 right-0 bottom-0 md:left-auto md:w-96 z-40 bg-crema shadow-2xl flex flex-col"
             >
               {/* Navigation */}
-              <nav className="flex-1 flex flex-col justify-start px-6 py-4">
+              <nav className="flex-1 flex flex-col justify-start p-6">
                 <ul className="space-y-1">
                   {navItems.map((item, index) => {
                     const isActive = pathname === item.href;
