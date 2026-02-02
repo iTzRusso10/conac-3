@@ -172,21 +172,21 @@
         "name": "Incanto",
         "tagline": "Rifugio esclusivo con piscina privata e ingresso indipendente, soggiorno separato, camera matrimoniale king-size, bagno con vasca e doccia. Balcone e terrazza con vista sul giardino, piscina e cortile interno",
         "soul": "Intimità, silenzio, contemplazione",
-        "description": "Incanto è il nome che diamo alla nebbia leggera che, nelle mattine d'autunno, avvolge la valle come un velo di seta. Questa suite ne cattura l'essenza. Tonalità di grigio perla si fondono con il crema caldo dei tessuti naturali. La luce entra morbida, filtrata dalle tende di lino. Dal letto, la vista si apre sulla valle — spesso velata, appunto, dalla bruma mattutina. È la suite per chi cerca intimità e contemplazione. Per chi ama i risvegli lenti, il caffè a letto, il silenzio.",
+        "description": "La Suite Incanto è il rifugio perfetto per chi cerca lusso discreto e privacy. Con i suoi 50 m², ingresso indipendente e piscina privata a uso esclusivo, offre una camera matrimoniale king-size, soggiorno separato e un bagno con vasca e doccia. Dal balcone e dalla terrazza si gode di una vista spettacolare sul giardino, sulla piscina e sul cortile interno. Ogni dettaglio – dall’aria condizionata al parquet, dalla cabina armadio alla TV a schermo piatto con servizi streaming – è studiato per garantire un soggiorno elegante e rilassante.",
         "highlight": "Finestra panoramica con seduta per contemplare l'alba"
       },
       "anima": {
         "name": "Anima",
         "tagline": "50 m² di lusso discreto, piscina privata a uso esclusivo, camera matrimoniale king-size e soggiorno separato. Bagno con vasca e doccia, terrazza con vista sui filari e sul cortile interno.",
         "soul": "Passione, tradizione, calore",
-        "description": "Vendemmia racconta la stagione più attesa nelle Langhe: quando le vigne si tingono d'oro e rosso, e l'aria si riempie del profumo dell'uva matura. In questa suite, legni caldi e rossi profondi evocano la cantina, la tradizione, il lavoro paziente dei vignaioli. È la suite per chi cerca calore e carattere.",
+        "description": "La Suite Anima è un’oasi di lusso discreto di 50 m², con ingresso indipendente e piscina privata a uso esclusivo. Offre una camera matrimoniale king-size, soggiorno separato con divano letto e bagno con vasca e doccia. Dal balcone e dalla terrazza si possono ammirare il giardino, la piscina e il cortile interno. Aria condizionata, cabina armadio, parquet e TV a schermo piatto con servizi streaming garantiscono un soggiorno elegante e rilassante. Prodotti da bagno in omaggio, accappatoi e pantofole completano l’esperienza Adults Only.",
         "highlight": "Dettagli in legno antico recuperato e toni bordeaux"
       },
       "fiordaliso": {
         "name": "Fiordaliso",
         "tagline": "Junior suite di 50 m², ingresso indipendente, piscina privata, camera matrimoniale king-size, soggiorno con divano letto e bagno con vasca e doccia. Balcone e terrazza con vista piscina e giardino.",
         "soul": "Accoglienza, romanticismo, sera",
-        "description": "Ogni sera, all'imbrunire, accendiamo le lanterne lungo il vialetto. Lanterna cattura quella luce dorata, quel momento sospeso tra giorno e notte. È la suite più luminosa, con tocchi di ferro battuto e riflessi ambrati. Per chi cerca romanticismo e quel senso di tornare a casa.",
+        "description": "La Suite Fiordaliso è una junior suite di 50 m² con ingresso indipendente e piscina privata a uso esclusivo. Dispone di camera matrimoniale king-size, soggiorno con divano letto e bagno con vasca e doccia. Dal balcone e dalla terrazza si gode di una splendida vista sul giardino, sulla piscina e sul cortile interno. Aria condizionata, cabina armadio, parquet e TV a schermo piatto con servizi streaming garantiscono un soggiorno confortevole ed elegante. Prodotti da bagno in omaggio, accappatoi e pantofole completano l’esperienza Adults Only",
         "highlight": "Lanterne originali in ferro battuto e balcone privato"
       }
     }
@@ -217,9 +217,9 @@
     "wedding": {
       "title": "Matrimoni intimi",
       "p1": "Non un matrimonio qualsiasi. Il vostro matrimonio.",
-      "p2": "Relais Conac ospita cerimonie e ricevimenti per piccoli numeri — fino a 50 invitati — in un'atmosfera che non troverete altrove.",
-      "p3": "La cerimonia nel prato con vista sulle colline. L'aperitivo a bordo piscina mentre il sole scende. La cena nella corte interna, tra lanterne e candele. La festa che continua al camino.",
-      "p4": "Ogni dettaglio è curato con voi: dal menu alle composizioni floreali, dalla musica all'illuminazione.",
+      "p2": "Celebra l’amore in un contesto raccolto e romantico. Il casolare, i giardini e la piscina diventano la cornice perfetta per un matrimonio intimo e indimenticabile, con allestimenti eleganti e servizio curato nei minimi dettagli.",
+      "p3": "",
+      "p4": "",
       "highlights": {
         "exclusive": "Uso esclusivo della proprietà",
         "ceremony": "Cerimonia all'aperto o nella corte",
@@ -230,17 +230,17 @@
     },
     "party": {
       "title": "Feste private",
-      "p1": "Compleanni speciali. Anniversari. Reunion familiari. Ogni occasione diventa memorabile quando il luogo è quello giusto.",
+      "p1": "Compleanni, anniversari o eventi speciali: le nostre sale e gli spazi esterni offrono riservatezza e raffinatezza, con un servizio personalizzato che rende ogni festa privata un momento unico da condividere con gli ospiti più cari.",
       "p2": "Affittate l'intero casolare per un weekend con amici o famiglia. Organizziamo cene a tema, degustazioni, esperienze personalizzate."
     },
     "aperitivo": {
       "title": "Aperitivo al tramonto",
-      "p1": "Il sole che scende dietro le colline. Calici di Langhe DOC. Stuzzichini preparati con ingredienti del territorio. Musica soft, lanterne che si accendono.",
+      "p1": "Goditi un aperitivo esclusivo a bordo della nostra piscina in pietra naturale. Cocktail, vini locali e stuzzichini accompagnano i tramonti sulle colline piemontesi, per momenti di puro relax e piacere sensoriale.",
       "p2": "L'aperitivo perfetto esiste. È qui."
     },
     "dinner": {
       "title": "Cene romantiche",
-      "p1": "Un tavolo per due nel posto più bello della proprietà — che sia la terrazza con vista, il bordo piscina, o accanto al camino d'inverno.",
+      "p1": "Cene sotto le stelle o in terrazza con vista sul giardino, preparate secondo la filosofia “dalla terra al piatto”: ingredienti freschi, locali e di stagione, che trasformano ogni piatto in un’esperienza di gusto e raffinatezza.",
       "p2": "Menu degustazione con vini abbinati. Nessun altro ospite. Solo voi."
     },
     "form": {
@@ -310,13 +310,13 @@
   },
   "experiences": {
     "hero": {
-      "headline": "Vivere il Piemonte",
-      "subhead": "Il territorio non si visita. Si annusa, si assaggia, si cammina. Queste sono le esperienze che vi aspettano."
+      "headline": "Esperienze",
+      "subhead": "Al Relais Conac 1888 ogni esperienza è un invito a vivere la dolce vita piemontese."
     },
     "truffle": {
       "title": "Caccia al tartufo",
-      "p1": "All'alba, quando il bosco è ancora umido di rugiada, partiamo con il nostro tartufaio e il suo cane.",
-      "p2": "Camminiamo tra querce e noccioli, in silenzio, aspettando il momento in cui il cane si ferma e inizia a scavare. E poi, eccolo: il tartufo bianco o nero, tesoro nascosto della terra piemontese.",
+      "p1": "Immergiti nella tradizione piemontese con la nostra esclusiva caccia al tartufo. Accompagnati da esperti locali e dai loro cani addestrati, scopri i segreti di questo pregiato tesoro della terra. Un’esperienza autentica e sensoriale, riservata agli amanti della natura e del gusto.",
+      "p2": "",
       "p3": "Al ritorno, una degustazione con uova al tegamino e tajarin al tartufo.",
       "duration": "Durata: circa 3 ore",
       "includes": "Incluso: passeggiata, degustazione, calice di vino",
@@ -324,18 +324,18 @@
     },
     "wine": {
       "title": "Degustazioni private",
-      "p1": "Barolo, Barbaresco, Nebbiolo, Arneis. I vini di queste colline raccontano la terra da cui nascono.",
-      "p2": "Organizziamo degustazioni nella nostra cantina o a bordo piscina al tramonto, guidate da produttori locali che vi sveleranno i segreti delle loro vigne.",
+      "p1": "Degusta i vini del Monferrato in un percorso guidato tra aromi e sapori unici. I nostri esperti ti condurranno alla scoperta di etichette locali selezionate, accompagnate da prodotti tipici del territorio, per un’esperienza sensoriale indimenticabile. Ideale per coppie e appassionati di enogastronomia.",
+      "p2": "",
       "p3": "Non una lezione, ma una conversazione. Non un assaggio, ma un viaggio.",
       "wines": "4-6 vini selezionati",
       "pairing": "Abbinamento con formaggi e salumi locali",
       "visits": "Possibilità di visita alle cantine vicine"
     },
     "nature": {
-      "title": "Passeggiate nella natura",
-      "p1": "I sentieri partono direttamente dal casolare.",
-      "p2": "Potete camminare per ore tra vigne, noccioleti e boschi, incontrando solo silenzio e qualche capriolo. Nebbie mattutine, tramonti dorati, il profumo della terra dopo la pioggia.",
-      "p3": "Su richiesta, organizziamo escursioni guidate con esperti del territorio.",
+      "title": "⁠Relax & Massaggi",
+      "p1": "Ritrova il benessere e l’equilibrio con i nostri trattamenti esclusivi. Massaggi rigeneranti e momenti di relax totale, in spazi eleganti e riservati. La piscina scoperta, il solarium e gli spazi verdi completano l’esperienza di puro relax.",
+      "p2": "",
+      "p3": "",
       "trail1": "Anello del bosco: 1 ora, facile",
       "trail2": "Sentiero delle vigne: 2 ore, medio",
       "trail3": "Trekking panoramico: mezza giornata"

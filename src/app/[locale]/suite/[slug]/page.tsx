@@ -1,9 +1,9 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { getDictionary } from '@/i18n/getDictionary';
-import { locales, type Locale } from '@/i18n/config';
-import { suites, getSuiteById } from '@/data/suites';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { getDictionary } from "@/i18n/getDictionary";
+import { locales, type Locale } from "@/i18n/config";
+import { suites, getSuiteById } from "@/data/suites";
 import {
   Mountain,
   Bath,
@@ -17,12 +17,12 @@ import {
   Building2,
   Grape,
   Trees,
-} from 'lucide-react';
+} from "lucide-react";
 
 export async function generateStaticParams() {
   return suites.flatMap((suite) => [
-    { locale: 'it', slug: suite.slug },
-    { locale: 'en', slug: suite.slug },
+    { locale: "it", slug: suite.slug },
+    { locale: "en", slug: suite.slug },
   ]);
 }
 
@@ -32,13 +32,16 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale: localeParam, slug } = await params;
-  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
+  const locale = (
+    locales.includes(localeParam as Locale) ? localeParam : "it"
+  ) as Locale;
   const dictionary = await getDictionary(locale);
   const suite = getSuiteById(slug);
 
   if (!suite) return {};
 
-  const suiteData = dictionary.suites.list[suite.id as keyof typeof dictionary.suites.list];
+  const suiteData =
+    dictionary.suites.list[suite.id as keyof typeof dictionary.suites.list];
 
   return {
     title: `Suite ${suiteData.name}`,
@@ -52,7 +55,9 @@ export default async function SuiteDetailPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale: localeParam, slug } = await params;
-  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
+  const locale = (
+    locales.includes(localeParam as Locale) ? localeParam : "it"
+  ) as Locale;
   const dictionary = await getDictionary(locale);
   const suite = getSuiteById(slug);
 
@@ -60,26 +65,51 @@ export default async function SuiteDetailPage({
     notFound();
   }
 
-  const suiteData = dictionary.suites.list[suite.id as keyof typeof dictionary.suites.list];
+  const suiteData =
+    dictionary.suites.list[suite.id as keyof typeof dictionary.suites.list];
 
   const amenityIcons = [
-    { key: 'view', icon: Mountain, show: suite.hasValleyView || suite.hasVineyardView },
-    { key: 'bathroom', icon: Bath, show: true },
-    { key: 'products', icon: Leaf, show: true },
-    { key: 'heating', icon: Thermometer, show: true },
-    { key: 'wifi', icon: Wifi, show: true },
-    { key: 'kettle', icon: Coffee, show: true },
-    { key: 'robes', icon: Shirt, show: true },
-    { key: 'minibar', icon: Wine, show: true },
+    {
+      key: "view",
+      icon: Mountain,
+      show: suite.hasValleyView || suite.hasVineyardView,
+    },
+    { key: "bathroom", icon: Bath, show: true },
+    { key: "products", icon: Leaf, show: true },
+    { key: "heating", icon: Thermometer, show: true },
+    { key: "wifi", icon: Wifi, show: true },
+    { key: "kettle", icon: Coffee, show: true },
+    { key: "robes", icon: Shirt, show: true },
+    { key: "minibar", icon: Wine, show: true },
   ];
 
   const features = [
-    { icon: Flame, label: locale === 'it' ? 'Camino' : 'Fireplace', show: suite.hasFireplace },
-    { icon: Building2, label: locale === 'it' ? 'Balcone privato' : 'Private balcony', show: suite.hasBalcony },
-    { icon: Mountain, label: locale === 'it' ? 'Vista valle' : 'Valley view', show: suite.hasValleyView },
-    { icon: Grape, label: locale === 'it' ? 'Vista vigneti' : 'Vineyard view', show: suite.hasVineyardView },
-    { icon: Trees, label: locale === 'it' ? 'Accesso giardino' : 'Garden access', show: suite.hasGardenAccess },
-  ].filter(f => f.show);
+    {
+      icon: Flame,
+      label: locale === "it" ? "Camino" : "Fireplace",
+      show: suite.hasFireplace,
+    },
+    {
+      icon: Building2,
+      label: locale === "it" ? "Balcone privato" : "Private balcony",
+      show: suite.hasBalcony,
+    },
+    {
+      icon: Mountain,
+      label: locale === "it" ? "Vista valle" : "Valley view",
+      show: suite.hasValleyView,
+    },
+    {
+      icon: Grape,
+      label: locale === "it" ? "Vista vigneti" : "Vineyard view",
+      show: suite.hasVineyardView,
+    },
+    {
+      icon: Trees,
+      label: locale === "it" ? "Accesso giardino" : "Garden access",
+      show: suite.hasGardenAccess,
+    },
+  ].filter((f) => f.show);
 
   return (
     <>
@@ -96,15 +126,14 @@ export default async function SuiteDetailPage({
           </div>
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-ferro/70 via-transparent to-transparent" />
-        
+
         <div className="container relative z-10 pb-16">
-          <p className="text-crema/70 uppercase tracking-widest text-sm mb-2">Suite</p>
+          <p className="text-crema/70 uppercase tracking-widest text-sm mb-2">
+            Suite
+          </p>
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-bianco-latte mb-4">
             {suiteData.name}
           </h1>
-          <p className="font-serif text-xl md:text-2xl text-crema/90 italic">
-            {suiteData.tagline}
-          </p>
         </div>
       </section>
 
@@ -136,15 +165,21 @@ export default async function SuiteDetailPage({
                 {/* Quick info */}
                 <div className="space-y-4 mb-6 pb-6 border-b border-pietra">
                   <div className="flex justify-between">
-                    <span className="text-ferro/70">{dictionary.suites.details.size}</span>
+                    <span className="text-ferro/70">
+                      {dictionary.suites.details.size}
+                    </span>
                     <span className="font-medium">{suite.size} m²</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-ferro/70">{dictionary.suites.details.guests}</span>
+                    <span className="text-ferro/70">
+                      {dictionary.suites.details.guests}
+                    </span>
                     <span className="font-medium">{suite.guests}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-ferro/70">{dictionary.suites.details.bed}</span>
+                    <span className="text-ferro/70">
+                      {dictionary.suites.details.bed}
+                    </span>
                     <span className="font-medium">{suite.bedType}</span>
                   </div>
                 </div>
@@ -186,14 +221,23 @@ export default async function SuiteDetailPage({
             {dictionary.suites.details.features}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {amenityIcons.filter(a => a.show).map(({ key, icon: Icon }) => (
-              <div key={key} className="flex items-center gap-3 text-ferro/80">
-                <Icon size={20} className="text-verde-bosco flex-shrink-0" />
-                <span className="text-sm">
-                  {dictionary.suites.amenities[key as keyof typeof dictionary.suites.amenities]}
-                </span>
-              </div>
-            ))}
+            {amenityIcons
+              .filter((a) => a.show)
+              .map(({ key, icon: Icon }) => (
+                <div
+                  key={key}
+                  className="flex items-center gap-3 text-ferro/80"
+                >
+                  <Icon size={20} className="text-verde-bosco flex-shrink-0" />
+                  <span className="text-sm">
+                    {
+                      dictionary.suites.amenities[
+                        key as keyof typeof dictionary.suites.amenities
+                      ]
+                    }
+                  </span>
+                </div>
+              ))}
           </div>
         </div>
       </section>

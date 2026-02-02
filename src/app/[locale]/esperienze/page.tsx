@@ -207,13 +207,13 @@ export default async function ExperiencesPage({
       {/* Pool */}
       <section className="section bg-bianco-latte">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="mx-auto text-center">
             <Waves className="text-pietra-dark mx-auto mb-6" size={48} />
             <h2 className="font-serif text-3xl md:text-4xl text-ferro mb-8">
               {dictionary.experiences.pool.title}
             </h2>
 
-            <div className="space-y-4 text-lg text-ferro/80 leading-relaxed font-serif">
+            <div className="space-y-4 text-center flex flex-col items-center text-lg text-ferro/80 leading-relaxed font-serif">
               <p>{dictionary.experiences.pool.p1}</p>
               <p className="italic">{dictionary.experiences.pool.p2}</p>
               <p>{dictionary.experiences.pool.p3}</p>
