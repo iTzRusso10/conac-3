@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe } from "lucide-react";
 import type { Dictionary } from "@/i18n/getDictionary";
 import type { Locale } from "@/i18n/config";
-import { locales, localeNames } from "@/i18n/config";
+import { localeNames } from "@/i18n/config";
 import Image from "next/image";
 
 interface NavbarProps {
@@ -17,17 +17,23 @@ interface NavbarProps {
 
 export default function Navbar({ dictionary, locale }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  // Scroll detection
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Blocca scroll quando menu è aperto
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
 
   const navItems = [
     { href: `/${locale}`, label: dictionary.nav.home },
@@ -45,154 +51,158 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
     return `/${newLocale}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`;
   };
 
+  const otherLocale = locale === "it" ? "en" : "it";
+
   return (
     <>
+      {/* HEADER - sempre visibile, z-index più alto del menu */}
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
-          isScrolled
-            ? "bg-crema/95 backdrop-blur-md shadow-sm py-3"
-            : "bg-transparent py-4"
+        className={`fixed top-0 left-0 right-0 z-60 transition-all duration-300 ${
+          isMenuOpen
+            ? "bg-crema/95 backdrop-blur-md"
+            : isScrolled
+            ? "bg-crema/95 backdrop-blur-md shadow-sm"
+            : "bg-transparent"
         }`}
       >
         <div className="container">
-          <nav className="flex items-center justify-between">
-            {/* Logo */}
-            <Link
-              href={`/${locale}`}
-              className={`font-serif text-xl md:text-2xl tracking-wide transition-colors ${
-                isScrolled || !pathname.includes("suite/")
-                  ? "text-ferro hover:text-verde-bosco"
-                  : "text-bianco-latte hover:text-crema"
-              }`}
-            >
+          <nav className="grid grid-cols-3 items-center h-16 md:h-20">
+            {/* Logo - Sinistra */}
+            <Link href={`/${locale}`} className="justify-self-start">
               <Image
                 src="/images/pia.png"
                 alt="Relais Conac"
-                width={120}
-                height={50}
-                className="w-28 h-[60px]"
+                width={80}
+                height={44}
+                className="h-9 w-auto md:h-11"
               />
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-6">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`text-sm font-sans transition-colors ${
-                    pathname === item.href
-                      ? "text-verde-bosco font-medium"
-                      : isScrolled
-                      ? "text-ferro/80 hover:text-verde-bosco"
-                      : "text-ferro/80 hover:text-verde-bosco"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
+            {/* Brand Name - Centro */}
+            <Link
+              href={`/${locale}`}
+              className="justify-self-center flex flex-col items-center"
+            >
+              <span className="font-script text-lg md:text-xl text-ferro leading-tight">
+                Relais Conac
+              </span>
+              <span className="text-[9px] md:text-[10px] text-terracotta tracking-[0.15em] font-sans leading-tight">
+                1888
+              </span>
+            </Link>
 
-            {/* Right side: Language + CTA + Mobile Menu */}
-            <div className="flex items-center gap-3">
-              {/* Language Switcher */}
-              <div className="relative">
-                <button
-                  onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                  className="flex items-center gap-1 text-sm text-ferro/70 hover:text-verde-bosco transition-colors px-2 py-1"
-                  aria-label="Change language"
-                >
-                  <Globe size={16} />
-                  <span className="uppercase text-xs font-sans">{locale}</span>
-                </button>
-
-                <AnimatePresence>
-                  {isLangMenuOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -5 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -5 }}
-                      className="absolute top-full right-0 mt-2 bg-bianco-latte rounded-lg shadow-lg py-1 min-w-[100px] border border-pietra/30"
-                    >
-                      {locales.map((l) => (
-                        <Link
-                          key={l}
-                          href={getLocalizedPath(l)}
-                          onClick={() => setIsLangMenuOpen(false)}
-                          className={`block px-4 py-2 text-sm font-sans hover:bg-crema transition-colors ${
-                            l === locale
-                              ? "text-verde-bosco font-medium"
-                              : "text-ferro"
-                          }`}
-                        >
-                          {localeNames[l]}
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
-              {/* CTA Desktop */}
-
-              {/* Mobile Menu Button */}
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2 text-ferro hover:text-verde-bosco transition-colors"
-                aria-label="Toggle menu"
+            {/* Right: Language + Menu Toggle */}
+            <div className="justify-self-end flex items-center gap-1">
+              <Link
+                href={getLocalizedPath(otherLocale)}
+                className="flex items-center gap-1 px-2 py-1.5 text-ferro/70 hover:text-verde-bosco transition-colors"
+                title={localeNames[otherLocale]}
               >
-                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                <Globe size={16} />
+                <span className="text-xs font-sans uppercase">
+                  {otherLocale}
+                </span>
+              </Link>
+
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="p-2 text-ferro hover:text-verde-bosco transition-colors"
+                aria-label={isMenuOpen ? "Chiudi menu" : "Apri menu"}
+              >
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
           </nav>
         </div>
       </motion.header>
 
-      {/* Mobile Menu */}
+      {/* MENU PANEL */}
       <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 lg:hidden"
-          >
-            <div
-              className="absolute inset-0 bg-ferro/20 backdrop-blur-sm"
-              onClick={() => setIsMobileMenuOpen(false)}
+        {isMenuOpen && (
+          <>
+            {/* Overlay - sotto la navbar, con blur su desktop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed top-16 md:top-20 left-0 right-0 bottom-0 z-40 bg-ferro/20 md:backdrop-blur-sm"
+              onClick={() => setIsMenuOpen(false)}
             />
+
+            {/* Menu - full width mobile, max-w-sm desktop, copre tutto con -webkit-fill-available */}
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ type: "tween", duration: 0.25 }}
-              className="absolute right-0 top-0 bottom-0 w-72 max-w-full bg-crema shadow-xl"
+              transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
+              className="fixed top-0 right-0 left-0 md:left-auto md:w-96 z-50 bg-crema shadow-2xl flex flex-col pt-16 md:pt-20"
+              style={{
+                height: "100vh",
+                // Safari fix
+                minHeight: "-webkit-fill-available",
+              }}
             >
-              <div className="p-6 pt-20">
-                <nav className="flex flex-col gap-2">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={`text-lg font-serif py-3 border-b border-pietra/20 transition-colors ${
-                        pathname === item.href
-                          ? "text-verde-bosco"
-                          : "text-ferro hover:text-verde-bosco"
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </nav>
+              {/* Navigation */}
+              <nav className="flex-1 flex flex-col justify-start px-6 py-4">
+                <ul className="space-y-1">
+                  {navItems.map((item, index) => {
+                    const isActive = pathname === item.href;
+                    return (
+                      <motion.li
+                        key={item.href}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.03 }}
+                      >
+                        <Link
+                          href={item.href}
+                          onClick={() => setIsMenuOpen(false)}
+                          className={`block py-3 px-4 rounded-lg text-lg font-serif transition-colors ${
+                            isActive
+                              ? "bg-verde-bosco/10 text-verde-bosco"
+                              : "text-ferro hover:bg-pietra/10 hover:text-verde-bosco"
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      </motion.li>
+                    );
+                  })}
+                </ul>
 
-                {/* CTA Mobile */}
-              </div>
+                {/* CTA */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                  className="mt-8"
+                >
+                  <Link
+                    href={`/${locale}/contatti`}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block w-full py-3 px-4 bg-verde-bosco text-bianco-latte text-center font-sans rounded-lg hover:bg-verde-bosco/90 transition-colors"
+                  >
+                    {dictionary.cta.checkAvailability}
+                  </Link>
+                </motion.div>
+
+                {/* Contatti */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.35 }}
+                  className="mt-6 pt-4 border-t border-pietra/20 text-sm text-ferro/60 font-sans text-center"
+                >
+                  <p>+39 0173 789 000</p>
+                  <p>info@relaisconac.it</p>
+                </motion.div>
+              </nav>
             </motion.div>
-          </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>

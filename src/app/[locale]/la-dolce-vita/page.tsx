@@ -1,9 +1,10 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getDictionary } from '@/i18n/getDictionary';
-import { locales, type Locale } from '@/i18n/config';
-import Hero from '@/components/ui/Hero';
-import { Eye, Ear, Wind, Coffee, Hand } from 'lucide-react';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { getDictionary } from "@/i18n/getDictionary";
+import { locales, type Locale } from "@/i18n/config";
+import Hero from "@/components/ui/Hero";
+import { Eye, Ear, Wind, Coffee, Hand } from "lucide-react";
+import { SectionWithLogo } from "@/components/ui/LogoDecorations";
 
 export async function generateMetadata({
   params,
@@ -11,13 +12,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: localeParam } = await params;
-  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
+  const locale = (
+    locales.includes(localeParam as Locale) ? localeParam : "it"
+  ) as Locale;
 
   return {
-    title: 'La Dolce Vita',
+    title: "La Dolce Vita",
     description:
-      locale === 'it'
-        ? 'La Dolce Vita non è nostalgia, è un modo di vivere. Scopri la filosofia del nostro casolare: lentezza, autenticità, piacere dei sensi.'
+      locale === "it"
+        ? "La Dolce Vita non è nostalgia, è un modo di vivere. Scopri la filosofia del nostro casolare: lentezza, autenticità, piacere dei sensi."
         : "La Dolce Vita is not nostalgia — it's a way of living. Discover our farmhouse philosophy: slowness, authenticity, pleasure of the senses.",
   };
 }
@@ -28,15 +31,17 @@ export default async function DolceVitaPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: localeParam } = await params;
-  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
+  const locale = (
+    locales.includes(localeParam as Locale) ? localeParam : "it"
+  ) as Locale;
   const dictionary = await getDictionary(locale);
 
   const senses = [
-    { key: 'sight', icon: Eye },
-    { key: 'sound', icon: Ear },
-    { key: 'smell', icon: Wind },
-    { key: 'taste', icon: Coffee },
-    { key: 'touch', icon: Hand },
+    { key: "sight", icon: Eye },
+    { key: "sound", icon: Ear },
+    { key: "smell", icon: Wind },
+    { key: "taste", icon: Coffee },
+    { key: "touch", icon: Hand },
   ] as const;
 
   return (
@@ -59,7 +64,9 @@ export default async function DolceVitaPage({
 
             <div className="space-y-8 text-lg text-ferro/80 leading-relaxed">
               <p>{dictionary.dolcevita.manifesto.intro}</p>
-              <p className="font-medium text-ferro">{dictionary.dolcevita.manifesto.intro2}</p>
+              <p className="font-medium text-ferro">
+                {dictionary.dolcevita.manifesto.intro2}
+              </p>
 
               {/* Time */}
               <div className="border-l-2 border-terracotta pl-6 py-2">
@@ -130,10 +137,15 @@ export default async function DolceVitaPage({
       </section>
 
       {/* CTA */}
-      <section className="section bg-verde-bosco text-bianco-latte">
+      <SectionWithLogo
+        logoPosition="center"
+        logoOpacity={0.1}
+        logoSize="xl"
+        className="section bg-verde-bosco text-bianco-latte"
+      >
         <div className="container text-center">
           <h2 className="font-serif text-3xl md:text-4xl mb-6">
-            {locale === 'it' ? 'Vivi La Dolce Vita' : 'Live La Dolce Vita'}
+            {locale === "it" ? "Vivi La Dolce Vita" : "Live La Dolce Vita"}
           </h2>
           <Link
             href={`/${locale}/esperienze`}
@@ -142,7 +154,7 @@ export default async function DolceVitaPage({
             {dictionary.cta.discoverExperiences}
           </Link>
         </div>
-      </section>
+      </SectionWithLogo>
     </>
   );
 }

@@ -255,7 +255,7 @@ export default async function HomePage({
       {/* Final CTA */}
       <section className="section bg-verde-bosco text-bianco-latte relative overflow-hidden">
         {/* Logo watermark */}
-        <LogoWatermark position="center" opacity={0.08} size="xl" />
+        <LogoWatermark position="center" opacity={0.1} size="xl" />
 
         {/* Rametti decorativi */}
         <div className="absolute inset-0 opacity-5 pointer-events-none">
