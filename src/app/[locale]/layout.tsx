@@ -53,7 +53,7 @@ export default async function LocaleLayout({
   const dictionary = await getDictionary(validLocale);
 
   return (
-    <html lang={validLocale}>
+    <html lang={validLocale} className="bg-crema">
       <head>
         <meta
           name="viewport"
