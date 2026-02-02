@@ -22,30 +22,32 @@
     "discoverExperiences": "Scopri le esperienze",
     "requestQuote": "Richiedi preventivo",
     "getInTouch": "Scrivici",
-    "bookExperience": "Prenota un'esperienza",
+    "bookExperience": "Prenota il tuo rifugio",
     "sendRequest": "Invia richiesta",
     "exploreSuite": "Scopri questa suite",
     "otherSuites": "Scopri le altre suite"
   },
   "home": {
     "hero": {
-      "headline": "Dove il tempo ha il sapore del vino",
+      "headline": "Dove il tempo impara ad aspettare.",
       "subhead": "Un casolare storico nelle colline del Piemonte. Sei suite con anima, una piscina che guarda la valle, e il silenzio del bosco come benvenuto."
     },
     "intro": {
-      "title": "La Dolce Vita",
-      "p1": "Non è un tema, è un modo di vivere.",
-      "p2": "È la pietra calda sotto i piedi al mattino. Il profumo del bosco che entra dalla finestra. Un calice di Barolo mentre il sole scende dietro le colline.",
-      "p3": "A Relais Conac coltiviamo l'arte della lentezza. Ogni dettaglio — dalle lanterne in ferro battuto ai fiori raccolti nel prato — racconta una cura artigianale che si è persa altrove.",
-      "p4": "Qui non si \"soggiorna\". Si vive, per qualche giorno, come si dovrebbe vivere sempre."
+      "title": "Luxury & Exclusivity",
+      "p1": "Immaginate un’oasi di assoluta serenità dove, una volta chiusa la porta, ogni rumore del mondo svanisce nel silenzio della campagna.",
+      "p2": "Al Relais Conac 1888, le albe sono sussurri delicati e i tramonti esplosioni dorate che infiammano le colline del Monferrato.",
+      "p3": "L’esclusività si scopre nei dettagli: letti a baldacchino che sembrano nuvole, vasche pensate per il totale abbandono e angoli lettura privati dove il tempo si ferma. Ogni poltrona, ogni luce e ogni materiale nobile è stato scelto per offrirvi l’equilibrio perfetto tra il prestigio di una dimora antica e il calore di una casa vera.",
+      "p4": "Un'esperienza Adults Only dedicata a chi cerca il lusso della quiete."
     },
-    "suites": {
-      "title": "Le nostre suite",
-      "intro": "Sei stanze, sei anime. Ogni suite porta il nome di un elemento del paesaggio piemontese e ne custodisce lo spirito."
+    "manifesto": {
+      "title": "La Vita Lenta (Il Manifesto)",
+      "intro": "In Piemonte la bellezza non si urla, si respira. Al Relais Conac la \"Dolce Vita\" inizia a tavola con la nostra filosofia \"dalla terra al piatto\": una colazione che è un rito fatto di sapori reali e prodotti dei nostri artigiani locali.",
+      "p1": "Vi invitiamo a riscoprire il piacere di non fare nulla: è il ritmo della \"Piazza\", il cuore del casolare, dove ci si ritrova per un caffè, una partita a carte all'ombra o un aperitivo mentre il sole cala dietro i filari. Uno stile di vita per veri intenditori: casual, elegante, autentico."
     },
-    "experiences": {
-      "title": "Esperienze",
-      "intro": "Il Piemonte non si visita. Si vive con tutti i sensi.",
+    "author_details": {
+      "title": "Dettagli D'autore",
+      "intro": "La Piscina in Pietra Naturale: Un’opera d’arte artigianale baciata dal sole. Scolpita nella pietra con una scalinata fatta a mano, è il vostro rifugio estivo. Il solarium vi attende con lettini in legno e materassi king-size da 23 cm: il massimo del comfort immersi nel verde.",
+      "p1": "Il Rito della Doccia Outdoor: Esiste un sollievo profondo nel fare una doccia all'aperto, barefoot sulla pietra antica. Una stimolazione sensoriale che riconnette i sensi e rigenera lo spirito in totale libertà.",
       "truffle": {
         "title": "Caccia al tartufo",
         "desc": "All'alba, con il tartufaio e il suo cane, nei boschi dove crescono tesori nascosti."
