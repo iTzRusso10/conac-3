@@ -55,6 +55,7 @@ export default async function LocaleLayout({
   return (
     <html lang={validLocale} className="bg-crema">
       <head>
+        <meta name="theme-color" content="#FAF6F0" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, viewport-fit=cover"

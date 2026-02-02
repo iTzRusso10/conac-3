@@ -67,7 +67,6 @@
 
 html {
   background: var(--color-crema);
-  min-height: -webkit-fill-available;
 }
 
 body {
@@ -76,11 +75,19 @@ body {
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 400;
-  min-height: -webkit-fill-available;
   line-height: 1.85; /* Interlinea generosa - Vita Lenta */
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--color-crema);
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* ===== TYPOGRAPHY - Stile Italiano Elegante ===== */
@@ -178,7 +185,9 @@ b {
 .card-rustic {
   background: var(--color-bianco-latte);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.03);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.05),
+    0 1px 4px rgba(0, 0, 0, 0.03);
   border: 1px solid var(--color-pietra-light);
 }
 

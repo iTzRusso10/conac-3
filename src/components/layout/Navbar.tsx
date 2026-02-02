@@ -219,7 +219,7 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.35 }}
-                  className="mt-6 pt-4 border-t border-pietra/20 text-sm text-ferro/60 font-sans text-center"
+                  className="mt-6 pt-4 border-t flex justify-between items-center border-pietra/20 text-sm text-ferro/60 font-sans text-center"
                 >
                   <p>+39 0173 789 000</p>
                   <p>info@relaisconac.it</p>
