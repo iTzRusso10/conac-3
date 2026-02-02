@@ -1,9 +1,17 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getDictionary } from '@/i18n/getDictionary';
-import { locales, type Locale } from '@/i18n/config';
-import Hero from '@/components/ui/Hero';
-import { Search, Wine, TreeDeciduous, Waves, Clock, Gift, Calendar } from 'lucide-react';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { getDictionary } from "@/i18n/getDictionary";
+import { locales, type Locale } from "@/i18n/config";
+import PageHero from "@/components/ui/PageHero";
+import {
+  Search,
+  Wine,
+  TreeDeciduous,
+  Waves,
+  Clock,
+  Gift,
+  Calendar,
+} from "lucide-react";
 
 export async function generateMetadata({
   params,
@@ -11,14 +19,16 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: localeParam } = await params;
-  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
+  const locale = (
+    locales.includes(localeParam as Locale) ? localeParam : "it"
+  ) as Locale;
 
   return {
-    title: locale === 'it' ? 'Esperienze' : 'Experiences',
+    title: locale === "it" ? "Esperienze" : "Experiences",
     description:
-      locale === 'it'
-        ? 'Vivi il Piemonte autentico: caccia al tartufo, degustazioni di Barolo, passeggiate nei boschi. Esperienze esclusive per gli ospiti del casolare.'
-        : 'Experience authentic Piedmont: truffle hunting, Barolo tastings, forest walks. Exclusive experiences for farmhouse guests.',
+      locale === "it"
+        ? "Vivi il Piemonte autentico: caccia al tartufo, degustazioni di Barolo, passeggiate nei boschi. Esperienze esclusive per gli ospiti del casolare."
+        : "Experience authentic Piedmont: truffle hunting, Barolo tastings, forest walks. Exclusive experiences for farmhouse guests.",
   };
 }
 
@@ -28,17 +38,18 @@ export default async function ExperiencesPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: localeParam } = await params;
-  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
+  const locale = (
+    locales.includes(localeParam as Locale) ? localeParam : "it"
+  ) as Locale;
   const dictionary = await getDictionary(locale);
 
   return (
     <>
-      {/* Hero */}
-      <Hero
-        headline={dictionary.experiences.hero.headline}
-        subhead={dictionary.experiences.hero.subhead}
+      {/* Page Hero */}
+      <PageHero
+        title={dictionary.experiences.hero.headline}
+        subtitle={dictionary.experiences.hero.subhead}
         image="/images/hero-experiences.jpg"
-        height="medium"
       />
 
       {/* Truffle Hunting */}
@@ -178,7 +189,9 @@ export default async function ExperiencesPage({
               {/* Trails */}
               <div className="bg-bianco-latte p-6 rounded-sm">
                 <h4 className="font-medium text-ferro mb-4">
-                  {locale === 'it' ? 'Suggerimenti percorsi:' : 'Trail suggestions:'}
+                  {locale === "it"
+                    ? "Suggerimenti percorsi:"
+                    : "Trail suggestions:"}
                 </h4>
                 <ul className="space-y-2 text-sm text-ferro/70">
                   <li>{dictionary.experiences.nature.trail1}</li>
@@ -220,7 +233,9 @@ export default async function ExperiencesPage({
       <section className="section bg-verde-bosco text-bianco-latte">
         <div className="container text-center">
           <h2 className="font-serif text-3xl md:text-4xl mb-6">
-            {locale === 'it' ? 'Pronti a vivere il Piemonte?' : 'Ready to live Piedmont?'}
+            {locale === "it"
+              ? "Pronti a vivere il Piemonte?"
+              : "Ready to live Piedmont?"}
           </h2>
           <Link
             href={`/${locale}/contatti`}

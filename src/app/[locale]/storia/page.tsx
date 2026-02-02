@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getDictionary } from "@/i18n/getDictionary";
 import { locales, type Locale } from "@/i18n/config";
 import { SectionWithLogo } from "@/components/ui/LogoDecorations";
-import Hero from "@/components/ui/Hero";
+import PageHero from "@/components/ui/PageHero";
 
 export async function generateMetadata({
   params,
@@ -37,10 +37,10 @@ export default async function StoryPage({
 
   return (
     <>
-      {/* Hero */}
-      <Hero
-        headline={dictionary.story.hero.headline}
-        subhead={dictionary.story.hero.subhead}
+      {/* Page Hero */}
+      <PageHero
+        title={dictionary.story.hero.headline}
+        subtitle={dictionary.story.hero.subhead}
         image="/images/hero-story.jpg"
       />
 

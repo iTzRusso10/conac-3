@@ -1,9 +1,9 @@
-import type { Metadata } from 'next';
-import { getDictionary } from '@/i18n/getDictionary';
-import { locales, type Locale } from '@/i18n/config';
-import Hero from '@/components/ui/Hero';
-import EventForm from '@/components/ui/EventForm';
-import { Heart, Users, Sunset, Utensils, Check } from 'lucide-react';
+import type { Metadata } from "next";
+import { getDictionary } from "@/i18n/getDictionary";
+import { locales, type Locale } from "@/i18n/config";
+import PageHero from "@/components/ui/PageHero";
+import EventForm from "@/components/ui/EventForm";
+import { Heart, Users, Sunset, Utensils, Check } from "lucide-react";
 
 export async function generateMetadata({
   params,
@@ -11,13 +11,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: localeParam } = await params;
-  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
+  const locale = (
+    locales.includes(localeParam as Locale) ? localeParam : "it"
+  ) as Locale;
 
   return {
-    title: locale === 'it' ? 'Ricevimenti & Eventi' : 'Events & Celebrations',
+    title: locale === "it" ? "Ricevimenti & Eventi" : "Events & Celebrations",
     description:
-      locale === 'it'
-        ? 'Organizza il tuo evento esclusivo: matrimoni intimi, cene romantiche, aperitivi a bordo piscina. Location unica nelle Langhe piemontesi.'
+      locale === "it"
+        ? "Organizza il tuo evento esclusivo: matrimoni intimi, cene romantiche, aperitivi a bordo piscina. Location unica nelle Langhe piemontesi."
         : "Host your exclusive event: intimate weddings, romantic dinners, poolside aperitifs. A unique venue in Piedmont's Langhe.",
   };
 }
@@ -28,23 +30,20 @@ export default async function EventsPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: localeParam } = await params;
-  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
+  const locale = (
+    locales.includes(localeParam as Locale) ? localeParam : "it"
+  ) as Locale;
   const dictionary = await getDictionary(locale);
 
   const weddingHighlights = Object.values(dictionary.events.wedding.highlights);
 
   return (
     <>
-      {/* Hero */}
-      <Hero
-        headline={dictionary.events.hero.headline}
-        subhead={dictionary.events.hero.subhead}
-        cta={{
-          label: dictionary.cta.requestQuote,
-          href: '#form',
-        }}
+      {/* Page Hero */}
+      <PageHero
+        title={dictionary.events.hero.headline}
+        subtitle={dictionary.events.hero.subhead}
         image="/images/hero-events.jpg"
-        height="large"
       />
 
       {/* Matrimoni Intimi */}
@@ -80,7 +79,10 @@ export default async function EventsPage({
               <ul className="space-y-3">
                 {weddingHighlights.map((highlight, i) => (
                   <li key={i} className="flex items-start gap-3 text-ferro/80">
-                    <Check size={18} className="text-verde-bosco mt-0.5 flex-shrink-0" />
+                    <Check
+                      size={18}
+                      className="text-verde-bosco mt-0.5 flex-shrink-0"
+                    />
                     <span>{highlight}</span>
                   </li>
                 ))}

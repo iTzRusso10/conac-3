@@ -1,9 +1,18 @@
-import type { Metadata } from 'next';
-import { getDictionary } from '@/i18n/getDictionary';
-import { locales, type Locale } from '@/i18n/config';
-import Hero from '@/components/ui/Hero';
-import BookingForm from '@/components/ui/BookingForm';
-import { MapPin, Phone, Mail, Car, Plane, Train, ParkingCircle, ChevronDown } from 'lucide-react';
+import type { Metadata } from "next";
+import { getDictionary } from "@/i18n/getDictionary";
+import { locales, type Locale } from "@/i18n/config";
+import PageHero from "@/components/ui/PageHero";
+import BookingForm from "@/components/ui/BookingForm";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Car,
+  Plane,
+  Train,
+  ParkingCircle,
+  ChevronDown,
+} from "lucide-react";
 
 export async function generateMetadata({
   params,
@@ -11,13 +20,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: localeParam } = await params;
-  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
+  const locale = (
+    locales.includes(localeParam as Locale) ? localeParam : "it"
+  ) as Locale;
 
   return {
-    title: locale === 'it' ? 'Contatti & Prenotazioni' : 'Contact & Bookings',
+    title: locale === "it" ? "Contatti & Prenotazioni" : "Contact & Bookings",
     description:
-      locale === 'it'
-        ? 'Contattaci per informazioni o prenotazioni. Verifica la disponibilità delle nostre suite nelle Langhe piemontesi.'
+      locale === "it"
+        ? "Contattaci per informazioni o prenotazioni. Verifica la disponibilità delle nostre suite nelle Langhe piemontesi."
         : "Contact us for information or bookings. Check availability for our suites in Piedmont's Langhe.",
   };
 }
@@ -28,7 +39,9 @@ export default async function ContactPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: localeParam } = await params;
-  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
+  const locale = (
+    locales.includes(localeParam as Locale) ? localeParam : "it"
+  ) as Locale;
   const dictionary = await getDictionary(locale);
 
   const faqItems = [
@@ -41,11 +54,10 @@ export default async function ContactPage({
 
   return (
     <>
-      {/* Hero */}
-      <Hero
-        headline={dictionary.contact.hero.headline}
-        subhead={dictionary.contact.hero.subhead}
-        height="medium"
+      {/* Page Hero */}
+      <PageHero
+        title={dictionary.contact.hero.headline}
+        subtitle={dictionary.contact.hero.subhead}
       />
 
       {/* Form & Info */}
@@ -62,14 +74,14 @@ export default async function ContactPage({
               {/* Booking Engine Placeholder */}
               <div className="mt-8 p-6 bg-pietra/20 border-2 border-dashed border-pietra rounded-sm">
                 <p className="text-sm text-ferro/60 text-center">
-                  {locale === 'it'
-                    ? '[ Placeholder per integrazione Booking Engine / Channel Manager ]'
-                    : '[ Placeholder for Booking Engine / Channel Manager integration ]'}
+                  {locale === "it"
+                    ? "[ Placeholder per integrazione Booking Engine / Channel Manager ]"
+                    : "[ Placeholder for Booking Engine / Channel Manager integration ]"}
                 </p>
                 <p className="text-xs text-ferro/40 text-center mt-2">
-                  {locale === 'it'
-                    ? 'Es: Cloudbeds, Little Hotelier, Lodgify widget'
-                    : 'E.g.: Cloudbeds, Little Hotelier, Lodgify widget'}
+                  {locale === "it"
+                    ? "Es: Cloudbeds, Little Hotelier, Lodgify widget"
+                    : "E.g.: Cloudbeds, Little Hotelier, Lodgify widget"}
                 </p>
               </div>
             </div>
@@ -83,22 +95,31 @@ export default async function ContactPage({
               {/* Contact Details */}
               <div className="space-y-6 mb-10">
                 <div className="flex items-start gap-4">
-                  <MapPin className="text-verde-bosco mt-1 flex-shrink-0" size={20} />
+                  <MapPin
+                    className="text-verde-bosco mt-1 flex-shrink-0"
+                    size={20}
+                  />
                   <div>
                     <h4 className="font-medium text-ferro mb-1">
                       {dictionary.contact.info.address}
                     </h4>
                     <p className="text-ferro/70">
-                      [Nome Casolare]<br />
-                      [Via/Strada], [Numero]<br />
-                      [CAP] [Comune], Piemonte<br />
+                      [Nome Casolare]
+                      <br />
+                      [Via/Strada], [Numero]
+                      <br />
+                      [CAP] [Comune], Piemonte
+                      <br />
                       Italia
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Phone className="text-verde-bosco mt-1 flex-shrink-0" size={20} />
+                  <Phone
+                    className="text-verde-bosco mt-1 flex-shrink-0"
+                    size={20}
+                  />
                   <div>
                     <h4 className="font-medium text-ferro mb-1">
                       {dictionary.contact.info.phone}
@@ -113,7 +134,10 @@ export default async function ContactPage({
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Mail className="text-verde-bosco mt-1 flex-shrink-0" size={20} />
+                  <Mail
+                    className="text-verde-bosco mt-1 flex-shrink-0"
+                    size={20}
+                  />
                   <div>
                     <h4 className="font-medium text-ferro mb-1">
                       {dictionary.contact.info.email}
@@ -137,31 +161,35 @@ export default async function ContactPage({
                   <div className="flex items-center gap-3">
                     <Car size={16} className="text-verde-bosco" />
                     <span>
-                      <strong>{dictionary.contact.info.fromTurin}:</strong> 80 km, ~1 ora
+                      <strong>{dictionary.contact.info.fromTurin}:</strong> 80
+                      km, ~1 ora
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Car size={16} className="text-verde-bosco" />
                     <span>
-                      <strong>{dictionary.contact.info.fromMilan}:</strong> 160 km, ~2 ore
+                      <strong>{dictionary.contact.info.fromMilan}:</strong> 160
+                      km, ~2 ore
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Plane size={16} className="text-verde-bosco" />
                     <span>
-                      <strong>{dictionary.contact.info.airport}:</strong> Torino Caselle (90 km)
+                      <strong>{dictionary.contact.info.airport}:</strong> Torino
+                      Caselle (90 km)
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Train size={16} className="text-verde-bosco" />
                     <span>
-                      <strong>{dictionary.contact.info.train}:</strong> Alba (15 km)
+                      <strong>{dictionary.contact.info.train}:</strong> Alba (15
+                      km)
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <ParkingCircle size={16} className="text-verde-bosco" />
                     <span>
-                      <strong>{dictionary.contact.info.parking}:</strong>{' '}
+                      <strong>{dictionary.contact.info.parking}:</strong>{" "}
                       {dictionary.contact.info.parkingNote}
                     </span>
                   </div>

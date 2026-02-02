@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getDictionary } from "@/i18n/getDictionary";
 import { locales, type Locale } from "@/i18n/config";
-import Hero from "@/components/ui/Hero";
+import PageHero from "@/components/ui/PageHero";
 import { Eye, Ear, Wind, Coffee, Hand } from "lucide-react";
 import { SectionWithLogo } from "@/components/ui/LogoDecorations";
 
@@ -46,12 +46,11 @@ export default async function DolceVitaPage({
 
   return (
     <>
-      {/* Hero */}
-      <Hero
-        headline={dictionary.dolcevita.hero.headline}
-        subhead={dictionary.dolcevita.hero.subhead}
+      {/* Page Hero */}
+      <PageHero
+        title={dictionary.dolcevita.hero.headline}
+        subtitle={dictionary.dolcevita.hero.subhead}
         image="/images/hero-dolcevita.jpg"
-        height="medium"
       />
 
       {/* Manifesto */}

@@ -1,10 +1,10 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getDictionary } from '@/i18n/getDictionary';
-import { locales, type Locale } from '@/i18n/config';
-import Hero from '@/components/ui/Hero';
-import Gallery from '@/components/ui/Gallery';
-import { galleryImages } from '@/data/gallery';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { getDictionary } from "@/i18n/getDictionary";
+import { locales, type Locale } from "@/i18n/config";
+import PageHero from "@/components/ui/PageHero";
+import Gallery from "@/components/ui/Gallery";
+import { galleryImages } from "@/data/gallery";
 
 export async function generateMetadata({
   params,
@@ -12,13 +12,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: localeParam } = await params;
-  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
+  const locale = (
+    locales.includes(localeParam as Locale) ? localeParam : "it"
+  ) as Locale;
 
   return {
-    title: locale === 'it' ? 'Galleria' : 'Gallery',
+    title: locale === "it" ? "Galleria" : "Gallery",
     description:
-      locale === 'it'
-        ? 'Esplora le immagini del casolare: piscina in pietra, suite con camino, lanterne, boschi e colline delle Langhe piemontesi.'
+      locale === "it"
+        ? "Esplora le immagini del casolare: piscina in pietra, suite con camino, lanterne, boschi e colline delle Langhe piemontesi."
         : "Explore farmhouse images: stone pool, suites with fireplace, lanterns, woods, and Piedmont's Langhe hills.",
   };
 }
@@ -29,16 +31,17 @@ export default async function GalleryPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: localeParam } = await params;
-  const locale = (locales.includes(localeParam as Locale) ? localeParam : 'it') as Locale;
+  const locale = (
+    locales.includes(localeParam as Locale) ? localeParam : "it"
+  ) as Locale;
   const dictionary = await getDictionary(locale);
 
   return (
     <>
-      {/* Hero */}
-      <Hero
-        headline={dictionary.gallery.hero.headline}
-        subhead={dictionary.gallery.hero.subhead}
-        height="medium"
+      {/* Page Hero */}
+      <PageHero
+        title={dictionary.gallery.hero.headline}
+        subtitle={dictionary.gallery.hero.subhead}
       />
 
       {/* Gallery */}
