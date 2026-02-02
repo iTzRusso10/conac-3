@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getDictionary } from "@/i18n/getDictionary";
 import { locales, type Locale } from "@/i18n/config";
@@ -69,10 +70,19 @@ export default async function HomePage({
           </RusticFrame>
 
           {/* Colonna destra - Descrizione con parole evidenziate */}
-          <div className="space-y-5">
+          <div className="space-y-6">
             <p className="font-body text-lg text-ferro/80 leading-relaxed">
               {dictionary.home.intro.p2}
             </p>
+            <div className="relative h-64 md:h-80 w-full overflow-hidden rounded-2xl shadow-lg">
+              <Image
+                src="/images/pia.png"
+                alt="Veduta della tenuta"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 420px, 100vw"
+              />
+            </div>
           </div>
         </div>
 
@@ -89,7 +99,16 @@ export default async function HomePage({
           </div>
 
           {/* Citazione */}
-          <div className="lg:order-1">
+          <div className="lg:order-1 space-y-6">
+            <div className="relative h-56 md:h-72 w-full overflow-hidden rounded-2xl shadow-lg">
+              <Image
+                src="/images/pia.png"
+                alt="Dettaglio della campagna"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 420px, 100vw"
+              />
+            </div>
             <FarmhouseQuote>{dictionary.home.intro.p4}</FarmhouseQuote>
           </div>
         </div>
@@ -110,6 +129,27 @@ export default async function HomePage({
           subtitle={dictionary.home.manifesto.intro}
           decorated
         />
+
+        <div className="flex flex-col md:flex-row gap-4 items-center w-full mx-auto">
+          <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-3xl shadow-xl">
+            <Image
+              src="/images/pia.png"
+              alt="Paesaggio intorno alla struttura"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 900px, 100vw"
+            />
+          </div>
+          <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-3xl shadow-xl">
+            <Image
+              src="/images/pia.png"
+              alt="Paesaggio intorno alla struttura"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 900px, 100vw"
+            />
+          </div>
+        </div>
 
         <SectionTitle
           title={""}
@@ -141,6 +181,17 @@ export default async function HomePage({
           subtitle={dictionary.home.author_details.intro}
           decorated
         />
+        <div className="mt-12 max-w-5xl mx-auto">
+          <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-3xl shadow-xl">
+            <Image
+              src="/images/pia.png"
+              alt="Paesaggio intorno alla struttura"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 900px, 100vw"
+            />
+          </div>
+        </div>
         <SectionTitle
           title={""}
           subtitle={dictionary.home.author_details.p1}

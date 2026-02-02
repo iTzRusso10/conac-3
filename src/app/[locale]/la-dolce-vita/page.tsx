@@ -4,7 +4,9 @@ import { getDictionary } from "@/i18n/getDictionary";
 import { locales, type Locale } from "@/i18n/config";
 import PageHero from "@/components/ui/PageHero";
 import { Eye, Ear, Wind, Coffee, Hand } from "lucide-react";
-import { SectionWithLogo } from "@/components/ui/LogoDecorations";
+import { LogoDivider, SectionWithLogo } from "@/components/ui/LogoDecorations";
+import SectionTitle from "@/components/ui/SectionTitle";
+import Image from "next/image";
 
 export async function generateMetadata({
   params,
@@ -54,32 +56,41 @@ export default async function DolceVitaPage({
       />
 
       {/* Manifesto */}
-      <section className="section bg-crema">
-        <div className="container">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl md:text-4xl text-ferro text-center mb-12">
-              {dictionary.dolcevita.manifesto.title}
-            </h2>
-
-            <div className="space-y-8 text-lg text-ferro/80 leading-relaxed">
-              <p>{dictionary.dolcevita.manifesto.intro}</p>
-              <p className="font-medium text-ferro italic">
-                {dictionary.dolcevita.manifesto.intro2}
-              </p>
-              <p className="font-medium text-ferro">
-                {dictionary.dolcevita.manifesto.intro3}
-              </p>
-            </div>
-          </div>
+      <div className="container pt-14 mx-auto flex flex-col md:flex-row md:items-center gap-10 lg:gap-16">
+        <div className="w-full md:w-1/2 lg:w-7/12">
+          <SectionTitle
+            decorated
+            title={dictionary.dolcevita.manifesto.title}
+            subtitle={dictionary.dolcevita.manifesto.intro}
+            subtitles={[
+              dictionary.dolcevita.manifesto.intro2,
+              dictionary.dolcevita.manifesto.intro3,
+            ]}
+          />
         </div>
-      </section>
+        <div className="w-full md:w-1/2 lg:w-5/12 md:shrink-0">
+          <Image
+            src="/images/pia.png"
+            alt="La Dolce Vita"
+            width={700}
+            height={840}
+            className="w-full h-auto object-cover rounded-2xl "
+            sizes="(min-width: 1280px) 420px, (min-width: 768px) 40vw, 100vw"
+          />
+        </div>
+      </div>
+
+      <LogoDivider />
 
       {/* I Cinque Sensi */}
       <section className="section bg-bianco-latte">
         <div className="container">
-          <h2 className="font-serif text-3xl md:text-4xl text-ferro text-center mb-16">
-            {dictionary.dolcevita.senses.title}
-          </h2>
+          <SectionTitle
+            centeredTitle={true}
+            subtitleSize="text-[16px]"
+            title={dictionary.dolcevita.senses.title}
+            decorated
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {senses.map(({ key, icon: Icon }) => (

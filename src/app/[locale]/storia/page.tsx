@@ -4,6 +4,7 @@ import { getDictionary } from "@/i18n/getDictionary";
 import { locales, type Locale } from "@/i18n/config";
 import { SectionWithLogo } from "@/components/ui/LogoDecorations";
 import PageHero from "@/components/ui/PageHero";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 export async function generateMetadata({
   params,
@@ -52,7 +53,7 @@ export default async function StoryPage({
         logoSize="xl"
       >
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-20 items-center">
             {/* Image placeholder */}
             <div className="aspect-[4/3] bg-pietra italian-frame order-2 lg:order-1">
               <div className="w-full h-full flex items-center justify-center text-ferro/40">
@@ -62,9 +63,17 @@ export default async function StoryPage({
 
             {/* Text */}
             <div className="order-1 lg:order-2">
-              <h2 className="font-serif text-3xl md:text-4xl text-ferro mb-6">
-                {dictionary.story.roots.title}
-              </h2>
+              <SectionTitle
+                subtitleSize="text-[16px]"
+                centered={false}
+                title={dictionary.story.roots.title}
+                decorated
+                subtitle={`${dictionary.story.roots.p1}`}
+                subtitles={[dictionary.story.roots.p2]}
+              />
+            </div>
+            {/* <div className="order-1 lg:order-2">
+              <h2 className="font-serif text-3xl md:text-4xl text-ferro mb-6"></h2>
               <div className="space-y-4 text-ferro/80 leading-relaxed">
                 <p>{dictionary.story.roots.p1}</p>
                 <p>{dictionary.story.roots.p2}</p>
@@ -72,7 +81,7 @@ export default async function StoryPage({
                   {dictionary.story.roots.p3}
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </SectionWithLogo>
@@ -85,9 +94,9 @@ export default async function StoryPage({
         logoSize="xl"
       >
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-20 items-center">
             {/* Text */}
-            <div>
+            {/* <div>
               <h2 className="font-serif text-3xl md:text-4xl text-ferro mb-6">
                 {dictionary.story.rebirth.title}
               </h2>
@@ -96,7 +105,16 @@ export default async function StoryPage({
                 <p>{dictionary.story.rebirth.p2}</p>
                 <p>{dictionary.story.rebirth.p3}</p>
               </div>
-            </div>
+            </div> */}
+
+            <SectionTitle
+              subtitleSize="text-[16px]"
+              centered={false}
+              title={dictionary.story.rebirth.title}
+              decorated
+              subtitle={`${dictionary.story.rebirth.p1}`}
+              subtitles={[dictionary.story.rebirth.p2]}
+            />
 
             {/* Image placeholder */}
             <div className="aspect-[4/3] bg-pietra italian-frame">
@@ -125,13 +143,14 @@ export default async function StoryPage({
 
             {/* Text */}
             <div className="order-1 lg:order-2">
-              <h2 className="font-serif text-3xl md:text-4xl text-ferro mb-6">
-                {dictionary.story.dreams.title}
-              </h2>
-              <div className="space-y-4 text-ferro/80 leading-relaxed">
-                <p>{dictionary.story.dreams.p1}</p>
-                <p>{dictionary.story.dreams.p2}</p>
-              </div>
+              <SectionTitle
+                subtitleSize="text-[16px]"
+                centered={false}
+                title={dictionary.story.dreams.title}
+                decorated
+                subtitle={`${dictionary.story.dreams.p1}`}
+                subtitles={[dictionary.story.dreams.p2]}
+              />
             </div>
           </div>
         </div>
@@ -147,15 +166,14 @@ export default async function StoryPage({
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Text */}
-            <div>
-              <h2 className="font-serif text-3xl md:text-4xl text-ferro mb-6">
-                {dictionary.story["luxuryb&b"].title}
-              </h2>
-              <div className="space-y-4 text-ferro/80 leading-relaxed">
-                <p>{dictionary.story["luxuryb&b"].p1}</p>
-                <p>{dictionary.story["luxuryb&b"].p2}</p>
-              </div>
-            </div>
+            <SectionTitle
+              subtitleSize="text-[16px]"
+              centered={false}
+              title={dictionary.story["luxuryb&b"].title}
+              decorated
+              subtitle={dictionary.story["luxuryb&b"].p1}
+              subtitles={[dictionary.story["luxuryb&b"].p2]}
+            />
 
             {/* Image placeholder */}
             <div className="aspect-[4/3] bg-pietra italian-frame">
