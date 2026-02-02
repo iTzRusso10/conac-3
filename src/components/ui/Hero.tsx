@@ -11,6 +11,7 @@ interface HeroProps {
     href: string;
   };
   image?: string;
+  video?: string;
   overlay?: boolean;
   height?: "full" | "large" | "medium";
   align?: "center" | "left";
@@ -22,6 +23,7 @@ export default function Hero({
   subhead,
   cta,
   image,
+  video,
   overlay = true,
   height = "large",
   align = "center",
@@ -38,12 +40,24 @@ export default function Hero({
     left: "text-left items-start",
   };
 
+  const hasBackground = video || image;
+
   return (
     <section
       className={`relative ${heightClasses[height]} flex items-center justify-center overflow-hidden`}
     >
-      {/* Background */}
-      {image ? (
+      {/* Video Background */}
+      {video ? (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={video} type="video/mp4" />
+        </video>
+      ) : image ? (
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${image})` }}
@@ -52,8 +66,8 @@ export default function Hero({
         <div className="absolute inset-0 bg-gradient-to-br from-verde-bosco/30 via-crema to-pietra/40" />
       )}
 
-      {/* Overlay naturale */}
-      {overlay && image && (
+      {/* Overlay */}
+      {overlay && hasBackground && (
         <div className="absolute inset-0 bg-gradient-to-t from-ferro/60 via-ferro/25 to-ferro/10" />
       )}
 
@@ -73,7 +87,7 @@ export default function Hero({
                 transition={{ duration: 0.8, delay: 0.1 }}
                 className="text-center"
               >
-                <h1 className="font-script text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-bianco-latte leading-none">
+                <h1 className="font-script text-6xl md:text-7xl lg:text-8xl xl:text-9xl !text-bianco-latte leading-none">
                   Relais Conac
                 </h1>
                 <div className="mt-2 md:mt-4">
@@ -113,7 +127,7 @@ export default function Hero({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
                 className={`font-serif text-4xl md:text-5xl lg:text-6xl leading-tight ${
-                  image ? "text-bianco-latte" : "text-ferro"
+                  hasBackground ? "text-bianco-latte" : "text-ferro"
                 }`}
               >
                 {headline}
@@ -125,7 +139,7 @@ export default function Hero({
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.3 }}
                   className={`mt-5 text-lg md:text-xl font-body leading-relaxed max-w-xl ${
-                    image ? "text-crema/90" : "text-ferro/75"
+                    hasBackground ? "text-crema/90" : "text-ferro/75"
                   }`}
                 >
                   {subhead}
@@ -144,7 +158,7 @@ export default function Hero({
               <Link
                 href={cta.href}
                 className={`btn ${
-                  image
+                  hasBackground
                     ? "bg-bianco-latte text-ferro hover:bg-crema border-2 border-bianco-latte"
                     : "btn-primary"
                 }`}

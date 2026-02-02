@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { getDictionary } from "@/i18n/getDictionary";
 import { locales, type Locale } from "@/i18n/config";
-import Hero from "@/components/ui/Hero";
 import SectionTitle from "@/components/ui/SectionTitle";
 import SuiteCard from "@/components/ui/SuiteCard";
 import ExperienceCard from "@/components/ui/ExperienceCard";
@@ -21,6 +20,7 @@ import {
 } from "@/components/ui/LogoDecorations";
 import { suites } from "@/data/suites";
 import { galleryImages } from "@/data/gallery";
+import Hero from "@/components/ui/Hero";
 
 export default async function HomePage({
   params,
@@ -37,7 +37,7 @@ export default async function HomePage({
 
   return (
     <>
-      {/* Hero */}
+      {/* Hero con video */}
       <Hero
         headline={dictionary.home.hero.headline}
         subhead={dictionary.home.hero.subhead}
@@ -45,7 +45,7 @@ export default async function HomePage({
           label: dictionary.cta.discoverSuites,
           href: `/${locale}/suite`,
         }}
-        image="/images/hero-home.jpg"
+        video="/images/hero/hero-videos.mp4"
         height="full"
         showBrandName={true}
       />

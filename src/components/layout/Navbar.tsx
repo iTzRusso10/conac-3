@@ -16,16 +16,8 @@ interface NavbarProps {
 }
 
 export default function Navbar({ dictionary, locale }: NavbarProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-
-  // Scroll detection
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Blocca scroll quando menu è aperto
   useEffect(() => {
@@ -55,17 +47,13 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
 
   return (
     <>
-      {/* HEADER - sempre visibile, z-index più alto del menu */}
+      {/* HEADER - sempre bianco */}
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-60 transition-all duration-300 ${
-          isMenuOpen
-            ? "bg-crema/95 backdrop-blur-md"
-            : isScrolled
-            ? "bg-crema/95 backdrop-blur-md shadow-sm"
-            : "bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-60 bg-crema ${
+          isMenuOpen ? "" : "shadow-sm"
         }`}
       >
         <div className="container">
@@ -98,7 +86,7 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
             <div className="justify-self-end flex items-center gap-1">
               <Link
                 href={getLocalizedPath(otherLocale)}
-                className="flex items-center gap-1 px-2 py-1.5 text-ferro/70 hover:text-verde-bosco transition-colors"
+                className="flex items-center gap-1 px-2 py-1.5 text-ferro hover:text-verde-bosco transition-colors"
                 title={localeNames[otherLocale]}
               >
                 <Globe size={16} />
@@ -123,7 +111,7 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
       <AnimatePresence>
         {isMenuOpen && (
           <>
-            {/* Overlay - sotto la navbar, con blur su desktop */}
+            {/* Overlay */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -133,13 +121,13 @@ export default function Navbar({ dictionary, locale }: NavbarProps) {
               onClick={() => setIsMenuOpen(false)}
             />
 
-            {/* Menu - full width mobile, max-w-sm desktop, copre tutto con -webkit-fill-available */}
+            {/* Menu */}
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
-              className="fixed  w-full top-0 right-0 bottom-0 md:left-auto md:w-96 z-50 bg-crema shadow-2xl flex flex-col pt-16 md:pt-20"
+              className="fixed w-full top-0 right-0 bottom-0 md:left-auto md:w-96 z-50 bg-crema shadow-2xl flex flex-col pt-16 md:pt-20"
             >
               {/* Navigation */}
               <nav className="flex-1 flex flex-col justify-start px-6 py-4">
