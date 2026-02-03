@@ -51,7 +51,7 @@ export default async function ExperiencesPage({
       <PageHero
         title={dictionary.experiences.hero.headline}
         subtitle={dictionary.experiences.hero.subhead}
-        image="/images/hero-experiences.jpg"
+        image="/images/esperienze/7.jpg"
       />
 
       {/* Truffle Hunting */}
@@ -166,7 +166,13 @@ export default async function ExperiencesPage({
           {/* Image */}
           <div className="aspect-[4/3] bg-verde-bosco/20 italian-frame order-1 lg:order-2">
             <div className="w-full h-full flex items-center justify-center text-verde-bosco/60">
-              [Foto degustazione vino]
+              <Image
+                src="/images/esperienze/4.jpeg"
+                alt="Foto storica dettaglio pietra antica"
+                className="object-cover object-center w-full h-full"
+                width={1000}
+                height={1000}
+              />
             </div>
           </div>
         </div>
@@ -182,7 +188,13 @@ export default async function ExperiencesPage({
           {/* Image */}
           <div className="aspect-[4/3] bg-verde-bosco/10 italian-frame">
             <div className="w-full h-full flex items-center justify-center text-verde-bosco/60">
-              [Foto sentiero nel bosco]
+              <Image
+                src="/images/esperienze/5.webp"
+                alt="Foto storica dettaglio pietra antica"
+                className="object-cover object-bottom w-full h-full"
+                width={1000}
+                height={1000}
+              />
             </div>
           </div>
 
@@ -238,9 +250,15 @@ export default async function ExperiencesPage({
         </div>
 
         {/* Pool image */}
-        <div className="mt-12 aspect-[21/9] bg-pietra/30 italian-frame max-w-5xl mx-auto">
+        <div className="mt-12 aspect-square md:aspect-[21/9] bg-pietra/30 italian-frame max-w-5xl mx-auto">
           <div className="w-full h-full flex items-center justify-center text-ferro/40">
-            [Foto panoramica piscina]
+            <Image
+              src="/images/esperienze/6.jpg"
+              alt="Foto storica dettaglio pietra antica"
+              className="object-cover object-bottom w-full h-full"
+              width={1000}
+              height={1000}
+            />
           </div>
         </div>
       </SectionWithLogo>

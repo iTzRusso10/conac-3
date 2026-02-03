@@ -45,7 +45,8 @@ export default async function EventsPage({
       <PageHero
         title={dictionary.events.hero.headline}
         subtitle={dictionary.events.hero.subhead}
-        image="/images/hero-events.jpg"
+        image="/images/momenti/5.jpeg"
+        imageClassName=""
       />
 
       {/* Matrimoni Intimi */}
@@ -58,7 +59,13 @@ export default async function EventsPage({
           {/* Image */}
           <div className="aspect-[4/3] bg-pietra italian-frame">
             <div className="w-full h-full flex items-center justify-center text-ferro/40">
-              [Foto matrimonio nella corte]
+              <Image
+                src="/images/momenti/4.jpeg"
+                width={1000}
+                height={1000}
+                alt="Pia"
+                className=" object-cover w-full h-full object-center"
+              />
             </div>
           </div>
 
@@ -120,7 +127,13 @@ export default async function EventsPage({
           {/* Image */}
           <div className="aspect-[4/3] bg-pietra italian-frame order-1 lg:order-2">
             <div className="w-full h-full flex items-center justify-center text-ferro/40">
-              [Foto festa privata]
+              <Image
+                src="/images/momenti/3.jpeg"
+                width={1000}
+                height={1000}
+                alt="Pia"
+                className=" object-cover w-full h-full object-center"
+              />
             </div>
           </div>
         </div>
@@ -134,7 +147,7 @@ export default async function EventsPage({
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Aperitivo */}
-          <div className="bg-bianco-latte p-8 italian-frame">
+          <div className="bg-bianco-latte p-6 italian-frame">
             <div className="flex items-center gap-3 mb-4">
               <Sunset className="text-terracotta" size={24} />
               <h3 className="font-serif text-2xl text-ferro">
@@ -148,16 +161,16 @@ export default async function EventsPage({
               </p>
             </div>
             <Image
-              src="/images/pia.png"
-              width={400}
-              height={300}
+              src="/images/momenti/2.jpeg"
+              width={1000}
+              height={1000}
               alt="Pia"
-              className="mt-4 mx-auto"
+              className="mt-4 object-cover w-full aspect-square md:aspect-video object-center"
             />
           </div>
 
           {/* Cena */}
-          <div className="bg-bianco-latte p-8 italian-frame">
+          <div className="bg-bianco-latte p-6 italian-frame">
             <div className="flex items-center gap-3 mb-4">
               <Utensils className="text-terracotta" size={24} />
               <h3 className="font-serif text-2xl text-ferro">
@@ -171,11 +184,11 @@ export default async function EventsPage({
               </p>
             </div>
             <Image
-              src="/images/pia.png"
-              width={400}
-              height={300}
+              src="/images/momenti/1.jpeg"
+              width={1000}
+              height={1000}
               alt="Pia"
-              className="mt-4 mx-auto"
+              className="mt-4 object-cover w-full aspect-square md:aspect-video object-center"
             />
           </div>
         </div>

@@ -117,7 +117,7 @@ export default async function HomePage({
         <div className="mt-12 md:hidden">
           <div className="grid grid-cols-2 gap-4">
             {rowImaes3.map((src, i) => (
-              <div key={i} className="relative h-40  overflow-hidden shadow-lg">
+              <div key={i} className="relative h-40 overflow-hidden shadow-lg">
                 <Image src={src} alt="" fill className="object-cover" />
               </div>
             ))}
@@ -136,7 +136,7 @@ export default async function HomePage({
               <p>{dictionary.home.manifesto.p1}</p>
             </div>
 
-            <div className="col-span-5 relative h-64  overflow-hidden shadow-xl">
+            <div className="col-span-5 relative h-64 overflow-hidden shadow-xl">
               <Image
                 src="/images/home/9.webp"
                 alt=""
@@ -148,27 +148,50 @@ export default async function HomePage({
         </div>
 
         {/* DESKTOP */}
-        <div className="hidden md:block px-8 mt-16">
-          <div className="grid grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {rowImaes2.map((src, i) => (
-              <div key={i} className="relative h-56  overflow-hidden shadow-lg">
-                <Image src={src} alt="" fill className="object-cover" />
+        <div className="hidden md:block px-8 mt-12">
+          <div className="max-w-6xl mx-auto">
+            {/* Grid compatto: 2 colonne di immagini + testo al centro */}
+            <div className="grid grid-cols-12 gap-6 items-center">
+              {/* Colonna sinistra - 2 immagini */}
+              <div className="col-span-3 flex flex-col gap-6">
+                {rowImaes2.slice(0, 2).map((src, i) => (
+                  <div
+                    key={i}
+                    className="relative h-48 overflow-hidden shadow-lg"
+                  >
+                    <Image src={src} alt="" fill className="object-cover" />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
 
-          <div className="grid grid-cols-12 gap-8 mt-16 items-center">
-            <div className="col-span-7 text-center">
-              <p>{dictionary.home.manifesto.p1}</p>
-            </div>
+              {/* Colonna centrale - Testo + immagine grande */}
+              <div className="col-span-6 flex flex-col gap-6">
+                <div className="text-center px-4">
+                  <p className="leading-relaxed">
+                    {dictionary.home.manifesto.p1}
+                  </p>
+                </div>
+                <div className="relative h-80 overflow-hidden shadow-xl">
+                  <Image
+                    src="/images/home/9.webp"
+                    alt=""
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
 
-            <div className="col-span-5 relative h-64  overflow-hidden shadow-xl">
-              <Image
-                src="/images/home/9.webp"
-                alt=""
-                fill
-                className="object-cover"
-              />
+              {/* Colonna destra - 1 immagine */}
+              <div className="col-span-3">
+                <div className="relative h-full min-h-[25rem] overflow-hidden shadow-lg">
+                  <Image
+                    src={rowImaes2[2]}
+                    alt=""
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -177,32 +200,68 @@ export default async function HomePage({
       <LogoDivider />
 
       {/* AUTORE */}
-      <SectionWithLogo className=" bg-crema text-center pt-0!">
+      <SectionWithLogo className="bg-crema text-center pt-0!">
         <SectionTitle title={dictionary.home.author_details.title} decorated />
 
-        <div className="flex flex-col gap-6 mt-12 md:grid md:grid-cols-2 md:gap-10 md:items-center">
-          <p className="px-4 md:px-0">{dictionary.home.author_details.intro}</p>
-          <div className="relative h-72 md:h-[420px]  overflow-hidden shadow-xl">
-            <Image
-              src="/images/home/1.webp"
-              alt=""
-              fill
-              className="object-cover"
-            />
+        {/* MOBILE - invariato */}
+        <div className="md:hidden">
+          <div className="flex flex-col gap-6 mt-12">
+            <p className="px-4">{dictionary.home.author_details.intro}</p>
+            <div className="relative h-72 overflow-hidden shadow-xl">
+              <Image
+                src="/images/home/1.webp"
+                alt=""
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-6 mt-10">
+            <p className="px-4">{dictionary.home.author_details.p1}</p>
+            <div className="relative h-72 overflow-hidden shadow-xl">
+              <Image
+                src="/images/home/16.webp"
+                alt=""
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
 
-        <div className="flex flex-col gap-6 mt-10 md:grid md:grid-cols-2 md:gap-10 md:items-center">
-          <p className="px-4 md:px-0 md:order-2">
-            {dictionary.home.author_details.p1}
-          </p>
-          <div className="relative h-72 md:h-[420px]  overflow-hidden shadow-xl md:order-1">
-            <Image
-              src="/images/home/16.webp"
-              alt=""
-              fill
-              className="object-cover"
-            />
+        {/* DESKTOP - layout compatto */}
+        <div className="hidden md:block mt-12 max-w-5xl mx-auto px-8">
+          <div className="grid grid-cols-2 gap-8 items-start">
+            {/* Prima colonna - immagine + testo */}
+            <div className="flex flex-col gap-6">
+              <div className="relative h-80 overflow-hidden shadow-xl">
+                <Image
+                  src="/images/home/1.webp"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-center leading-relaxed">
+                {dictionary.home.author_details.intro}
+              </p>
+            </div>
+
+            {/* Seconda colonna - immagine + testo */}
+            <div className="flex flex-col gap-6">
+              <div className="relative h-80 overflow-hidden shadow-xl">
+                <Image
+                  src="/images/home/16.webp"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-center leading-relaxed">
+                {dictionary.home.author_details.p1}
+              </p>
+            </div>
           </div>
         </div>
       </SectionWithLogo>

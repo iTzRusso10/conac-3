@@ -53,7 +53,12 @@ export default async function DolceVitaPage({
     "/images/dolcevita/4.webp",
   ];
 
-  const imagesRow2 = ["/images/dolcevita/5.webp", "/images/dolcevita/7.webp"];
+  const imagesRow2 = [
+    "/images/dolcevita/5.webp",
+    "/images/dolcevita/7.webp",
+    "/images/dolcevita/8.webp",
+    "/images/dolcevita/9.webp",
+  ];
 
   return (
     <>
@@ -69,10 +74,12 @@ export default async function DolceVitaPage({
         logoPosition="center"
         logoOpacity={0.05}
         logoSize="lg"
-        className=" bg-crema pt-0!"
+        className="bg-crema pt-0! pb-0!"
       >
-        <div className="lg:px-8 py-12 lg:py-16 flex flex-col gap-8">
-          {/* Title */}
+        <LogoDivider className="pt-10" />
+
+        {/* MOBILE - invariato */}
+        <div className="lg:hidden flex flex-col gap-8">
           <div className="text-center">
             <SectionTitle
               subtitle={dictionary.dolcevita.breakfast.intro}
@@ -81,13 +88,9 @@ export default async function DolceVitaPage({
             />
           </div>
 
-          {/* Griglia 4 foto */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-[-60px]">
+          <div className="grid grid-cols-2 gap-4 mt-[-60px]">
             {imagesRow.map((image, i) => (
-              <div
-                key={i}
-                className="relative h-56 md:h-64 overflow-hidden shadow-lg"
-              >
+              <div key={i} className="relative h-56 overflow-hidden shadow-lg">
                 <Image
                   src={image}
                   alt={`Breakfast ${i}`}
@@ -98,58 +101,153 @@ export default async function DolceVitaPage({
             ))}
           </div>
 
-          {/* intro2 — centrato */}
           <p className="text-center max-w-2xl mx-auto">
             {dictionary.dolcevita.breakfast.intro2}
           </p>
 
-          {/* Griglia 2 foto */}
-          <div className="grid grid-cols-2 gap-4">
-            {imagesRow2.map((image, i) => (
-              <div
-                key={i}
-                className="relative h-64 md:h-80  overflow-hidden shadow-lg"
-              >
-                <Image
-                  src={image}
-                  alt={`Breakfast ${i}`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* 1 foto larga */}
-          <div className="relative w-full md:w-1/2 md:mx-auto h-72 md:h-96  overflow-hidden shadow-lg">
-            <Image
-              src="/images/dolcevita/8.webp"
-              alt="Breakfast"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          {/* intro3 — centrato */}
-          <p className="text-center max-w-2xl mx-auto">
-            {dictionary.dolcevita.breakfast.intro3}
-          </p>
-
-          {/* Ultimo blocco: foto sx | intro4 dx */}
-          <div className="flex text-center flex-col gap-6 md:grid md:grid-cols-2 md:items-center md:gap-8">
-            <div className="relative h-72 md:h-96 overflow-hidden shadow-lg">
+          <div className="grid grid-cols-1 gap-4">
+            <div className="relative h-64 overflow-hidden shadow-lg">
               <Image
-                src="/images/dolcevita/9.webp"
-                alt="Breakfast"
+                src={imagesRow2[0]}
+                alt="Breakfast 1"
                 fill
                 className="object-cover"
               />
             </div>
-            <p className="leading-relaxed">
-              {dictionary.dolcevita.breakfast.intro4}
-            </p>
+
+            <div className="relative h-64 overflow-hidden shadow-lg">
+              <Image
+                src={imagesRow2[1]}
+                alt="Breakfast 2"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <div className="flex items-center justify-center text-center">
+              <p className="text-lg leading-relaxed">
+                {dictionary.dolcevita.breakfast.intro3}
+              </p>
+            </div>
+
+            <div className="flex items-center justify-center text-center">
+              <p className="text-lg leading-relaxed">
+                {dictionary.dolcevita.breakfast.intro4}
+              </p>
+            </div>
+
+            <div className="relative h-64 overflow-hidden shadow-lg">
+              <Image
+                src={imagesRow2[2]}
+                alt="Breakfast 3"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <div className="relative h-64 overflow-hidden shadow-lg">
+              <Image
+                src={imagesRow2[3]}
+                alt="Breakfast 4"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
+
+        {/* DESKTOP - layout compatto e arioso */}
+        <div className="hidden lg:block lg:px-8 lg:py-12">
+          <div className="max-w-6xl mx-auto flex flex-col gap-10">
+            {/* Title */}
+            <div className="text-center">
+              <SectionTitle
+                subtitle={dictionary.dolcevita.breakfast.intro}
+                decorated
+                title={dictionary.dolcevita.breakfast.title}
+              />
+            </div>
+
+            {/* Griglia 4 foto - più compatta */}
+            <div className="grid grid-cols-4 gap-4">
+              {imagesRow.map((image, i) => (
+                <div
+                  key={i}
+                  className="relative h-48 overflow-hidden shadow-lg"
+                >
+                  <Image
+                    src={image}
+                    alt={`Breakfast ${i}`}
+                    fill
+                    className="object-cover object-bottom"
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* intro2 */}
+            <p className="text-center max-w-3xl mx-auto text-lg leading-relaxed">
+              {dictionary.dolcevita.breakfast.intro2}
+            </p>
+
+            {/* Layout alternato immagini + testo */}
+            <div className="grid grid-cols-3 gap-6 items-center">
+              {/* Prima riga: img - testo - img */}
+              <div className="relative h-72 overflow-hidden shadow-lg">
+                <Image
+                  src={imagesRow2[0]}
+                  alt="Breakfast 1"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="flex items-center justify-center text-center px-6">
+                <p className="text-lg leading-relaxed">
+                  {dictionary.dolcevita.breakfast.intro3}
+                </p>
+              </div>
+
+              <div className="relative h-72 overflow-hidden shadow-lg">
+                <Image
+                  src={imagesRow2[1]}
+                  alt="Breakfast 2"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-3 gap-6 items-center">
+              {/* Seconda riga: img - testo - img (invertito) */}
+              <div className="relative h-72 overflow-hidden shadow-lg">
+                <Image
+                  src={imagesRow2[2]}
+                  alt="Breakfast 3"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="flex items-center justify-center text-center px-6">
+                <p className="text-lg leading-relaxed">
+                  {dictionary.dolcevita.breakfast.intro4}
+                </p>
+              </div>
+
+              <div className="relative h-72 overflow-hidden shadow-lg">
+                <Image
+                  src={imagesRow2[3]}
+                  alt="Breakfast 4"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <LogoDivider />
       </SectionWithLogo>
       {/* Colazione / Breakfast */}
 
