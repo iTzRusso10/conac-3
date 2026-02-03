@@ -81,7 +81,6 @@ export default async function StoryPage({
         </div>
       </SectionWithLogo>
 
-      {/* Riportarlo alla luce */}
       <SectionWithLogo
         className="bg-bianco-latte text-center"
         logoPosition="center"
