@@ -69,10 +69,7 @@ export default async function HomePage({
           {/* immagini secondarie */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {rowImaes.map((src, i) => (
-              <div
-                key={i}
-                className="relative h-36 lg:h-44 rounded-2xl overflow-hidden"
-              >
+              <div key={i} className="relative h-36 lg:h-44  overflow-hidden">
                 <Image src={src} alt="" fill className="object-cover" />
               </div>
             ))}
@@ -80,7 +77,7 @@ export default async function HomePage({
 
           {/* blocco narrativo */}
           <div className="relative">
-            <div className="relative bg-top h-72 lg:h-[420px] rounded-3xl overflow-hidden shadow-xl">
+            <div className="relative bg-top h-72 lg:h-[420px]  overflow-hidden shadow-xl">
               <Image
                 src="/images/home/20.jpg"
                 alt=""
@@ -120,16 +117,13 @@ export default async function HomePage({
         <div className="mt-12 md:hidden">
           <div className="grid grid-cols-2 gap-4">
             {rowImaes3.map((src, i) => (
-              <div
-                key={i}
-                className="relative h-40 rounded-2xl overflow-hidden shadow-lg"
-              >
+              <div key={i} className="relative h-40  overflow-hidden shadow-lg">
                 <Image src={src} alt="" fill className="object-cover" />
               </div>
             ))}
           </div>
 
-          <div className="relative h-52 rounded-2xl overflow-hidden shadow-lg mt-4 w-full mx-auto">
+          <div className="relative h-52 overflow-hidden shadow-lg mt-4 w-full mx-auto">
             <Image
               src="/images/home/17.jpg"
               alt=""
@@ -142,7 +136,7 @@ export default async function HomePage({
               <p>{dictionary.home.manifesto.p1}</p>
             </div>
 
-            <div className="col-span-5 relative h-64 rounded-3xl overflow-hidden shadow-xl">
+            <div className="col-span-5 relative h-64  overflow-hidden shadow-xl">
               <Image
                 src="/images/home/9.webp"
                 alt=""
@@ -157,10 +151,7 @@ export default async function HomePage({
         <div className="hidden md:block px-8 mt-16">
           <div className="grid grid-cols-3 gap-6 max-w-5xl mx-auto">
             {rowImaes2.map((src, i) => (
-              <div
-                key={i}
-                className="relative h-56 rounded-2xl overflow-hidden shadow-lg"
-              >
+              <div key={i} className="relative h-56  overflow-hidden shadow-lg">
                 <Image src={src} alt="" fill className="object-cover" />
               </div>
             ))}
@@ -171,7 +162,7 @@ export default async function HomePage({
               <p>{dictionary.home.manifesto.p1}</p>
             </div>
 
-            <div className="col-span-5 relative h-64 rounded-3xl overflow-hidden shadow-xl">
+            <div className="col-span-5 relative h-64  overflow-hidden shadow-xl">
               <Image
                 src="/images/home/9.webp"
                 alt=""
@@ -191,7 +182,7 @@ export default async function HomePage({
 
         <div className="flex flex-col gap-6 mt-12 md:grid md:grid-cols-2 md:gap-10 md:items-center">
           <p className="px-4 md:px-0">{dictionary.home.author_details.intro}</p>
-          <div className="relative h-72 md:h-[420px] rounded-3xl overflow-hidden shadow-xl">
+          <div className="relative h-72 md:h-[420px]  overflow-hidden shadow-xl">
             <Image
               src="/images/home/1.webp"
               alt=""
@@ -205,7 +196,7 @@ export default async function HomePage({
           <p className="px-4 md:px-0 md:order-2">
             {dictionary.home.author_details.p1}
           </p>
-          <div className="relative h-72 md:h-[420px] rounded-3xl overflow-hidden shadow-xl md:order-1">
+          <div className="relative h-72 md:h-[420px]  overflow-hidden shadow-xl md:order-1">
             <Image
               src="/images/home/16.webp"
               alt=""
