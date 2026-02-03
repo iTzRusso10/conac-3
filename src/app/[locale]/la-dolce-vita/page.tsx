@@ -46,13 +46,22 @@ export default async function DolceVitaPage({
     { key: "touch", icon: Hand },
   ] as const;
 
+  const imagesRow = [
+    "/images/dolcevita/1.jpg",
+    "/images/dolcevita/2.webp",
+    "/images/dolcevita/3.webp",
+    "/images/dolcevita/4.webp",
+  ];
+
+  const imagesRow2 = ["/images/dolcevita/5.webp", "/images/dolcevita/7.webp"];
+
   return (
     <>
       {/* Page Hero */}
       <PageHero
         title={dictionary.dolcevita.hero.headline}
         subtitle={dictionary.dolcevita.hero.subhead}
-        image="/images/hero-dolcevita.jpg"
+        image="/images/dolcevita/6.webp"
       />
 
       <SectionWithLogo
@@ -73,16 +82,16 @@ export default async function DolceVitaPage({
 
           {/* Griglia 4 foto */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-[-60px]">
-            {[1, 2, 3, 4].map((i) => (
+            {imagesRow.map((image, i) => (
               <div
                 key={i}
-                className="relative h-56 md:h-64 rounded-2xl overflow-hidden shadow-lg"
+                className="relative h-56 md:h-64 overflow-hidden shadow-lg"
               >
                 <Image
-                  src="/images/pia.png"
+                  src={image}
                   alt={`Breakfast ${i}`}
                   fill
-                  className="object-cover"
+                  className="object-cover object-bottom"
                 />
               </div>
             ))}
@@ -95,13 +104,13 @@ export default async function DolceVitaPage({
 
           {/* Griglia 2 foto */}
           <div className="grid grid-cols-2 gap-4">
-            {[1, 2].map((i) => (
+            {imagesRow2.map((image, i) => (
               <div
                 key={i}
-                className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg"
+                className="relative h-64 md:h-80  overflow-hidden shadow-lg"
               >
                 <Image
-                  src="/images/pia.png"
+                  src={image}
                   alt={`Breakfast ${i}`}
                   fill
                   className="object-cover"
@@ -111,9 +120,9 @@ export default async function DolceVitaPage({
           </div>
 
           {/* 1 foto larga */}
-          <div className="relative w-full h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative w-full md:w-1/2 md:mx-auto h-72 md:h-96  overflow-hidden shadow-lg">
             <Image
-              src="/images/pia.png"
+              src="/images/dolcevita/8.webp"
               alt="Breakfast"
               fill
               className="object-cover"
@@ -127,9 +136,9 @@ export default async function DolceVitaPage({
 
           {/* Ultimo blocco: foto sx | intro4 dx */}
           <div className="flex text-center flex-col gap-6 md:grid md:grid-cols-2 md:items-center md:gap-8">
-            <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+            <div className="relative h-72 md:h-96 overflow-hidden shadow-lg">
               <Image
-                src="/images/pia.png"
+                src="/images/dolcevita/9.webp"
                 alt="Breakfast"
                 fill
                 className="object-cover"

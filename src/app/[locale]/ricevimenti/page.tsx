@@ -54,46 +54,44 @@ export default async function EventsPage({
         logoPosition="center"
         className="section bg-crema"
       >
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Image */}
-            <div className="aspect-[4/3] bg-pietra italian-frame">
-              <div className="w-full h-full flex items-center justify-center text-ferro/40">
-                [Foto matrimonio nella corte]
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Image */}
+          <div className="aspect-[4/3] bg-pietra italian-frame">
+            <div className="w-full h-full flex items-center justify-center text-ferro/40">
+              [Foto matrimonio nella corte]
+            </div>
+          </div>
+
+          {/* Content */}
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <Heart className="text-terracotta" size={24} />
+              <h2 className="font-serif text-3xl md:text-4xl text-ferro">
+                {dictionary.events.wedding.title}
+              </h2>
             </div>
 
-            {/* Content */}
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <Heart className="text-terracotta" size={24} />
-                <h2 className="font-serif text-3xl md:text-4xl text-ferro">
-                  {dictionary.events.wedding.title}
-                </h2>
-              </div>
-
-              <div className="space-y-4 text-ferro/80 leading-relaxed mb-8">
-                <p className="font-serif italic text-xl text-ferro">
-                  {dictionary.events.wedding.p1}
-                </p>
-                <p>{dictionary.events.wedding.p2}</p>
-                <p>{dictionary.events.wedding.p3}</p>
-                <p>{dictionary.events.wedding.p4}</p>
-              </div>
-
-              {/* Highlights */}
-              <ul className="space-y-3">
-                {weddingHighlights.map((highlight, i) => (
-                  <li key={i} className="flex items-start gap-3 text-ferro/80">
-                    <Check
-                      size={18}
-                      className="text-verde-bosco mt-0.5 flex-shrink-0"
-                    />
-                    <span>{highlight}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="space-y-4 text-ferro/80 leading-relaxed mb-8">
+              <p className="font-serif italic text-xl text-ferro">
+                {dictionary.events.wedding.p1}
+              </p>
+              <p>{dictionary.events.wedding.p2}</p>
+              <p>{dictionary.events.wedding.p3}</p>
+              <p>{dictionary.events.wedding.p4}</p>
             </div>
+
+            {/* Highlights */}
+            <ul className="space-y-3">
+              {weddingHighlights.map((highlight, i) => (
+                <li key={i} className="flex items-start gap-3 text-ferro/80">
+                  <Check
+                    size={18}
+                    className="text-verde-bosco mt-0.5 flex-shrink-0"
+                  />
+                  <span>{highlight}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </SectionWithLogo>
