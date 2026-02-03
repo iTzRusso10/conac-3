@@ -61,7 +61,7 @@ export default async function DolceVitaPage({
         logoSize="lg"
         className=" bg-crema pt-0!"
       >
-        <div className="container px-4 lg:px-8 py-12 lg:py-16 flex flex-col gap-8">
+        <div className="lg:px-8 py-12 lg:py-16 flex flex-col gap-8">
           {/* Title */}
           <div className="text-center">
             <SectionTitle

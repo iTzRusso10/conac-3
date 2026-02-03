@@ -52,27 +52,26 @@ export default async function StoryPage({
         logoOpacity={0.05}
         logoSize="xl"
       >
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-20 items-center">
-            {/* Image placeholder */}
-            <div className="aspect-[4/3] bg-pietra italian-frame order-2 lg:order-1">
-              <div className="w-full h-full flex items-center justify-center text-ferro/40">
-                [Foto storica / dettaglio pietra antica]
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-20 items-center">
+          {/* Image placeholder */}
+          <div className="aspect-[4/3] bg-pietra italian-frame order-2 lg:order-1">
+            <div className="w-full h-full flex items-center justify-center text-ferro/40">
+              [Foto storica / dettaglio pietra antica]
             </div>
+          </div>
 
-            {/* Text */}
-            <div className="order-1 lg:order-2">
-              <SectionTitle
-                subtitleSize="text-[16px]"
-                centered
-                title={dictionary.story.roots.title}
-                decorated
-                subtitle={`${dictionary.story.roots.p1}`}
-                subtitles={[dictionary.story.roots.p2]}
-              />
-            </div>
-            {/* <div className="order-1 lg:order-2">
+          {/* Text */}
+          <div className="order-1 lg:order-2">
+            <SectionTitle
+              subtitleSize="text-[16px]"
+              centered
+              title={dictionary.story.roots.title}
+              decorated
+              subtitle={`${dictionary.story.roots.p1}`}
+              subtitles={[dictionary.story.roots.p2]}
+            />
+          </div>
+          {/* <div className="order-1 lg:order-2">
               <h2 className="font-serif text-3xl md:text-4xl text-ferro mb-6"></h2>
               <div className="space-y-4 text-ferro/80 leading-relaxed">
                 <p>{dictionary.story.roots.p1}</p>
@@ -82,7 +81,6 @@ export default async function StoryPage({
                 </p>
               </div>
             </div> */}
-          </div>
         </div>
       </SectionWithLogo>
 
@@ -93,10 +91,9 @@ export default async function StoryPage({
         logoOpacity={0.05}
         logoSize="xl"
       >
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-20 items-center">
-            {/* Text */}
-            {/* <div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-20 items-center">
+          {/* Text */}
+          {/* <div>
               <h2 className="font-serif text-3xl md:text-4xl text-ferro mb-6">
                 {dictionary.story.rebirth.title}
               </h2>
@@ -107,20 +104,19 @@ export default async function StoryPage({
               </div>
             </div> */}
 
-            <SectionTitle
-              subtitleSize="text-[16px]"
-              centered
-              title={dictionary.story.rebirth.title}
-              decorated
-              subtitle={`${dictionary.story.rebirth.p1}`}
-              subtitles={[dictionary.story.rebirth.p2]}
-            />
+          <SectionTitle
+            subtitleSize="text-[16px]"
+            centered
+            title={dictionary.story.rebirth.title}
+            decorated
+            subtitle={`${dictionary.story.rebirth.p1}`}
+            subtitles={[dictionary.story.rebirth.p2]}
+          />
 
-            {/* Image placeholder */}
-            <div className="aspect-[4/3] bg-pietra italian-frame">
-              <div className="w-full h-full flex items-center justify-center text-ferro/40">
-                [Foto restauro / artigiano al lavoro]
-              </div>
+          {/* Image placeholder */}
+          <div className="aspect-[4/3] bg-pietra italian-frame">
+            <div className="w-full h-full flex items-center justify-center text-ferro/40">
+              [Foto restauro / artigiano al lavoro]
             </div>
           </div>
         </div>
@@ -132,26 +128,24 @@ export default async function StoryPage({
         logoOpacity={0.05}
         logoSize="xl"
       >
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Image placeholder */}
-            <div className="aspect-[4/3] bg-pietra italian-frame order-2 lg:order-1">
-              <div className="w-full h-full flex items-center justify-center text-ferro/40">
-                [Foto storica / dettaglio pietra antica]
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Image placeholder */}
+          <div className="aspect-[4/3] bg-pietra italian-frame order-2 lg:order-1">
+            <div className="w-full h-full flex items-center justify-center text-ferro/40">
+              [Foto storica / dettaglio pietra antica]
             </div>
+          </div>
 
-            {/* Text */}
-            <div className="order-1 lg:order-2">
-              <SectionTitle
-                subtitleSize="text-[16px]"
-                centered
-                title={dictionary.story.dreams.title}
-                decorated
-                subtitle={`${dictionary.story.dreams.p1}`}
-                subtitles={[dictionary.story.dreams.p2]}
-              />
-            </div>
+          {/* Text */}
+          <div className="order-1 lg:order-2">
+            <SectionTitle
+              subtitleSize="text-[16px]"
+              centered
+              title={dictionary.story.dreams.title}
+              decorated
+              subtitle={`${dictionary.story.dreams.p1}`}
+              subtitles={[dictionary.story.dreams.p2]}
+            />
           </div>
         </div>
       </SectionWithLogo>
@@ -163,23 +157,21 @@ export default async function StoryPage({
         logoOpacity={0.05}
         logoSize="xl"
       >
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Text */}
-            <SectionTitle
-              subtitleSize="text-[16px]"
-              centered
-              title={dictionary.story["luxuryb&b"].title}
-              decorated
-              subtitle={dictionary.story["luxuryb&b"].p1}
-              subtitles={[dictionary.story["luxuryb&b"].p2]}
-            />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Text */}
+          <SectionTitle
+            subtitleSize="text-[16px]"
+            centered
+            title={dictionary.story["luxuryb&b"].title}
+            decorated
+            subtitle={dictionary.story["luxuryb&b"].p1}
+            subtitles={[dictionary.story["luxuryb&b"].p2]}
+          />
 
-            {/* Image placeholder */}
-            <div className="aspect-[4/3] bg-pietra italian-frame">
-              <div className="w-full h-full flex items-center justify-center text-ferro/40">
-                [Foto restauro / artigiano al lavoro]
-              </div>
+          {/* Image placeholder */}
+          <div className="aspect-[4/3] bg-pietra italian-frame">
+            <div className="w-full h-full flex items-center justify-center text-ferro/40">
+              [Foto restauro / artigiano al lavoro]
             </div>
           </div>
         </div>
