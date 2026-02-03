@@ -62,6 +62,7 @@ export default async function DolceVitaPage({
         title={dictionary.dolcevita.hero.headline}
         subtitle={dictionary.dolcevita.hero.subhead}
         image="/images/dolcevita/6.webp"
+        imageClassName="bg-bottom!"
       />
 
       <SectionWithLogo

@@ -7,6 +7,7 @@ interface PageHeroProps {
   subtitle?: string;
   image?: string;
   align?: "center" | "left";
+  imageClassName?: string;
 }
 
 export default function PageHero({
@@ -14,6 +15,7 @@ export default function PageHero({
   subtitle,
   image,
   align = "center",
+  imageClassName,
 }: PageHeroProps) {
   const alignClasses = {
     center: "text-center items-center justify-center",
@@ -26,7 +28,7 @@ export default function PageHero({
       {image ? (
         <>
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat z-0 ${imageClassName}`}
             style={{ backgroundImage: `url(${image})` }}
           />
           {/* Overlay scuro per leggibilità */}
