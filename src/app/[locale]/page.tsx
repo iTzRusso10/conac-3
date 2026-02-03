@@ -42,7 +42,7 @@ export default async function HomePage({
       />
 
       {/* INTRO */}
-      <SectionWithLogo className="bg-crema pt-1! md:pt-20!">
+      <SectionWithLogo className="bg-crema pt-1! md:pt-20! ">
         <SectionTitle title={dictionary.home.intro.title} decorated />
 
         <div className="flex flex-col gap-10 px-4 mt-10 lg:px-8">
@@ -96,7 +96,7 @@ export default async function HomePage({
       <LogoDivider />
 
       {/* MANIFESTO */}
-      <SectionWithLogo className="bg-bianco-latte">
+      <SectionWithLogo className="bg-bianco-latte ">
         <SectionTitle title={dictionary.home.manifesto.title} decorated />
         <div className="flex justify-center flex-col gap-2 items-center">
           <p className="text-center">
@@ -168,7 +168,7 @@ export default async function HomePage({
       <LogoDivider />
 
       {/* AUTORE */}
-      <SectionWithLogo className="bg-crema text-center pt-0!">
+      <SectionWithLogo className=" bg-crema text-center pt-0!">
         <SectionTitle title={dictionary.home.author_details.title} decorated />
 
         <div className="flex flex-col gap-6 mt-12 md:grid md:grid-cols-2 md:gap-10 md:items-center">

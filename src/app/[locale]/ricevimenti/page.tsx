@@ -5,6 +5,7 @@ import PageHero from "@/components/ui/PageHero";
 import EventForm from "@/components/ui/EventForm";
 import { Heart, Users, Sunset, Utensils, Check } from "lucide-react";
 import Image from "next/image";
+import { SectionWithLogo } from "@/components/ui/LogoDecorations";
 
 export async function generateMetadata({
   params,
@@ -48,7 +49,11 @@ export default async function EventsPage({
       />
 
       {/* Matrimoni Intimi */}
-      <section className="section bg-crema">
+      <SectionWithLogo
+        logoOpacity={0.1}
+        logoPosition="center"
+        className="section bg-crema"
+      >
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Image */}
@@ -91,90 +96,92 @@ export default async function EventsPage({
             </div>
           </div>
         </div>
-      </section>
+      </SectionWithLogo>
 
       {/* Feste Private */}
-      <section className="section bg-bianco-latte">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Content */}
-            <div className="order-2 lg:order-1">
-              <div className="flex items-center gap-3 mb-4">
-                <Users className="text-terracotta" size={24} />
-                <h2 className="font-serif text-3xl md:text-4xl text-ferro">
-                  {dictionary.events.party.title}
-                </h2>
-              </div>
-              <div className="space-y-4 text-ferro/80 leading-relaxed">
-                <p>{dictionary.events.party.p1}</p>
-                <p>{dictionary.events.party.p2}</p>
-              </div>
+      <SectionWithLogo
+        logoOpacity={0.1}
+        logoPosition="center"
+        className="section bg-bianco-latte"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Content */}
+          <div className="order-2 lg:order-1">
+            <div className="flex items-center gap-3 mb-4">
+              <Users className="text-terracotta" size={24} />
+              <h2 className="font-serif text-3xl md:text-4xl text-ferro">
+                {dictionary.events.party.title}
+              </h2>
             </div>
+            <div className="space-y-4 text-ferro/80 leading-relaxed">
+              <p>{dictionary.events.party.p1}</p>
+              <p>{dictionary.events.party.p2}</p>
+            </div>
+          </div>
 
-            {/* Image */}
-            <div className="aspect-[4/3] bg-pietra italian-frame order-1 lg:order-2">
-              <div className="w-full h-full flex items-center justify-center text-ferro/40">
-                [Foto festa privata]
-              </div>
+          {/* Image */}
+          <div className="aspect-[4/3] bg-pietra italian-frame order-1 lg:order-2">
+            <div className="w-full h-full flex items-center justify-center text-ferro/40">
+              [Foto festa privata]
             </div>
           </div>
         </div>
-      </section>
+      </SectionWithLogo>
 
       {/* Aperitivo e Cena */}
-      <section className="section bg-crema">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Aperitivo */}
-            <div className="bg-bianco-latte p-8 italian-frame">
-              <div className="flex items-center gap-3 mb-4">
-                <Sunset className="text-terracotta" size={24} />
-                <h3 className="font-serif text-2xl text-ferro">
-                  {dictionary.events.aperitivo.title}
-                </h3>
-              </div>
-              <div className="space-y-3 text-ferro/80">
-                <p>{dictionary.events.aperitivo.p1}</p>
-                <p className="font-serif italic text-lg text-ferro">
-                  {dictionary.events.aperitivo.p2}
-                </p>
-              </div>
-              <Image
-                src="/images/pia.png"
-                width={400}
-                height={300}
-                alt="Pia"
-                className="mt-4 mx-auto"
-              />
+      <SectionWithLogo
+        logoOpacity={0.1}
+        logoPosition="center"
+        className="section bg-crema"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Aperitivo */}
+          <div className="bg-bianco-latte p-8 italian-frame">
+            <div className="flex items-center gap-3 mb-4">
+              <Sunset className="text-terracotta" size={24} />
+              <h3 className="font-serif text-2xl text-ferro">
+                {dictionary.events.aperitivo.title}
+              </h3>
             </div>
+            <div className="space-y-3 text-ferro/80">
+              <p>{dictionary.events.aperitivo.p1}</p>
+              <p className="font-serif italic text-lg text-ferro">
+                {dictionary.events.aperitivo.p2}
+              </p>
+            </div>
+            <Image
+              src="/images/pia.png"
+              width={400}
+              height={300}
+              alt="Pia"
+              className="mt-4 mx-auto"
+            />
+          </div>
 
-            {/* Cena */}
-            <div className="bg-bianco-latte p-8 italian-frame">
-              <div className="flex items-center gap-3 mb-4">
-                <Utensils className="text-terracotta" size={24} />
-                <h3 className="font-serif text-2xl text-ferro">
-                  {dictionary.events.dinner.title}
-                </h3>
-              </div>
-              <div className="space-y-3 text-ferro/80">
-                <p>{dictionary.events.dinner.p1}</p>
-                <p className="font-serif italic text-lg text-ferro">
-                  {dictionary.events.dinner.p2}
-                </p>
-              </div>
-              <Image
-                src="/images/pia.png"
-                width={400}
-                height={300}
-                alt="Pia"
-                className="mt-4 mx-auto"
-              />
+          {/* Cena */}
+          <div className="bg-bianco-latte p-8 italian-frame">
+            <div className="flex items-center gap-3 mb-4">
+              <Utensils className="text-terracotta" size={24} />
+              <h3 className="font-serif text-2xl text-ferro">
+                {dictionary.events.dinner.title}
+              </h3>
             </div>
+            <div className="space-y-3 text-ferro/80">
+              <p>{dictionary.events.dinner.p1}</p>
+              <p className="font-serif italic text-lg text-ferro">
+                {dictionary.events.dinner.p2}
+              </p>
+            </div>
+            <Image
+              src="/images/pia.png"
+              width={400}
+              height={300}
+              alt="Pia"
+              className="mt-4 mx-auto"
+            />
           </div>
         </div>
-      </section>
-
-      {/* Form */}
+      </SectionWithLogo>
     </>
   );
 }

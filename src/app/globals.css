@@ -405,6 +405,6 @@ b {
 @media (max-width: 768px) {
   :root {
     --section-padding-y: 3.5rem;
-    --section-padding-x: 1.25rem;
+    --section-padding-x: 1rem;
   }
 }

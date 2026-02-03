@@ -12,6 +12,7 @@ import {
   Gift,
   Calendar,
 } from "lucide-react";
+import { SectionWithLogo } from "@/components/ui/LogoDecorations";
 
 export async function generateMetadata({
   params,
@@ -53,7 +54,11 @@ export default async function ExperiencesPage({
       />
 
       {/* Truffle Hunting */}
-      <section className="section bg-crema">
+      <SectionWithLogo
+        logoOpacity={0.1}
+        logoPosition="center"
+        className=" bg-crema"
+      >
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Image */}
@@ -104,10 +109,14 @@ export default async function ExperiencesPage({
             </div>
           </div>
         </div>
-      </section>
+      </SectionWithLogo>
 
       {/* Wine Tastings */}
-      <section className="section bg-bianco-latte">
+      <SectionWithLogo
+        logoOpacity={0.1}
+        logoPosition="center"
+        className="section bg-bianco-latte"
+      >
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Content */}
@@ -158,10 +167,14 @@ export default async function ExperiencesPage({
             </div>
           </div>
         </div>
-      </section>
+      </SectionWithLogo>
 
       {/* Nature Walks */}
-      <section className="section bg-crema">
+      <SectionWithLogo
+        logoOpacity={0.1}
+        logoPosition="center"
+        className="section bg-crema"
+      >
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Image */}
@@ -202,10 +215,14 @@ export default async function ExperiencesPage({
             </div>
           </div>
         </div>
-      </section>
+      </SectionWithLogo>
 
       {/* Pool */}
-      <section className="section bg-bianco-latte">
+      <SectionWithLogo
+        logoPosition="center"
+        logoOpacity={0.1}
+        className="section bg-bianco-latte"
+      >
         <div className="container">
           <div className="mx-auto text-center">
             <Waves className="text-pietra-dark mx-auto mb-6" size={48} />
@@ -227,10 +244,14 @@ export default async function ExperiencesPage({
             </div>
           </div>
         </div>
-      </section>
+      </SectionWithLogo>
 
       {/* CTA */}
-      <section className="section bg-verde-bosco text-bianco-latte">
+      <SectionWithLogo
+        logoPosition="center"
+        logoOpacity={0.1}
+        className="section bg-verde-bosco text-bianco-latte"
+      >
         <div className="container text-center">
           <h2 className="font-serif text-3xl md:text-4xl mb-6">
             {locale === "it"
@@ -244,7 +265,7 @@ export default async function ExperiencesPage({
             {dictionary.cta.checkAvailability}
           </Link>
         </div>
-      </section>
+      </SectionWithLogo>
     </>
   );
 }

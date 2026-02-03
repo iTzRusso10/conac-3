@@ -56,10 +56,10 @@ export default async function DolceVitaPage({
       />
 
       <SectionWithLogo
-        logoPosition="right"
+        logoPosition="center"
         logoOpacity={0.05}
         logoSize="lg"
-        className="section bg-crema pt-0!"
+        className=" bg-crema pt-0!"
       >
         <div className="container px-4 lg:px-8 py-12 lg:py-16 flex flex-col gap-8">
           {/* Title */}
@@ -146,9 +146,9 @@ export default async function DolceVitaPage({
       {/* CTA */}
       <SectionWithLogo
         logoPosition="center"
-        logoOpacity={0.2}
+        logoOpacity={0.1}
         logoSize="xl"
-        className="section bg-verde-bosco text-bianco-latte"
+        className=" bg-verde-bosco text-bianco-latte"
       >
         <div className="container text-center">
           <h2 className="font-serif text-3xl md:text-4xl mb-6">
