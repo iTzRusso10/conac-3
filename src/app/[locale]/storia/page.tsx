@@ -5,6 +5,7 @@ import { locales, type Locale } from "@/i18n/config";
 import { SectionWithLogo } from "@/components/ui/LogoDecorations";
 import PageHero from "@/components/ui/PageHero";
 import SectionTitle from "@/components/ui/SectionTitle";
+import Image from "next/image";
 
 export async function generateMetadata({
   params,
@@ -56,7 +57,13 @@ export default async function StoryPage({
           {/* Image placeholder */}
           <div className="aspect-[4/3] bg-pietra italian-frame order-2 lg:order-1">
             <div className="w-full h-full flex items-center justify-center text-ferro/40">
-              [Foto storica / dettaglio pietra antica]
+              <Image
+                src="/images/storia/1.jpeg"
+                alt="Foto storica dettaglio pietra antica"
+                className="object-cover w-full h-full"
+                width={1000}
+                height={1000}
+              />
             </div>
           </div>
 
@@ -116,7 +123,13 @@ export default async function StoryPage({
           {/* Image placeholder */}
           <div className="aspect-[4/3] bg-pietra italian-frame">
             <div className="w-full h-full flex items-center justify-center text-ferro/40">
-              [Foto restauro / artigiano al lavoro]
+              <Image
+                src="/images/storia/2.jpeg"
+                alt="Foto storica dettaglio pietra antica"
+                className="object-cover object-bottom w-full h-full"
+                width={1000}
+                height={1000}
+              />
             </div>
           </div>
         </div>
@@ -132,7 +145,13 @@ export default async function StoryPage({
           {/* Image placeholder */}
           <div className="aspect-[4/3] bg-pietra italian-frame order-2 lg:order-1">
             <div className="w-full h-full flex items-center justify-center text-ferro/40">
-              [Foto storica / dettaglio pietra antica]
+              <Image
+                src="/images/storia/3.jpeg"
+                alt="Foto storica dettaglio pietra antica"
+                className="object-cover object-bottom w-full h-full"
+                width={1000}
+                height={1000}
+              />
             </div>
           </div>
 
@@ -171,7 +190,13 @@ export default async function StoryPage({
           {/* Image placeholder */}
           <div className="aspect-[4/3] bg-pietra italian-frame">
             <div className="w-full h-full flex items-center justify-center text-ferro/40">
-              [Foto restauro / artigiano al lavoro]
+              <Image
+                src="/images/storia/4.webp"
+                alt="Foto storica dettaglio pietra antica"
+                className="object-cover object-bottom w-full h-full"
+                width={1000}
+                height={1000}
+              />
             </div>
           </div>
         </div>
