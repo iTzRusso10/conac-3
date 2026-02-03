@@ -42,6 +42,8 @@
     "manifesto": {
       "title": "Our suites",
       "intro": "Six rooms, six souls. Each suite carries the name of an element from the Piedmontese landscape and guards its spirit.",
+      "intro2": "Al Relais Conac 1888, il dolce far niente è una scelta consapevole, un invito a rallentare e ad ascoltare il tempo che scorre senza fretta.",
+
       "p1": "Add english text here"
     },
     "author_details": {
@@ -121,28 +123,12 @@
       "intro3": "Add english text here...",
       "conclusion": "At Relais Conac, La Dolce Vita is not a slogan. It's what you'll see, feel, and taste every day."
     },
-    "senses": {
-      "title": "The five senses of the farmhouse",
-      "sight": {
-        "name": "Sight",
-        "text": "The soft line of the hills. The golden light of sunset on stone. The lanterns lighting up one by one."
-      },
-      "sound": {
-        "name": "Sound",
-        "text": "Silence, broken only by birds. The crackle of fire. Footsteps on the gravel path."
-      },
-      "smell": {
-        "name": "Smell",
-        "text": "The forest after rain. The scent of freshly found truffle. Wood burning in the fireplace."
-      },
-      "taste": {
-        "name": "Taste",
-        "text": "A Barolo that tells the story of its vineyard. The neighbor's honey. Warm morning bread."
-      },
-      "touch": {
-        "name": "Touch",
-        "text": "Sun-warmed stone. Fresh bed linens. Pool water on skin."
-      }
+    "breakfast": {
+      "title": "An Italian Lifestyle",
+      "intro": "Tutto inizia da una buona colazione",
+      "intro2": "Che sia al letto o a bordo piscina, la colazione non è un semplice servizio, ma un rituale lento e autentico, da vivere con calma, senza orari rigidi, immersi nel silenzio delle colline piemontesi",
+      "intro3": "Ogni proposta segue la nostra filosofia dalla terra al piatto: ingredienti locali, prodotti stagionali e sapori genuini che rispettano il territorio. È il primo gesto di benessere della giornata, il momento in cui il tempo rallenta davvero.",
+      "intro4": "Una colazione pensata per chi sceglie un’esperienza Adults Only, dove il lusso è fatto di semplicità, quiete e attenzione ai dettagli."
     }
   },
   "suites": {

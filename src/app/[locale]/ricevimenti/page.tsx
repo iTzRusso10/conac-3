@@ -175,16 +175,6 @@ export default async function EventsPage({
       </section>
 
       {/* Form */}
-      <section id="form" className="section bg-bianco-latte scroll-mt-24">
-        <div className="container">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="font-serif text-3xl md:text-4xl text-ferro text-center mb-10">
-              {dictionary.events.form.title}
-            </h2>
-            <EventForm dictionary={dictionary} />
-          </div>
-        </div>
-      </section>
     </>
   );
 }

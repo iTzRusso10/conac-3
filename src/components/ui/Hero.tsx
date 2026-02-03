@@ -210,7 +210,7 @@ export default function Hero({
                     initial={{ opacity: 0, y: 25 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.4 }}
-                    className="mt-8 text-xl lg:text-2xl font-body italic text-white/90 max-w-xl text-center drop-shadow-md"
+                    className="mt-8 text-xl lg:text-2xl font-body italic text-white/90! max-w-xl text-center drop-shadow-md"
                   >
                     {headline}
                   </motion.p>
@@ -221,7 +221,7 @@ export default function Hero({
                     initial={{ opacity: 0, y: 25 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.5 }}
-                    className="mt-4 text-lg font-body text-white/80 max-w-lg text-center drop-shadow-md"
+                    className="mt-4 text-lg font-body text-white/80! max-w-lg text-center drop-shadow-md"
                   >
                     {subhead}
                   </motion.p>

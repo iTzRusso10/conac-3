@@ -143,7 +143,7 @@ export default async function SuiteDetailPage({
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main content */}
             <div className="lg:col-span-2">
-              <p className="text-sm uppercase tracking-widest text-terracotta mb-4">
+              <p className="text-sm uppercase tracking-widest text-terracotta! mb-4">
                 {suiteData.soul}
               </p>
               <p className="text-lg text-ferro/80 leading-relaxed mb-8">
@@ -191,7 +191,7 @@ export default async function SuiteDetailPage({
                       {features.map(({ icon: Icon, label }) => (
                         <span
                           key={label}
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-verde-bosco/10 text-verde-bosco text-sm rounded-full"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-verde-bosco/10 text-verde-bosco! text-sm rounded-full"
                         >
                           <Icon size={14} />
                           {label}
@@ -215,6 +215,19 @@ export default async function SuiteDetailPage({
       </section>
 
       {/* Amenities */}
+      <section className="section bg-crema pt-0!">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[1, 2, 3, 4].map((n) => (
+              <div key={n} className="aspect-square bg-pietra italian-frame">
+                <div className="w-full h-full flex items-center justify-center text-ferro/40 text-sm">
+                  {suiteData.name} - Foto {n}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="section bg-bianco-latte">
         <div className="container">
           <h2 className="font-serif text-2xl md:text-3xl text-ferro text-center mb-10">
@@ -243,19 +256,6 @@ export default async function SuiteDetailPage({
       </section>
 
       {/* Gallery placeholder */}
-      <section className="section bg-crema">
-        <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[1, 2, 3, 4].map((n) => (
-              <div key={n} className="aspect-square bg-pietra italian-frame">
-                <div className="w-full h-full flex items-center justify-center text-ferro/40 text-sm">
-                  {suiteData.name} - Foto {n}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Other suites */}
       <section className="py-12 bg-bianco-latte">

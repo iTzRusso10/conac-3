@@ -47,7 +47,7 @@ export default async function SuitesPage({
       {/* Intro */}
       <section className="py-12 bg-crema">
         <div className="container">
-          <p className="text-center text-lg text-ferro/80 max-w-2xl mx-auto font-serif italic">
+          <p className="text-center text-lg max-w-2xl mx-auto ">
             {dictionary.suites.intro}
           </p>
         </div>

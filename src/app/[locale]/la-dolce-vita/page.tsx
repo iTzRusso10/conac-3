@@ -55,63 +55,93 @@ export default async function DolceVitaPage({
         image="/images/hero-dolcevita.jpg"
       />
 
-      {/* Manifesto */}
-      <div className="container pt-14 mx-auto flex flex-col md:flex-row md:items-center gap-10 lg:gap-16">
-        <div className="w-full md:w-1/2 lg:w-7/12">
-          <SectionTitle
-            decorated
-            title={dictionary.dolcevita.manifesto.title}
-            subtitle={dictionary.dolcevita.manifesto.intro}
-            subtitles={[
-              dictionary.dolcevita.manifesto.intro2,
-              dictionary.dolcevita.manifesto.intro3,
-            ]}
-          />
-        </div>
-        <div className="w-full md:w-1/2 lg:w-5/12 md:shrink-0">
-          <Image
-            src="/images/pia.png"
-            alt="La Dolce Vita"
-            width={700}
-            height={840}
-            className="w-full h-auto object-cover rounded-2xl "
-            sizes="(min-width: 1280px) 420px, (min-width: 768px) 40vw, 100vw"
-          />
-        </div>
-      </div>
+      <SectionWithLogo
+        logoPosition="right"
+        logoOpacity={0.05}
+        logoSize="lg"
+        className="section bg-crema pt-0!"
+      >
+        <div className="container px-4 lg:px-8 py-12 lg:py-16 flex flex-col gap-8">
+          {/* Title */}
+          <div className="text-center">
+            <SectionTitle
+              subtitle={dictionary.dolcevita.breakfast.intro}
+              decorated
+              title={dictionary.dolcevita.breakfast.title}
+            />
+          </div>
 
-      <LogoDivider />
-
-      {/* I Cinque Sensi */}
-      <section className="section bg-bianco-latte">
-        <div className="container">
-          <SectionTitle
-            centeredTitle={true}
-            subtitleSize="text-[16px]"
-            title={dictionary.dolcevita.senses.title}
-            decorated
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {senses.map(({ key, icon: Icon }) => (
-              <div key={key} className="text-center group">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-crema border border-pietra flex items-center justify-center transition-all duration-300 group-hover:bg-verde-bosco group-hover:border-verde-bosco">
-                  <Icon
-                    size={32}
-                    className="text-ferro/70 transition-colors group-hover:text-bianco-latte"
-                  />
-                </div>
-                <h3 className="font-serif text-xl text-ferro mb-3">
-                  {dictionary.dolcevita.senses[key].name}
-                </h3>
-                <p className="text-ferro/70 text-sm leading-relaxed">
-                  {dictionary.dolcevita.senses[key].text}
-                </p>
+          {/* Griglia 4 foto */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-[-60px]">
+            {[1, 2, 3, 4].map((i) => (
+              <div
+                key={i}
+                className="relative h-56 md:h-64 rounded-2xl overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/images/pia.png"
+                  alt={`Breakfast ${i}`}
+                  fill
+                  className="object-cover"
+                />
               </div>
             ))}
           </div>
+
+          {/* intro2 — centrato */}
+          <p className="text-center max-w-2xl mx-auto">
+            {dictionary.dolcevita.breakfast.intro2}
+          </p>
+
+          {/* Griglia 2 foto */}
+          <div className="grid grid-cols-2 gap-4">
+            {[1, 2].map((i) => (
+              <div
+                key={i}
+                className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/images/pia.png"
+                  alt={`Breakfast ${i}`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* 1 foto larga */}
+          <div className="relative w-full h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/images/pia.png"
+              alt="Breakfast"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          {/* intro3 — centrato */}
+          <p className="text-center max-w-2xl mx-auto">
+            {dictionary.dolcevita.breakfast.intro3}
+          </p>
+
+          {/* Ultimo blocco: foto sx | intro4 dx */}
+          <div className="flex text-center flex-col gap-6 md:grid md:grid-cols-2 md:items-center md:gap-8">
+            <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/pia.png"
+                alt="Breakfast"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <p className="leading-relaxed">
+              {dictionary.dolcevita.breakfast.intro4}
+            </p>
+          </div>
         </div>
-      </section>
+      </SectionWithLogo>
+      {/* Colazione / Breakfast */}
 
       {/* CTA */}
       <SectionWithLogo

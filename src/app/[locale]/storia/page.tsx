@@ -47,7 +47,7 @@ export default async function StoryPage({
 
       {/* Le Radici */}
       <SectionWithLogo
-        className="bg-crema"
+        className="bg-crema text-center"
         logoPosition="center"
         logoOpacity={0.05}
         logoSize="xl"
@@ -65,7 +65,7 @@ export default async function StoryPage({
             <div className="order-1 lg:order-2">
               <SectionTitle
                 subtitleSize="text-[16px]"
-                centered={false}
+                centered
                 title={dictionary.story.roots.title}
                 decorated
                 subtitle={`${dictionary.story.roots.p1}`}
@@ -88,7 +88,7 @@ export default async function StoryPage({
 
       {/* Riportarlo alla luce */}
       <SectionWithLogo
-        className="bg-bianco-latte"
+        className="bg-bianco-latte text-center"
         logoPosition="center"
         logoOpacity={0.05}
         logoSize="xl"
@@ -109,7 +109,7 @@ export default async function StoryPage({
 
             <SectionTitle
               subtitleSize="text-[16px]"
-              centered={false}
+              centered
               title={dictionary.story.rebirth.title}
               decorated
               subtitle={`${dictionary.story.rebirth.p1}`}
@@ -127,7 +127,7 @@ export default async function StoryPage({
       </SectionWithLogo>
       {/* Sogno */}
       <SectionWithLogo
-        className="bg-crema"
+        className="bg-crema text-center"
         logoPosition="center"
         logoOpacity={0.05}
         logoSize="xl"
@@ -145,7 +145,7 @@ export default async function StoryPage({
             <div className="order-1 lg:order-2">
               <SectionTitle
                 subtitleSize="text-[16px]"
-                centered={false}
+                centered
                 title={dictionary.story.dreams.title}
                 decorated
                 subtitle={`${dictionary.story.dreams.p1}`}
@@ -158,7 +158,7 @@ export default async function StoryPage({
 
       {/* Luxury B&B */}
       <SectionWithLogo
-        className="bg-bianco-latte"
+        className="bg-bianco-latte text-center"
         logoPosition="center"
         logoOpacity={0.05}
         logoSize="xl"
@@ -168,7 +168,7 @@ export default async function StoryPage({
             {/* Text */}
             <SectionTitle
               subtitleSize="text-[16px]"
-              centered={false}
+              centered
               title={dictionary.story["luxuryb&b"].title}
               decorated
               subtitle={dictionary.story["luxuryb&b"].p1}
@@ -189,7 +189,7 @@ export default async function StoryPage({
         logoPosition="center"
         logoOpacity={0.2}
         logoSize="xl"
-        className="section bg-verde-bosco text-bianco-latte"
+        className="section bg-verde-bosco text-bianco-latte text-center"
       >
         <div className="container text-center">
           <h2 className="font-serif text-3xl md:text-4xl mb-6">

@@ -29,7 +29,7 @@
   },
   "home": {
     "hero": {
-      "headline": "Dove il tempo impara ad aspettare.",
+      "headline": "Dove ogni attimo diventa lusso",
       "subhead": "Nel cuore del Piemonte, riscopri la vita lenta e lasciati avvolgere da un’esperienza Adults Only di natura, silenzio e puro relax."
     },
     "intro": {
@@ -40,14 +40,15 @@
       "p4": "Un'esperienza Adults Only dedicata a chi cerca il lusso della quiete."
     },
     "manifesto": {
-      "title": "La Vita Lenta (Il Manifesto)",
-      "intro": "In Piemonte la bellezza non si urla, si respira. Al Relais Conac la \"Dolce Vita\" inizia a tavola con la nostra filosofia \"dalla terra al piatto\": una colazione che è un rito fatto di sapori reali e prodotti dei nostri artigiani locali.",
+      "title": "La Vita Lenta",
+      "intro": "Il Dolce Far Niente",
+      "intro2": "Al Relais Conac 1888, il dolce far niente è una scelta consapevole, un invito a rallentare e ad ascoltare il tempo che scorre senza fretta.",
       "p1": "Vi invitiamo a riscoprire il piacere di non fare nulla: è il ritmo della \"Piazza\", il cuore del casolare, dove ci si ritrova per un caffè, una partita a carte all'ombra o un aperitivo mentre il sole cala dietro i filari. Uno stile di vita per veri intenditori: casual, elegante, autentico."
     },
     "author_details": {
-      "title": "Dettagli D'autore",
-      "intro": "La Piscina in Pietra Naturale: Un’opera d’arte artigianale baciata dal sole. Scolpita nella pietra con una scalinata fatta a mano, è il vostro rifugio estivo. Il solarium vi attende con lettini in legno e materassi king-size da 23 cm: il massimo del comfort immersi nel verde.",
-      "p1": "Il Rito della Doccia Outdoor: Esiste un sollievo profondo nel fare una doccia all'aperto, barefoot sulla pietra antica. Una stimolazione sensoriale che riconnette i sensi e rigenera lo spirito in totale libertà.",
+      "title": "Dettagli d'Autore",
+      "intro": "La Piscina in Pietra Naturale: un’opera d’arte artigianale baciata dal sole. Scolpita nella pietra con una scalinata fatta a mano, è il vostro rifugio estivo. Il solarium vi attende con lettini in legno e materassi king-size da 23 cm: il massimo del comfort immersi nel verde.",
+      "p1": "Il Rito della Doccia Outdoor: esiste un sollievo profondo nel fare una doccia all'aperto, barefoot sulla pietra antica. Una stimolazione sensoriale che riconnette i sensi e rigenera lo spirito in totale libertà.",
       "truffle": {
         "title": "Caccia al tartufo",
         "desc": "All'alba, con il tartufaio e il suo cane, nei boschi dove crescono tesori nascosti."
@@ -110,7 +111,7 @@
   },
   "dolcevita": {
     "hero": {
-      "headline": "Il Nostro Manifesto - La Dolce Vita",
+      "headline": "La Dolce Vita",
       "subhead": "La Dolce Vita al Relais Conac 1888 è il piacere di rallentare, assaporare ogni attimo e ritrovare il contatto con ciò che conta davvero."
     },
     "manifesto": {
@@ -120,28 +121,12 @@
       "intro3": "Qui il lusso si misura nella qualità del tempo e nella possibilità di vivere ogni esperienza con tutti i sensi.",
       "conclusion": "A Relais Conac, La Dolce Vita non è uno slogan. È quello che vedrete, sentirete, assaggerete ogni giorno."
     },
-    "senses": {
-      "title": "I cinque sensi del Relais",
-      "sight": {
-        "name": "Vista",
-        "text": "Colline dorate, tramonti infuocati e dettagli eleganti che catturano lo sguardo."
-      },
-      "sound": {
-        "name": "Udito",
-        "text": "Il silenzio della natura interrotto solo dal canto degli uccelli e dal fruscio delle foglie."
-      },
-      "smell": {
-        "name": "Olfatto",
-        "text": "Profumi di legno, fiori e ingredienti freschi che raccontano il Piemonte autentico."
-      },
-      "taste": {
-        "name": "Gusto",
-        "text": "Sapori genuini e stagionali che trasformano ogni pasto in un rito sensoriale."
-      },
-      "touch": {
-        "name": "Tatto",
-        "text": "Materassi soffici, legno caldo e pietra naturale: ogni superficie invita al contatto."
-      }
+    "breakfast": {
+      "title": "An Italian Lifestyle",
+      "intro": "Tutto inizia con una buona colazione",
+      "intro2": "Che sia al letto o a bordo piscina, la colazione non è un semplice servizio, ma un rituale lento e autentico, da vivere con calma, senza orari rigidi, immersi nel silenzio delle colline piemontesi",
+      "intro3": "Ogni proposta segue la nostra filosofia dalla terra al piatto: ingredienti locali, prodotti stagionali e sapori genuini che rispettano il territorio. È il primo gesto di benessere della giornata, il momento in cui il tempo rallenta davvero.",
+      "intro4": "Una colazione pensata per chi sceglie un’esperienza Adults Only, dove il lusso è fatto di semplicità, quiete e attenzione ai dettagli."
     }
   },
   "suites": {

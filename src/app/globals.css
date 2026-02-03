@@ -71,7 +71,6 @@ html {
 
 body {
   background: var(--color-crema);
-  color: var(--color-ferro);
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 400;
@@ -127,10 +126,11 @@ h3 {
 
 p {
   max-width: 62ch;
+  font-size: 18px;
   font-family: var(--font-body);
-  line-height: 1.9; /* Interlinea extra generosa per paragrafi */
+  line-height: 1.9;
+  color: color-mix(in oklab, #2c2c2c 70%, transparent);
 }
-
 /* Sottotitoli con colore bronzo */
 .subtitle,
 .text-bronzo {

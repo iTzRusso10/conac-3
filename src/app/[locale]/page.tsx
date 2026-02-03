@@ -27,11 +27,9 @@ export default async function HomePage({
   ) as Locale;
   const dictionary = await getDictionary(locale);
 
-  const experienceTypes = ["truffle", "wine", "nature", "relax"] as const;
-
   return (
     <>
-      {/* Hero con video */}
+      {/* HERO */}
       <Hero
         headline={dictionary.home.hero.headline}
         subhead={dictionary.home.hero.subhead}
@@ -40,200 +38,179 @@ export default async function HomePage({
           href: `/${locale}/suite`,
         }}
         video="/images/hero/hero-videos.mp4"
-        showBrandName={true}
+        showBrandName
       />
 
-      {/* Intro - La Dolce Vita */}
-      <SectionWithLogo
-        className="bg-crema pt-0!"
-        logoPosition="center"
-        logoOpacity={0.1}
-        logoSize="lg"
-      >
-        {/* Titolo sezione con stile rustico */}
-        <div className="text-center mb-12">
-          <span className="inline-block text-verde-bosco/60 mb-4">
-            <LogoDivider className="" />
-          </span>
-          <h2 className="font-serif text-3xl md:text-4xl text-ferro">
-            {dictionary.home.intro.title}
-          </h2>
-        </div>
+      {/* INTRO */}
+      <SectionWithLogo className="bg-crema pt-1! md:pt-20!">
+        <SectionTitle title={dictionary.home.intro.title} decorated />
 
-        {/* Layout a due colonne alternato */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-5xl mx-auto">
-          {/* Colonna sinistra - Testo in cornice */}
-          <RusticFrame>
-            <p className="font-body text-lg text-ferro/85 leading-relaxed text-center italic">
+        <div className="flex flex-col gap-10 px-4 mt-10 lg:px-8">
+          <div className="flex flex-col gap-8 lg:grid lg:place-items-center lg:gap-10">
+            <p className="italic lg:block text-center lg:max-w-sm">
               &quot;{dictionary.home.intro.p1}&quot;
             </p>
+          </div>
+
+          {/* immagini secondarie */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {[0, 1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="relative h-36 lg:h-44 rounded-2xl overflow-hidden"
+              >
+                <Image
+                  src="/images/pia.png"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* blocco narrativo */}
+          <div className="relative">
+            <div className="relative h-72 lg:h-[420px] rounded-3xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/pia.png"
+                alt=""
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <div className="mt-6 lg:absolute lg:bottom-10 lg:right-10 lg:max-w-lg text-center">
+              <div className="bg-crema/95 backdrop-blur rounded-2xl p-8 shadow-lg">
+                <p>{dictionary.home.intro.p3}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex justify-center items-center">
+            <p className="italic text-center">{dictionary.home.intro.p4}</p>
+          </div>
+        </div>
+      </SectionWithLogo>
+
+      <LogoDivider />
+
+      {/* MANIFESTO */}
+      <SectionWithLogo className="bg-bianco-latte">
+        <SectionTitle title={dictionary.home.manifesto.title} decorated />
+        <div className="flex justify-center flex-col gap-2 items-center">
+          <p className="text-center">
+            &quot;{dictionary.home.manifesto.intro}&quot;
+          </p>
+          <RusticFrame className="mt-4">
+            <p className="text-center">{dictionary.home.manifesto.intro2}</p>
           </RusticFrame>
+        </div>
 
-          {/* Colonna destra - Descrizione con parole evidenziate */}
-          <div className="space-y-6">
-            <p className="font-body text-lg text-ferro/80 leading-relaxed">
-              {dictionary.home.intro.p2}
-            </p>
-            <div className="relative h-64 md:h-80 w-full overflow-hidden rounded-2xl shadow-lg">
+        {/* MOBILE */}
+        <div className="mt-12 px-4 md:hidden">
+          <div className="grid grid-cols-2 gap-4">
+            {[0, 1].map((i) => (
+              <div
+                key={i}
+                className="relative h-40 rounded-2xl overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/images/pia.png"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="relative h-40 rounded-2xl overflow-hidden shadow-lg mt-4 w-1/2 mx-auto">
+            <Image src="/images/pia.png" alt="" fill className="object-cover" />
+          </div>
+        </div>
+
+        {/* DESKTOP */}
+        <div className="hidden md:block px-8 mt-16">
+          <div className="grid grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[0, 1, 2].map((i) => (
+              <div
+                key={i}
+                className="relative h-56 rounded-2xl overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/images/pia.png"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-12 gap-8 mt-16 items-center">
+            <div className="col-span-7 text-center">
+              <p>{dictionary.home.manifesto.p1}</p>
+            </div>
+
+            <div className="col-span-5 relative h-64 rounded-3xl overflow-hidden shadow-xl">
               <Image
                 src="/images/pia.png"
-                alt="Veduta della tenuta"
+                alt=""
                 fill
                 className="object-cover"
-                sizes="(min-width: 1024px) 420px, 100vw"
               />
             </div>
           </div>
         </div>
+      </SectionWithLogo>
 
-        {/* Separatore semplice */}
-        <SimpleLine className="my-12 max-w-md mx-auto" />
+      <LogoDivider />
 
-        {/* Seconda parte - Layout speculare */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-5xl mx-auto">
-          {/* Testo */}
-          <div className="lg:order-2 space-y-5">
-            <p className="font-body text-lg text-ferro/80 leading-relaxed">
-              {dictionary.home.intro.p3}
-            </p>
+      {/* AUTORE */}
+      <SectionWithLogo className="bg-crema text-center pt-0!">
+        <SectionTitle title={dictionary.home.author_details.title} decorated />
+
+        <div className="flex flex-col gap-6 mt-12 md:grid md:grid-cols-2 md:gap-10 md:items-center">
+          <p className="px-4 md:px-0">{dictionary.home.author_details.intro}</p>
+          <div className="relative h-72 md:h-[420px] rounded-3xl overflow-hidden shadow-xl">
+            <Image src="/images/pia.png" alt="" fill className="object-cover" />
           </div>
+        </div>
 
-          {/* Citazione */}
-          <div className="lg:order-1 space-y-6">
-            <div className="relative h-56 md:h-72 w-full overflow-hidden rounded-2xl shadow-lg">
-              <Image
-                src="/images/pia.png"
-                alt="Dettaglio della campagna"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 420px, 100vw"
-              />
-            </div>
-            <FarmhouseQuote>{dictionary.home.intro.p4}</FarmhouseQuote>
+        <div className="flex flex-col gap-6 mt-10 md:grid md:grid-cols-2 md:gap-10 md:items-center">
+          <p className="px-4 md:px-0 md:order-2">
+            {dictionary.home.author_details.p1}
+          </p>
+          <div className="relative h-72 md:h-[420px] rounded-3xl overflow-hidden shadow-xl md:order-1">
+            <Image src="/images/pia.png" alt="" fill className="object-cover" />
           </div>
         </div>
       </SectionWithLogo>
 
-      {/* Separatore con logo */}
       <LogoDivider />
 
-      {/* Suite Preview */}
-      <SectionWithLogo
-        className="bg-bianco-latte"
-        logoPosition="right"
-        logoOpacity={0.04}
-        logoSize="lg"
-      >
-        <SectionTitle
-          title={dictionary.home.manifesto.title}
-          subtitle={dictionary.home.manifesto.intro}
-          decorated
-        />
-
-        <div className="flex flex-col md:flex-row gap-4 items-center w-full mx-auto">
-          <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-3xl shadow-xl">
-            <Image
-              src="/images/pia.png"
-              alt="Paesaggio intorno alla struttura"
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 900px, 100vw"
-            />
-          </div>
-          <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-3xl shadow-xl">
-            <Image
-              src="/images/pia.png"
-              alt="Paesaggio intorno alla struttura"
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 900px, 100vw"
-            />
-          </div>
-        </div>
-
-        <SectionTitle
-          title={""}
-          subtitle={dictionary.home.manifesto.p1}
-          decorated
-        />
-
-        {/* CTA */}
-        <div className="text-center mt-14">
-          <SimpleLine className="max-w-xs mx-auto mb-8" />
-          <Link href={`/${locale}/suite`} className="btn btn-primary">
-            {dictionary.cta.readManifesto}
-          </Link>
-        </div>
-      </SectionWithLogo>
-      <LogoDivider />
-
-      {/* Separatore con logo */}
-
-      {/* Experiences */}
-      <SectionWithLogo
-        className="bg-crema !pt-0"
-        logoPosition="center"
-        logoOpacity={0.05}
-        logoSize="lg"
-      >
-        <SectionTitle
-          title={dictionary.home.author_details.title}
-          subtitle={dictionary.home.author_details.intro}
-          decorated
-        />
-        <div className="mt-12 max-w-5xl mx-auto">
-          <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-3xl shadow-xl">
-            <Image
-              src="/images/pia.png"
-              alt="Paesaggio intorno alla struttura"
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 900px, 100vw"
-            />
-          </div>
-        </div>
-        <SectionTitle
-          title={""}
-          subtitle={dictionary.home.author_details.p1}
-          decorated
-        />
-      </SectionWithLogo>
-
-      {/* Separatore con logo */}
-      <LogoDivider />
-
-      {/* Final CTA */}
+      {/* CTA FINALE */}
       <section className="section bg-verde-bosco text-bianco-latte relative overflow-hidden">
-        {/* Logo watermark */}
         <LogoWatermark position="center" opacity={0.1} size="xl" />
 
-        {/* Rametti decorativi */}
-        <div className="absolute inset-0 opacity-5 pointer-events-none">
-          <div className="absolute top-10 left-10">
-            <OliveBranch className="w-32 h-10 text-bianco-latte" />
-          </div>
-          <div className="absolute bottom-10 right-10">
-            <OliveBranch className="w-32 h-10 text-bianco-latte" flip />
-          </div>
-        </div>
-
-        <div className="container relative z-10">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-5">
+        <div className="relative z-10 px-4 md:px-8">
+          <div className="max-w-3xl">
+            <h2 className="font-serif text-4xl md:text-5xl mb-6">
               {dictionary.home.final.title}
             </h2>
-
-            <p className="text-crema/85 text-lg mb-10 font-body">
-              {dictionary.home.final.text}
-            </p>
-
+            <p>{dictionary.home.final.text}</p>
             <Link
               href={`/${locale}/contatti`}
-              className="btn bg-bianco-latte text-verde-bosco hover:bg-crema border-2 border-bianco-latte"
+              className="btn bg-bianco-latte text-verde-bosco"
             >
               {dictionary.cta.checkAvailability}
             </Link>
           </div>
+        </div>
+
+        <div className="absolute bottom-10 right-10 opacity-10 hidden md:block">
+          <OliveBranch className="w-40 h-14 text-bianco-latte" />
         </div>
       </section>
     </>
