@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { getDictionary } from "@/i18n/getDictionary";
 import { locales, type Locale } from "@/i18n/config";
 import PageHero from "@/components/ui/PageHero";
-import BookingForm from "@/components/ui/BookingForm";
 import {
   MapPin,
   Phone,
