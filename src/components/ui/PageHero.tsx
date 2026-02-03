@@ -40,7 +40,7 @@ export default function PageHero({
       )}
 
       {/* Content */}
-      <div className="container relative z-10 py-12 md:py-16">
+      <div className="container h-100 relative z-10 py-12 md:py-16">
         <div
           className={`flex flex-col ${alignClasses[align]} max-w-3xl ${
             align === "center" ? "mx-auto" : ""
@@ -51,7 +51,7 @@ export default function PageHero({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className={`font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight ${
-              image ? "text-white drop-shadow-lg" : "text-ferro"
+              image ? "text-white! drop-shadow-lg" : "text-ferro"
             }`}
           >
             {title}
@@ -63,7 +63,7 @@ export default function PageHero({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
               className={`mt-4 text-lg md:text-xl font-body max-w-2xl ${
-                image ? "text-white/90 drop-shadow-md" : "text-ferro/70"
+                image ? "text-white/90! drop-shadow-md" : "text-ferro/70"
               } ${align === "center" ? "text-center" : ""}`}
             >
               {subtitle}

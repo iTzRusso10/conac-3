@@ -43,7 +43,7 @@ export default async function StoryPage({
       <PageHero
         title={dictionary.story.hero.headline}
         subtitle={dictionary.story.hero.subhead}
-        image="/images/hero-story.jpg"
+        image="/images/storia/5.jpeg"
       />
 
       {/* Le Radici */}
