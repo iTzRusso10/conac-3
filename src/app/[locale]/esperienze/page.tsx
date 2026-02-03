@@ -13,6 +13,7 @@ import {
   Calendar,
 } from "lucide-react";
 import { SectionWithLogo } from "@/components/ui/LogoDecorations";
+import Image from "next/image";
 
 export async function generateMetadata({
   params,
@@ -63,7 +64,13 @@ export default async function ExperiencesPage({
           {/* Image */}
           <div className="aspect-[4/3] bg-terracotta/20 italian-frame">
             <div className="w-full h-full flex items-center justify-center text-terracotta/60">
-              [Foto caccia al tartufo]
+              <Image
+                src="/images/esperienze/2.jpg"
+                alt="Foto storica dettaglio pietra antica"
+                className="object-cover object-center w-full h-full"
+                width={1000}
+                height={1000}
+              />
             </div>
           </div>
 
