@@ -1,10 +1,8 @@
-'use client';
-
-import Link from 'next/link';
-import Image from 'next/image';
-import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
-import type { Dictionary } from '@/i18n/getDictionary';
-import type { Locale } from '@/i18n/config';
+import Link from "next/link";
+import Image from "next/image";
+import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
+import type { Dictionary } from "@/i18n/getDictionary";
+import type { Locale } from "@/i18n/config";
 
 interface FooterProps {
   dictionary: Dictionary;
@@ -84,7 +82,9 @@ export default function Footer({ dictionary, locale }: FooterProps) {
           </div>
 
           <div>
-            <h4 className="font-serif text-lg text-bianco-latte mb-4">&nbsp;</h4>
+            <h4 className="font-serif text-lg text-bianco-latte mb-4">
+              &nbsp;
+            </h4>
             <nav className="flex flex-col gap-2">
               {navLinks.slice(4).map((link) => (
                 <Link
@@ -107,8 +107,10 @@ export default function Footer({ dictionary, locale }: FooterProps) {
               <div className="flex items-start gap-3">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
                 <span>
-                  Strada Provinciale, 12<br />
-                  12050 Monforte d'Alba, Piemonte<br />
+                  Strada Provinciale, 12
+                  <br />
+                  12050 Monforte d&apos;Alba, Piemonte
+                  <br />
                   Italia
                 </span>
               </div>
@@ -139,7 +141,7 @@ export default function Footer({ dictionary, locale }: FooterProps) {
               © {currentYear} Relais Conac 1888. {dictionary.footer.rights}.
             </p>
             <div className="flex items-center gap-6">
-              <span>{dictionary.footer.vat} 01234567890</span>
+              <span>{dictionary.footer.vat}</span>
               <Link
                 href={`/${locale}/privacy`}
                 className="hover:text-crema transition-colors"
