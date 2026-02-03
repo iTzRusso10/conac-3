@@ -78,16 +78,6 @@ export default async function StoryPage({
               subtitles={[dictionary.story.roots.p2]}
             />
           </div>
-          {/* <div className="order-1 lg:order-2">
-              <h2 className="font-serif text-3xl md:text-4xl text-ferro mb-6"></h2>
-              <div className="space-y-4 text-ferro/80 leading-relaxed">
-                <p>{dictionary.story.roots.p1}</p>
-                <p>{dictionary.story.roots.p2}</p>
-                <p className="font-serif italic text-lg">
-                  {dictionary.story.roots.p3}
-                </p>
-              </div>
-            </div> */}
         </div>
       </SectionWithLogo>
 
