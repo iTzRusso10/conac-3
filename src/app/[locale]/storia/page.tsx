@@ -99,18 +99,6 @@ export default async function StoryPage({
         logoSize="xl"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-20 items-center">
-          {/* Text */}
-          {/* <div>
-              <h2 className="font-serif text-3xl md:text-4xl text-ferro mb-6">
-                {dictionary.story.rebirth.title}
-              </h2>
-              <div className="space-y-4 text-ferro/80 leading-relaxed">
-                <p>{dictionary.story.rebirth.p1}</p>
-                <p>{dictionary.story.rebirth.p2}</p>
-                <p>{dictionary.story.rebirth.p3}</p>
-              </div>
-            </div> */}
-
           <SectionTitle
             subtitleSize="text-[16px]"
             centered
@@ -126,7 +114,7 @@ export default async function StoryPage({
               <Image
                 src="/images/storia/2.jpeg"
                 alt="Foto storica dettaglio pietra antica"
-                className="object-cover object-bottom w-full h-full"
+                className="object-cover object-center w-full h-full"
                 width={1000}
                 height={1000}
               />
@@ -191,7 +179,7 @@ export default async function StoryPage({
           <div className="aspect-[4/3] bg-pietra italian-frame">
             <div className="w-full h-full flex items-center justify-center text-ferro/40">
               <Image
-                src="/images/storia/4.webp"
+                src="/images/storia/4.jpeg"
                 alt="Foto storica dettaglio pietra antica"
                 className="object-cover object-bottom w-full h-full"
                 width={1000}
